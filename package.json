@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "preinstall": "cd bootstrap-theme-leihs && { test -d node_modules && npm i || { npm ci || npm i ;} ;}",
+    "XXXpreinstall": "cd bootstrap-theme-leihs && { test -d node_modules && npm i || { npm ci || npm i ;} ;}",
     "dev": "node server.js",
     "build": "npm run -s build:theme && npm run -s build:lib && npm run -s build:next",
     "build:next": "next build",
@@ -32,11 +32,12 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "bootstrap-theme-leihs": "file:bootstrap-theme-leihs"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.0.0",
-    "eslint": "^5.3.0",
+    "eslint": "5.6.0",
     "eslint-config-prettier": "^2.7.0",
     "eslint-config-react-app": "^3.0.4",
     "eslint-plugin-prettier": "^2.6.2",
