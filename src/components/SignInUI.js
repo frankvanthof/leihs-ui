@@ -131,8 +131,9 @@ export const SignInCard = ({
         </React.Fragment>
       )}
 
-      {!f.isEmpty(extAuths) &&
-        !f.isEmpty(pwAuth) && <Hr className="pb-3 pt-4">oder</Hr>}
+      {!f.isEmpty(extAuths) && !f.isEmpty(pwAuth) && (
+        <Hr className="pb-3 pt-4">oder</Hr>
+      )}
 
       <Let {...pwAuth}>
         {({ id, description, title }) => (
