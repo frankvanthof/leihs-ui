@@ -40,6 +40,7 @@
     "eslint-config-prettier": "^2.7.0",
     "eslint-config-react-app": "^3.0.7",
     "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react-hooks": "^1.1.0-rc.0",
     "prettier": "^1.16.4",
     "prettier-eslint": "^8.8.2",
     "react-scripts": "^2.1.5",
@@ -58,7 +59,8 @@
   "eslintConfig": {
     "plugins": [
       "prettier",
-      "react"
+      "react",
+      "react-hooks"
     ],
     "extends": [
       "react-app",
@@ -72,6 +74,7 @@
       "prettier/prettier": [
         "error"
       ],
+      "react-hooks/rules-of-hooks": "error",
       "react/prop-types": "off"
     },
     "overrides": [
