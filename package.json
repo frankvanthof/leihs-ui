@@ -16,6 +16,8 @@
     "ci:lint": "eslint 'src/{,**/}*.js{,x}' && npm run -s ci:lint:json",
     "lint:json": "prettier --write 'src/{,**/}*.json'",
     "ci:lint:json": "prettier --list-different 'src/{,**/}*.json'",
+    "remove-typescript-files": "find . -name '*.ts' -delete",
+    "???remove-typescript-files???": "open 'https://github.com/facebook/create-react-app/issues/6235'",
     "upgrade-deps": "npx npm-check-updates -ua && cd bootstrap-theme-leihs && npx npm-check-updates -ua && rm -rf node_modules && npm i && cd - && rm -rf node_modules && npm i",
     "test-lib": "node -p 'window=this; l = require(\"./dist/leihs-ui-server-side.js\"); l.renderComponentToStaticMarkup(\"Navbar\", {})'",
     "test": "react-scripts test --env=jsdom"
