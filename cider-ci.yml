@@ -35,8 +35,18 @@ jobs:
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
     task_defaults: *TASK_DEFAULTS
-    task:
-      scripts:
-        jest:
-          timeout: 10 minutes
-          body: 'npm ci && npm test'
+    tasks:
+      jest:
+        scripts:
+          test:
+            timeout: 10 minutes
+            body: 'npm ci && npm test'
+
+      ssr-cli:
+        scripts:
+          test:
+            timeout: 10 minutes
+            body: |
+             npm ci
+             time npm run build:ssr
+             sh test/test-ssr-cli.sh

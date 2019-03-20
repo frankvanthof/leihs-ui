@@ -4,17 +4,15 @@
 // This CLI is bundled into a single file with <http://npmjs.com/@zeit/ncc>.
 
 const LeihsUI = require('./dist/leihs-ui-server-side')
+const subcommand = process.argv[2]
 
 function SSR() {
-  process.stdout.write(
-    LeihsUI.renderComponentToString(
-      process.argv[3],
-      JSON.parse(process.argv[4])
-    )
-  )
+  const name = process.argv[3]
+  const props = JSON.parse(process.argv[4])
+  process.stdout.write(LeihsUI.renderComponentToString(name, props))
 }
 
-switch (process.argv[2]) {
+switch (subcommand) {
   case 'render':
     return SSR()
   default:
