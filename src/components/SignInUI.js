@@ -196,6 +196,20 @@ export const SignInCard = ({
           </a>
         </p>
       )}
+
+      {!!authFlow.forgotPasswordLink && (
+        <form method="GET" action={authFlow.forgotPasswordLink}>
+          <div className="TMP mt-4 h3 font-monospace">
+            <input type="hidden" name="user" value={userParam} />
+            <button
+              type="submit"
+              className="btn btn-large btn-block btn-warning"
+            >
+              forgot password?
+            </button>
+          </div>
+        </form>
+      )}
     </F>
   )
 

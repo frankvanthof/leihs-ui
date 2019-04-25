@@ -12,7 +12,8 @@ const defaultProps = {
     form: {
       method: 'POST',
       action: '/sign-in'
-    }
+    },
+    forgotPasswordLink: '/password-reset/forgot-password'
   }
 }
 
@@ -37,7 +38,7 @@ class SignInPage extends Component {
         >
           <div className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100">
             <SignInCard
-              authFlow={f.merge(authFlow, defaultProps.authFlow)}
+              authFlow={f.merge(defaultProps.authFlow, authFlow)}
               authSystems={authSystems}
               messages={flashMessages}
               locales={props.navbar.config.locales}
