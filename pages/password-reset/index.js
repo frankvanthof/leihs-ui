@@ -39,6 +39,11 @@ export const NavLinks = () => (
         <a>reset-password</a>
       </Link>
     </li>
+    <li>
+      <Link prefetch href="./password-reset/reset-password-from-email">
+        <a>reset-password, prefilled from email</a>
+      </Link>
+    </li>
   </ul>
 )
 

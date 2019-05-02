@@ -3,19 +3,19 @@
 import React from 'react'
 import { withRouter } from 'next/router'
 
-import PasswordForgotPage from '../../src/pages/PasswordForgotPage'
+import PasswordForgotSuccessPage from '../../src/pages/PasswordForgotSuccessPage'
 import navbarProps from '../_sharedNavbarProps.json'
 
 const exampleProps = {
   navbar: navbarProps,
   emailToCheck: 'n*****@e******.com',
-  flashMessages: [{ level: 'success', message: 'check ya mail' }]
+  message: 'OK CHECK YA MAIL PLZ!'
 }
 
 const page = ({ router }) => {
   const userParam = router.query.user
 
-  return <PasswordForgotPage {...exampleProps} />
+  return <PasswordForgotSuccessPage {...exampleProps} />
 }
 
 export default withRouter(page)

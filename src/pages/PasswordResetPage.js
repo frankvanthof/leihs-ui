@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import cx from 'classnames'
 import f from 'lodash'
 
 import Navbar from '../components/Navbar'
+import { CsrfTokenField } from '../components/Forms'
 import FlashMessages from '../components/FlashMessages'
 import { Translator as T } from '../locale/translate'
 
@@ -16,7 +18,7 @@ class Page extends Component {
   render(props = this.props) {
     const t = T(props.navbar.config.locales)
     const csrf = { token: f.get(props, 'navbar.config.csrfToken') }
-    const pwReset = f.get(props, 'pwReset')
+    const pwReset = f.get(props, 'pwReset') || {}
     const flashMessages = f.get(props, 'flashMessages')
 
     return (
@@ -77,33 +79,36 @@ const PasswordForgotCard = ({
         action={form.action}
       >
         <CsrfTokenField {...csrf} />
-        <div className="form-group form-group-sm">
-          <label htmlFor={'inputEmail'} className="XXXsr-only">
-            {t('password_reset_userparam_label')}
-          </label>
-          <input
-            id={'inputEmail'}
-            name="user"
-            required
-            readOnly
-            placeholder={t('password_reset_userparam_label')}
-            className="form-control"
-            defaultValue={pwReset.userParam || ''}
-          />
-        </div>
+        {!f.isEmpty(pwReset.userParam) && (
+          <div className="form-group form-group-sm">
+            <label htmlFor={'inputEmail'}>
+              {t('password_reset_userparam_label')}
+            </label>
+            <input
+              id={'inputEmail'}
+              name="user"
+              required
+              readOnly
+              placeholder={t('password_reset_userparam_label')}
+              className="form-control"
+              defaultValue={pwReset.userParam}
+            />
+          </div>
+        )}
 
-        <div className="form-group form-group-sm">
-          <label htmlFor={'inputToken'} className="XXXsr-only">
+        <div className={cx('form-group', { 'form-group-sm': pwReset.token })}>
+          <label htmlFor={'inputToken'}>
             {t('password_reset_token_label')}
           </label>
           <input
             id={'inputToken'}
             name="secret-token"
+            autoComplete="off"
             required
-            // readOnly
             placeholder={t('password_reset_token_label')}
             className="form-control text-monospace"
             defaultValue={pwReset.token || ''}
+            autoFocus={!pwReset.token}
           />
         </div>
 
@@ -115,12 +120,13 @@ const PasswordForgotCard = ({
             type="password"
             id={'inputNewPassword'}
             name="newPassword"
-            autoComplete="new-password"
+            defaultValue={''}
             required
+            minLength="4"
+            autoComplete="new-password"
             placeholder={t('password_reset_newpassword_label')}
             className="form-control"
-            defaultValue={''}
-            autoFocus={true}
+            autoFocus={!!pwReset.token}
           />
         </div>
 
@@ -131,8 +137,3 @@ const PasswordForgotCard = ({
     </section>
   )
 }
-
-const CsrfTokenField = ({ name, token }) => (
-  assert(token),
-  <input type="hidden" name={name || 'csrf-token'} value={token} />
-)

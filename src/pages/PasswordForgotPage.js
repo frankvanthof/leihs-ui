@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import assert from 'assert'
 import f from 'lodash'
 
 import Navbar from '../components/Navbar'
+import { CsrfTokenField } from '../components/Forms'
 import FlashMessages from '../components/FlashMessages'
 import { Translator as T } from '../locale/translate'
 
@@ -100,8 +100,3 @@ const PasswordForgotCard = ({
     </section>
   )
 }
-
-const CsrfTokenField = ({ name, token }) => (
-  assert(token),
-  <input type="hidden" name={name || 'csrf-token'} value={token} />
-)

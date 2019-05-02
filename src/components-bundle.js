@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import SignInPage from './pages/SignInPage'
 
 import PasswordForgotPage from './pages/PasswordForgotPage'
+import PasswordForgotSuccessPage from './pages/PasswordForgotSuccessPage'
 import PasswordResetPage from './pages/PasswordResetPage'
 
 export const Components = {
@@ -17,5 +18,6 @@ export const Components = {
   SignInPage,
 
   PasswordForgotPage,
+  PasswordForgotSuccessPage,
   PasswordResetPage
 }
