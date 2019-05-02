@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import assert from 'assert'
 import f from 'lodash'
 
 import Navbar from '../components/Navbar'
@@ -15,6 +16,7 @@ const defaultProps = {
 class Page extends Component {
   render(props = this.props) {
     const t = T(props.navbar.config.locales)
+    const csrf = { token: f.get(props, 'navbar.config.csrfToken') }
     const userParam = f.get(props, 'userParam')
     const flashMessages = f.get(props, 'flashMessages')
 
@@ -31,6 +33,7 @@ class Page extends Component {
           <div className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100">
             <PasswordForgotCard
               {...defaultProps}
+              csrf={csrf}
               userParam={userParam}
               messages={flashMessages}
               t={t}
@@ -49,6 +52,7 @@ const PasswordForgotCard = ({
   form,
   messages,
   userParam,
+  csrf,
   autoFocusUserField = true
 }) => {
   return (
@@ -73,6 +77,7 @@ const PasswordForgotCard = ({
         method={form.method}
         action={form.action}
       >
+        <CsrfTokenField {...csrf} />
         <label htmlFor={'inputEmail'} className="sr-only">
           {t('password_forgot_userparam_label')}
         </label>
@@ -95,3 +100,8 @@ const PasswordForgotCard = ({
     </section>
   )
 }
+
+const CsrfTokenField = ({ name, token }) => (
+  assert(token),
+  <input type="hidden" name={name || 'csrf-token'} value={token} />
+)

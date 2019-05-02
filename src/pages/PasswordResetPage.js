@@ -15,6 +15,7 @@ const defaultProps = {
 class Page extends Component {
   render(props = this.props) {
     const t = T(props.navbar.config.locales)
+    const csrf = { token: f.get(props, 'navbar.config.csrfToken') }
     const pwReset = f.get(props, 'pwReset')
     const flashMessages = f.get(props, 'flashMessages')
 
@@ -31,6 +32,7 @@ class Page extends Component {
           <div className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100">
             <PasswordForgotCard
               {...defaultProps}
+              csrf={csrf}
               pwReset={pwReset}
               messages={flashMessages}
               t={t}
@@ -49,6 +51,7 @@ const PasswordForgotCard = ({
   form,
   messages,
   pwReset,
+  csrf,
   autoFocusUserField = true
 }) => {
   return (
@@ -73,6 +76,7 @@ const PasswordForgotCard = ({
         method={form.method}
         action={form.action}
       >
+        <CsrfTokenField {...csrf} />
         <div className="form-group form-group-sm">
           <label htmlFor={'inputEmail'} className="XXXsr-only">
             {t('password_reset_userparam_label')}
@@ -127,3 +131,8 @@ const PasswordForgotCard = ({
     </section>
   )
 }
+
+const CsrfTokenField = ({ name, token }) => (
+  assert(token),
+  <input type="hidden" name={name || 'csrf-token'} value={token} />
+)
