@@ -78,7 +78,7 @@ const PasswordForgotCard = ({
         method={form.method}
         action={form.action}
       >
-        <CsrfTokenField {...csrf} />
+        <CsrfTokenField {...csrf} isOptional={!pwReset.token} />
         {!f.isEmpty(pwReset.userParam) && (
           <div className="form-group form-group-sm">
             <label htmlFor={'inputEmail'}>
