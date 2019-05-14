@@ -69,7 +69,7 @@ const PasswordForgotCard = ({
           </label>
           <input
             id={'inputToken'}
-            name="secret-token"
+            name={[0, 'token', 'secret-token'][step]}
             autoComplete="off"
             required
             placeholder={t('password_reset_token_label')}
