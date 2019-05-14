@@ -56,6 +56,10 @@ const PasswordForgotCard = ({
   csrf,
   autoFocusUserField = true
 }) => {
+  const step = f.isEmpty(pwReset.token) ? 1 : 2
+  const formProps =
+    step === 1 ? {} : { method: form.method, action: form.action }
+
   return (
     <section
       className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
@@ -73,13 +77,9 @@ const PasswordForgotCard = ({
         className="rounded"
         messageClasses="h5 rounded"
       />
-      <form
-        className="ui-form-signin text-left"
-        method={form.method}
-        action={form.action}
-      >
-        <CsrfTokenField {...csrf} isOptional={!pwReset.token} />
-        {!f.isEmpty(pwReset.userParam) && (
+      <form className="ui-form-signin text-left" {...formProps}>
+        {step === 2 && <CsrfTokenField {...csrf} />}
+        {step === 2 && (
           <div className="form-group form-group-sm">
             <label htmlFor={'inputEmail'}>
               {t('password_reset_userparam_label')}
@@ -112,23 +112,25 @@ const PasswordForgotCard = ({
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor={'inputNewPassword'}>
-            {t('password_reset_newpassword_label')}
-          </label>
-          <input
-            type="password"
-            id={'inputNewPassword'}
-            name="newPassword"
-            defaultValue={''}
-            required
-            minLength="4"
-            autoComplete="new-password"
-            placeholder={t('password_reset_newpassword_label')}
-            className="form-control"
-            autoFocus={!!pwReset.token}
-          />
-        </div>
+        {step === 2 && (
+          <div className="form-group">
+            <label htmlFor={'inputNewPassword'}>
+              {t('password_reset_newpassword_label')}
+            </label>
+            <input
+              type="password"
+              id={'inputNewPassword'}
+              name="newPassword"
+              defaultValue={''}
+              required
+              minLength="4"
+              placeholder={t('password_reset_newpassword_label')}
+              autoComplete="new-password"
+              className="form-control"
+              autoFocus={!!pwReset.token}
+            />
+          </div>
+        )}
 
         <button className="btn btn-success btn-block mt-3" type="submit">
           {t('password_reset_continue')}
