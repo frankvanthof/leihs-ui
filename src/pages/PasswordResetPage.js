@@ -63,6 +63,22 @@ const PasswordForgotCard = ({
         messageClasses="h5 rounded"
       />
       <form className="ui-form-signin text-left" {...formProps}>
+        <div className={cx('form-group', { 'form-group-sm': step === 2 })}>
+          <label htmlFor={'inputToken'}>
+            {t('password_reset_token_label')}
+          </label>
+          <input
+            id={'inputToken'}
+            name="secret-token"
+            autoComplete="off"
+            required
+            placeholder={t('password_reset_token_label')}
+            className="form-control text-monospace"
+            defaultValue={pwReset.token || ''}
+            autoFocus={step === 1}
+            readOnly={step === 2}
+          />
+        </div>
         {step === 2 && <CsrfTokenField {...csrf} />}
         {step === 2 && (
           <div className="form-group form-group-sm">
@@ -81,22 +97,6 @@ const PasswordForgotCard = ({
           </div>
         )}
 
-        <div className={cx('form-group', { 'form-group-sm': pwReset.token })}>
-          <label htmlFor={'inputToken'}>
-            {t('password_reset_token_label')}
-          </label>
-          <input
-            id={'inputToken'}
-            name="secret-token"
-            autoComplete="off"
-            required
-            placeholder={t('password_reset_token_label')}
-            className="form-control text-monospace"
-            defaultValue={pwReset.token || ''}
-            autoFocus={!pwReset.token}
-          />
-        </div>
-
         {step === 2 && (
           <div className="form-group">
             <label htmlFor={'inputNewPassword'}>
@@ -112,7 +112,7 @@ const PasswordForgotCard = ({
               placeholder={t('password_reset_newpassword_label')}
               autoComplete="new-password"
               className="form-control"
-              autoFocus={!!pwReset.token}
+              autoFocus={step === 2}
             />
           </div>
         )}
