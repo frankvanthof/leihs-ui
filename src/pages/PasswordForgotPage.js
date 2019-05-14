@@ -3,6 +3,7 @@ import f from 'lodash'
 
 import Navbar from '../components/Navbar'
 import { CsrfTokenField } from '../components/Forms'
+import { Card, CenterOnPage } from '../components/CardPage'
 import FlashMessages from '../components/FlashMessages'
 import { Translator as T } from '../locale/translate'
 
@@ -24,22 +25,15 @@ class Page extends Component {
       <div className="bg-paper h-100">
         <Navbar {...props.navbar} hideSignInField />
 
-        <div
-          className="m-auto d-flex minh-100 pb-sm-5"
-          style={{
-            maxWidth: '42rem'
-          }}
-        >
-          <div className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100">
-            <PasswordForgotCard
-              {...defaultProps}
-              csrf={csrf}
-              userParam={userParam}
-              messages={flashMessages}
-              t={t}
-            />
-          </div>
-        </div>
+        <CenterOnPage>
+          <PasswordForgotCard
+            {...defaultProps}
+            csrf={csrf}
+            userParam={userParam}
+            messages={flashMessages}
+            t={t}
+          />
+        </CenterOnPage>
       </div>
     )
   }
@@ -56,16 +50,7 @@ const PasswordForgotCard = ({
   autoFocusUserField = true
 }) => {
   return (
-    <section
-      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
-      style={{
-        maxWidth: '30rem'
-      }}
-    >
-      <h1 className="h3 my-2 font-weight-normal">
-        {t('password_forgot_title')}
-      </h1>
-      <hr className="xmb-3" />
+    <Card title={t('password_forgot_title')}>
       <p className="mb-4">{t('password_forgot_description')}</p>
       <FlashMessages
         messages={messages}
@@ -97,6 +82,6 @@ const PasswordForgotCard = ({
           {t('password_forgot_continue')}
         </button>
       </form>
-    </section>
+    </Card>
   )
 }

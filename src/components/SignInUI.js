@@ -3,6 +3,7 @@ import f from 'lodash'
 import { Let } from './Util'
 import { Hr } from './Bootstrap'
 import { VisuallyHidden } from './Bootstrap'
+import { Card } from '../components/CardPage'
 import FlashMessages from './FlashMessages'
 import { Translator as T } from '../locale/translate'
 
@@ -214,12 +215,7 @@ export const SignInCard = ({
   )
 
   return (
-    <section
-      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
-      style={{
-        maxWidth: '30rem'
-      }}
-    >
+    <Card>
       <h1 className="h3 my-3 font-weight-normal">{authFlow.title}</h1>
       <hr className="mb-4" />
       <FlashMessages
@@ -229,7 +225,7 @@ export const SignInCard = ({
       />
       {firstStep}
       {secondStep}
-    </section>
+    </Card>
   )
 }
 
