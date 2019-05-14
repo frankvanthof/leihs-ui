@@ -167,12 +167,19 @@
     "es": "Nueva contraseña",
     "gsw": "New Password"
   },
-  "xxx": {
-    "de": "X",
-    "en": "X",
-    "fr": "X",
-    "es": "X",
-    "gsw": "X"
+  "password_reset_success_message": {
+    "de": "Passwort wurde erfolgreich gespeichert!",
+    "en": "Password has been successfully saved!",
+    "fr": "Le mot de passe a été enregistré avec succès!",
+    "es": "La contraseña se ha guardado correctamente!",
+    "gsw": "Passwort wurde erfolgreich gespeichert!"
+  },
+  "password_reset_success_action": {
+    "de": "Hierher gehen um sich erneut anzumelden",
+    "en": "Go here to sign in again",
+    "fr": "Allez ici pour vous connecter à nouveau",
+    "es": "Vaya aquí para volver a iniciar sesión",
+    "gsw": "go here to sign in again"
   },
   "xxx": {
     "de": "X",
