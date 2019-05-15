@@ -7,7 +7,7 @@ import { CenteredCard } from '../components/CardPage'
 import { Translator as T } from '../locale/translate'
 
 const defaultProps = {
-  resetPwLink: '/password-reset/reset-password'
+  signInLink: '/sign-in'
 }
 
 class Page extends Component {
@@ -26,7 +26,7 @@ class Page extends Component {
             className="rounded"
             messageClasses="h5 rounded"
           />
-          <a href={props.resetPwLink}>{t('password_reset_success_action')}</a>
+          <a href={props.signInLink}>{t('password_reset_success_action')}</a>
         </CenteredCard>
       </div>
     )
