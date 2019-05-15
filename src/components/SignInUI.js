@@ -215,9 +215,7 @@ export const SignInCard = ({
   )
 
   return (
-    <Card>
-      <h1 className="h3 my-3 font-weight-normal">{authFlow.title}</h1>
-      <hr className="mb-4" />
+    <Card title={authFlow.title}>
       <FlashMessages
         messages={messages}
         className="rounded"
