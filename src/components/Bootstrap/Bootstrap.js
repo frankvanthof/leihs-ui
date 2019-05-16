@@ -19,6 +19,7 @@ const BOOTSTRAP_MODIFIERS = [
   'light',
   'dark'
 ]
+export const NBSP = '\u00A0'
 
 // https://getbootstrap.com/docs/4.0/utilities/spacing/#notation
 const bsSizeUtils = ({ m, p, ...props }) => {

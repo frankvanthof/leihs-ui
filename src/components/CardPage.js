@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Fragment as F } from 'react'
+import f from 'lodash'
 
 export const Card = ({ title, children }) => (
   <section
@@ -7,8 +8,12 @@ export const Card = ({ title, children }) => (
       maxWidth: '30rem'
     }}
   >
-    <h1 className="h3 my-2 font-weight-normal">{title}</h1>
-    <hr className="xmb-3" />
+    {!f.isEmpty(title) && (
+      <F>
+        <h1 className="card-title h3 my-2 font-weight-normal ">{title}</h1>
+        <hr className="xmb-3" />
+      </F>
+    )}
     {children}
   </section>
 )

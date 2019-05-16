@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`basic error message: renders correctly 1`] = `
+<div
+  className="m-auto d-flex minh-100 pb-sm-5"
+  style={
+    Object {
+      "maxWidth": "42rem",
+    }
+  }
+>
+  <div
+    className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100"
+  >
+    <section
+      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
+      style={
+        Object {
+          "maxWidth": "30rem",
+        }
+      }
+    >
+      <h1
+        className="card-title h3 my-2 font-weight-normal "
+      >
+        oh noes!
+      </h1>
+      <hr
+        className="xmb-3"
+      />
+      something went wrong! there is nothing we can do expect showing you this message. it can be pretty long.
+      <br />
+      
+      <br />
+      linebreaks are also allowed, so we can write as much prose as we need.
+      <hr
+        className="mb-0"
+      />
+      <p
+        className="card-text mb-0 mt-3"
+      >
+        <a
+          href="https://example.com"
+        >
+          go back to homepage
+        </a>
+      </p>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`full example: renders correctly 1`] = `
+<div
+  className="m-auto d-flex minh-100 pb-sm-5"
+  style={
+    Object {
+      "maxWidth": "42rem",
+    }
+  }
+>
+  <div
+    className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100"
+  >
+    <section
+      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
+      style={
+        Object {
+          "maxWidth": "30rem",
+        }
+      }
+    >
+      <h1
+        className="card-title h3 my-2 font-weight-normal "
+      >
+        Title of Message
+      </h1>
+      <hr
+        className="xmb-3"
+      />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <div
+        className="mt-4 mb-2"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-primary"
+          onClick={[Function]}
+          role={null}
+          type="button"
+        >
+          I am old enough
+        </button>
+         
+        <a
+          aria-label={null}
+          className="btn btn-secondary"
+          href="https://kika.de"
+          onClick={[Function]}
+          role="button"
+          type={null}
+        >
+          I am not old enough
+        </a>
+      </div>
+      <p
+        className="card-text mb-0 mt-3"
+      >
+        <a
+          href="/"
+        >
+          cancel and go back to homepage
+        </a>
+      </p>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`message with very long text: renders correctly 1`] = `
+<div
+  className="m-auto d-flex minh-100 pb-sm-5"
+  style={
+    Object {
+      "maxWidth": "42rem",
+    }
+  }
+>
+  <div
+    className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100"
+  >
+    <section
+      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
+      style={
+        Object {
+          "maxWidth": "30rem",
+        }
+      }
+    >
+      <h1
+        className="card-title h3 my-2 font-weight-normal "
+      >
+        Very Long Message!
+      </h1>
+      <hr
+        className="xmb-3"
+      />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <br />
+      
+      <br />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+      <br />
+      
+      <br />
+      Selfies messenger bag master cleanse tumeric intelligentsia. Polaroid normcore schlitz humblebrag vaporware williamsburg vegan hot chicken seitan. Kinfolk everyday carry pour-over photo booth, crucifix meditation cold-pressed vape succulents bicycle rights disrupt selfies pinterest.
+      <br />
+      
+      <br />
+      Pickled yuccie asymmetrical retro raclette godard blog roof party everyday carry pug disrupt.
+      <br />
+      Truffaut disrupt mlkshk pinterest pug, af slow-carb chia squid hell of.
+      <hr
+        className="mb-0"
+      />
+      <p
+        className="card-text mb-0 mt-3"
+      >
+        <a
+          href="https://example.com"
+        >
+          go back to homepage
+        </a>
+      </p>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`no footer and no title: renders correctly 1`] = `
+<div
+  className="m-auto d-flex minh-100 pb-sm-5"
+  style={
+    Object {
+      "maxWidth": "42rem",
+    }
+  }
+>
+  <div
+    className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100"
+  >
+    <section
+      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
+      style={
+        Object {
+          "maxWidth": "30rem",
+        }
+      }
+    >
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+    </section>
+  </div>
+</div>
+`;
+
+exports[`no footer: renders correctly 1`] = `
+<div
+  className="m-auto d-flex minh-100 pb-sm-5"
+  style={
+    Object {
+      "maxWidth": "42rem",
+    }
+  }
+>
+  <div
+    className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100"
+  >
+    <section
+      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
+      style={
+        Object {
+          "maxWidth": "30rem",
+        }
+      }
+    >
+      <h1
+        className="card-title h3 my-2 font-weight-normal "
+      >
+        oh noes!
+      </h1>
+      <hr
+        className="xmb-3"
+      />
+      Lorem ipsum dolor amet ethical pop-up fam hashtag fixie crucifix godard semiotics la croix cold-pressed schlitz cardigan chia wayfarers four loko.
+    </section>
+  </div>
+</div>
+`;

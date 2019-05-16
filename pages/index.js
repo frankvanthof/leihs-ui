@@ -84,6 +84,11 @@ export default function IndexPage() {
             </Link>
           </li>
           <li>
+            <Link prefetch href="/generic-messages">
+              <a>generic messages</a>
+            </Link>
+          </li>
+          <li>
             <Link prefetch href="/debug-request">
               <a>debug request</a>
             </Link>
