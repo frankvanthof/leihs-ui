@@ -2,5 +2,5 @@
   "version": 2,
   "name": "leihs-ui",
   "alias": "leihs-ui.now.sh",
-  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }
