@@ -1,4 +1,6 @@
 {
+  "version": 2,
+  "name": "leihs-ui",
   "alias": "leihs-ui.now.sh",
-  "version": 1
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
 }
