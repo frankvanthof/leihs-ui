@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { LeihsPage } from '../../src/components/styleguide'
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
 export const NavLinks = () => (
   <ul>
     <li>
@@ -21,7 +22,7 @@ export const NavLinks = () => (
     </li>
     <li>
       <Link prefetch href="./password-reset/forgot-password-success">
-        <a>forgot-password, sucess message ("Check your mail!")</a>
+        <a>{'forgot-password, sucess message ("Check your mail!")'}</a>
       </Link>
     </li>
 
@@ -46,7 +47,7 @@ export const NavLinks = () => (
     </li>
     <li>
       <Link prefetch href="./password-reset/reset-password-success">
-        <a>reset-password, sucess message ("Sign in Again!")</a>
+        <a>{'reset-password, sucess message ("Sign in Again!")'}</a>
       </Link>
     </li>
   </ul>

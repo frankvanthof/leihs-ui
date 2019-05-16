@@ -4,6 +4,7 @@ import { LeihsPage } from '../src/components/styleguide'
 
 import { NavLinks as PwResetNavLinks } from './password-reset'
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
 export default function IndexPage() {
   return (
     <LeihsPage>
