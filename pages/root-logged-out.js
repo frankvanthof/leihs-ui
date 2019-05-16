@@ -3,5 +3,11 @@ import React from 'react'
 
 import HomePage from '../src/pages/HomePage'
 
-const page = () => <HomePage />
+import navbarProps from './_sharedNavbarProps.json'
+
+const exampleProps = {
+  navbar: navbarProps
+}
+
+const page = () => <HomePage {...exampleProps} />
 export default page

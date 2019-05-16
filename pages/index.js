@@ -16,15 +16,8 @@ export default function IndexPage() {
             </Link>
           </li>
           <li>
-            <Link prefetch href="./auth">
-              <a>auth stuff</a>
-            </Link>
-          </li>
-          <li>
             <Link prefetch href="./login">
-              <a>
-                dummy page <code>/login</code>
-              </a>
+              <a>login examples</a>
             </Link>
             <ul>
               <li>
@@ -60,20 +53,11 @@ export default function IndexPage() {
             </ul>
           </li>
           <li>
-            <Link prefetch href="./login-dummy">
-              <a>dummy login flow</a>
-            </Link>
-          </li>
-          <li>
             <Link prefetch href="./navbar/dummy">
               <a>dummy navbar page</a>
             </Link>
           </li>
-          <li>
-            <Link prefetch href="/static/vanilla-login.html">
-              <a>vanilla login</a>
-            </Link>
-          </li>
+
           <li>
             <Link prefetch href="/debug-request">
               <a>debug request</a>
