@@ -66,6 +66,7 @@ export default class Navbar extends React.Component {
     } = props
     const { me, appTitle, appMenu, appColor, subApps, returnTo } = config
     const user = f.get(me, 'user')
+    const isLoggedIn = f.get(user, 'id')
     const { homeUrl } = defaults
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
     const t = T(config.locales)
@@ -77,7 +78,8 @@ export default class Navbar extends React.Component {
       <BsNavbar
         dark
         color="dark"
-        expand={user ? 'sm' : true}
+        // NOTE: when not logged in, navbar is always expanded (so login button is always visible)
+        expand={isLoggedIn ? 'sm' : true}
         className={cx('navbar-leihs ui-main-nav', props.className)}
         // FIXME: style tag gets missing(???)
         style={
@@ -125,7 +127,7 @@ export default class Navbar extends React.Component {
 
             <LocalesDropdown
               locales={config.locales}
-              isLoggedIn={!f.isEmpty(user)}
+              isLoggedIn={isLoggedIn}
               csrfToken={csrfToken}
             />
           </Nav>
