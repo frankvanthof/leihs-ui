@@ -74,13 +74,15 @@ export default class Navbar extends React.Component {
     const bgColor =
       props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
 
+    // NOTE: when not logged in, navbar is always expanded (so login button is always visible)
+    // FIXME: <BsNavbar expand={…}/> does not work as expected, results in `navbar-expand-true`(!) <https://github.com/reactstrap/reactstrap/blob/master/src/Navbar.js#L28>
+    const expandClass = isLoggedIn ? 'navbar-expand-sm' : 'navbar-expand'
+
     return (
       <BsNavbar
         dark
         color="dark"
-        // NOTE: when not logged in, navbar is always expanded (so login button is always visible)
-        expand={isLoggedIn ? 'sm' : true}
-        className={cx('navbar-leihs ui-main-nav', props.className)}
+        className={cx('navbar-leihs ui-main-nav', expandClass, props.className)}
         // FIXME: style tag gets missing(???)
         style={
           !bgColor
