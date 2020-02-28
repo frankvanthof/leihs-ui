@@ -17,6 +17,7 @@ export const Components = {
 
   CategoryList: require('./components/MobileApp/CategoryList').default,
   ModelList: require('./components/MobileApp/ModelList').default,
+  SearchForm: require('./components/MobileApp/SearchForm').default,
 
   // pages:
   HomePage,
