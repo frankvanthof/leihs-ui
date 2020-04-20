@@ -1,0 +1,63 @@
+{
+  "spec": {
+    "block": "#<Proc:0x00007faaa88da838@/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb:11>",
+    "description_args": [
+      "available quantites gathered from different pools"
+    ],
+    "description": "available quantites gathered from different pools",
+    "full_description": "models connection available quantites gathered from different pools",
+    "described_class": null,
+    "file_path": "./spec/graphql/models/availability_spec.rb",
+    "line_number": 11,
+    "location": "./spec/graphql/models/availability_spec.rb:11",
+    "absolute_file_path": "/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb",
+    "rerun_file_path": "./spec/graphql/models/availability_spec.rb",
+    "scoped_id": "1:1",
+    "execution_result": "#<RSpec::Core::Example::ExecutionResult:0x00007faaa88da608>",
+    "example_group": {
+      "block": "#<Proc:0x00007faa7f843510@/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb:4>",
+      "description_args": [
+        "models connection"
+      ],
+      "description": "models connection",
+      "full_description": "models connection",
+      "described_class": null,
+      "file_path": "./spec/graphql/models/availability_spec.rb",
+      "line_number": 4,
+      "location": "./spec/graphql/models/availability_spec.rb:4",
+      "absolute_file_path": "/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb",
+      "rerun_file_path": "./spec/graphql/models/availability_spec.rb",
+      "scoped_id": "1"
+    },
+    "shared_group_inclusion_backtrace": [
+
+    ],
+    "last_run_status": "unknown"
+  },
+  "result": {
+    "data": {
+      "models": {
+        "edges": [
+          {
+            "node": {
+              "id": "5577cbcf-fdc4-4cfc-bdb9-435d75522c1d",
+              "availableQuantityInDateRange": 2
+            }
+          },
+          {
+            "node": {
+              "id": "7efd48dc-676f-4438-9d1b-d0774b6704b7",
+              "availableQuantityInDateRange": 0
+            }
+          },
+          {
+            "node": {
+              "id": "87420e5a-c916-42f6-94ac-dd31ea32afb2",
+              "availableQuantityInDateRange": 0
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -14,7 +14,8 @@
   "browserslist": "defaults, not dead",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "react-dates": "^21.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

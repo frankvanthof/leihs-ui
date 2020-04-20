@@ -1,0 +1,77 @@
+{
+  "spec": {
+    "block": "#<Proc:0x00007faaa88e0d78@/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb:290>",
+    "description_args": [
+      "priorities"
+    ],
+    "description": "priorities",
+    "full_description": "models connection start/end date restrictions priorities",
+    "described_class": null,
+    "file_path": "./spec/graphql/models/availability_spec.rb",
+    "line_number": 290,
+    "location": "./spec/graphql/models/availability_spec.rb:290",
+    "absolute_file_path": "/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb",
+    "rerun_file_path": "./spec/graphql/models/availability_spec.rb",
+    "scoped_id": "1:3:2",
+    "execution_result": "#<RSpec::Core::Example::ExecutionResult:0x00007faaa88e0b70>",
+    "example_group": {
+      "block": "#<Proc:0x00007faaa88d80d8@/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb:178>",
+      "description_args": [
+        "start/end date restrictions"
+      ],
+      "description": "start/end date restrictions",
+      "full_description": "models connection start/end date restrictions",
+      "described_class": null,
+      "file_path": "./spec/graphql/models/availability_spec.rb",
+      "line_number": 178,
+      "location": "./spec/graphql/models/availability_spec.rb:178",
+      "absolute_file_path": "/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb",
+      "rerun_file_path": "./spec/graphql/models/availability_spec.rb",
+      "scoped_id": "1:3",
+      "parent_example_group": {
+        "block": "#<Proc:0x00007faa7f843510@/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb:4>",
+        "description_args": [
+          "models connection"
+        ],
+        "description": "models connection",
+        "full_description": "models connection",
+        "described_class": null,
+        "file_path": "./spec/graphql/models/availability_spec.rb",
+        "line_number": 4,
+        "location": "./spec/graphql/models/availability_spec.rb:4",
+        "absolute_file_path": "/Users/ma/CODE/leihs/borrow/spec/graphql/models/availability_spec.rb",
+        "rerun_file_path": "./spec/graphql/models/availability_spec.rb",
+        "scoped_id": "1"
+      }
+    },
+    "shared_group_inclusion_backtrace": [
+
+    ],
+    "last_run_status": "unknown"
+  },
+  "result": {
+    "data": {
+      "models": {
+        "edges": [
+          {
+            "node": {
+              "id": "da28cf22-db3e-4b9d-bfa8-199923b629cf",
+              "availability": [
+                {
+                  "dates": [
+                    {
+                      "date": "2020-04-17",
+                      "quantity": 1,
+                      "startDateRestriction": "VISITS_CAPACITY_REACHED",
+                      "endDateRestriction": "VISITS_CAPACITY_REACHED"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
