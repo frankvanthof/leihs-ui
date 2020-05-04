@@ -1,19 +1,34 @@
 import React, { useState } from 'react'
-import moment from 'moment'
 import 'react-dates/initialize'
+import f from 'lodash'
 
 import { DateRangePicker } from 'react-dates'
-import { START_DATE, HORIZONTAL_ORIENTATION } from 'react-dates/constants'
+import {
+  START_DATE,
+  END_DATE,
+  HORIZONTAL_ORIENTATION
+} from 'react-dates/constants'
+
+import Moment from 'moment'
+import { extendMoment } from 'moment-range'
+const moment = extendMoment(Moment)
 
 export const ModelCalendar = ({
   small = false,
   disabled = false,
   required = false,
-  minimumDays = 1
+  minimumDays = 1,
+  initialOpen = false,
+  modelData
 }) => {
   const [startDate, setStartDate] = useState(null)
   const [endDate, setEndDate] = useState(null)
-  const [focusedInput, setFocusedInput] = useState(START_DATE)
+  const [focusedInput, setFocusedInput] = useState(
+    initialOpen ? START_DATE : null
+  )
+  const availabilityByDate = getAvailabilityByDate(modelData)
+  console.log(availabilityByDate)
+
   return (
     <DateRangePicker
       startDate={startDate} // momentPropTypes.momentObj or null,
@@ -47,14 +62,59 @@ export const ModelCalendar = ({
       minimumNights={minimumDays} // for equipement we measure workdays, not nights
       enableOutsideDays={false} // show beginning of next month (easier to select same-week)
       // "blocked" means it can not be selected due to constraints and configuration that might change over time, like availability
-      isDayBlocked={() => false}
+      isDayBlocked={day =>
+        isDayBlocked(day, availabilityByDate, startDate, focusedInput)
+      }
       // "outside range" means it can never be selected, like any day in the past
-      //   isOutsideRange={() => false}
-      isOutsideRange={day => isPastDay(day)}
+      isOutsideRange={day => {
+        if (isPastDay(day)) return true
+        const dayData = getDayData(day, availabilityByDate)
+        if (!dayData) return true
+      }}
       // "highlighted" we currently have no usage for
-      isDayHighlighted={() => false}
+      isDayHighlighted={() => true}
     />
   )
+}
+
+function getAvailabilityByDate(modelData) {
+  return f.fromPairs(
+    modelData.models.edges
+      .flatMap(edg => edg.node.availability.flatMap(avb => avb.dates))
+      .map(i => [i.date, i])
+  )
+}
+
+function getDayData(day, availabilityByDate) {
+  return availabilityByDate[day.format('YYYY-MM-DD')]
+}
+
+function isDayBlocked(
+  day,
+  availabilityByDate,
+  selectedStartDate = null,
+  focusedInput = null
+) {
+  const dayData = getDayData(day, availabilityByDate)
+  if (!dayData) return true
+
+  if (focusedInput === START_DATE && dayData.startDateRestriction) return true
+  if (focusedInput === END_DATE && dayData.endDateRestriction) return true
+  if (dayData.quantity < 1) return true
+
+  // dont allow endDate before startDate
+  if (selectedStartDate && day.isBefore(selectedStartDate, 'day')) {
+    return true
+  }
+
+  // dont allow selection of ranges that include blocked dates
+  if (selectedStartDate && focusedInput === END_DATE) {
+    for (let rangeDay of moment.range(selectedStartDate, day).by('day')) {
+      const rangeDayData = getDayData(rangeDay, availabilityByDate)
+      if (!rangeDayData) return true
+      if (rangeDayData.quantity < 1) return true
+    }
+  }
 }
 
 function isPastDay(day) {
