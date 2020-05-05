@@ -1,8 +1,8 @@
 import { addParameters } from '@storybook/react'
+import './fake-time'
 
 // add global CSS styles
-import '../src/theme/build/bootstrap-leihs.css'
-// import '../../theme/bootstrap-leihs.scss'
+import '../src/theme/bootstrap-leihs.css'
 
 addParameters({
   viewport: {
