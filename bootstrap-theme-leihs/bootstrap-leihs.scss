@@ -3,7 +3,9 @@
 @import './node_modules/bootstrap/scss/bootstrap';
 @import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
-@import './node_modules/react-dates/lib/css/_datepicker.css';
+// @import './node_modules/react-dates/lib/css/_datepicker.css';
+@import './node_modules/react-date-range/dist/styles.css'; // main css file
+@import './node_modules/react-date-range/dist/theme/default.css'; // theme css file
 
 @import './scss/decoration';
 @import './scss/typography';

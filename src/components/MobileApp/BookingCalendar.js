@@ -1,30 +1,13 @@
 import React, { useState } from 'react'
-import 'react-dates/initialize'
 import f from 'lodash'
 
 // TODO:
 // - fix isBlocked???
 // - reset endDate if new startDate is changed AND endDate is not valid anymore
 
-import {
-  DayPickerRangeController,
-  DateRangePickerInputController
-} from 'react-dates'
-
-import {
-  /* eslint-disable no-unused-vars */
-  START_DATE,
-  END_DATE,
-  VERTICAL_ORIENTATION,
-  HORIZONTAL_ORIENTATION,
-  VERTICAL_SCROLLABLE
-} from 'react-dates/constants'
-
-import Moment from 'moment'
-import { extendMoment } from 'moment-range'
-const moment = extendMoment(Moment)
-
-const renderCalendarInfo = () => <div>Hi!</div>
+import { DateRange } from 'react-date-range'
+// import { addDays, parseISO } from 'date-fns'
+const df = require('date-fns')
 
 export const BookingCalendar = ({
   small = false,
@@ -37,17 +20,38 @@ export const BookingCalendar = ({
   initialQuantity = 1,
   modelData
 }) => {
-  const [startDate, setStartDate] = useState(null)
-  const [endDate, setEndDate] = useState(null)
-  const [focusedInput, setFocusedInput] = useState(
-    initialOpen ? START_DATE : null
-  )
-
   const [quantity, setQuantity] = useState(initialQuantity)
   const availabilityByDate = getAvailabilityByDate(modelData)
 
+  const [selectedRange, setSelectedRange] = useState({
+    startDate: new Date(),
+    endDate: new Date(),
+    key: 'selection',
+    autoFocus: true
+  })
+
+  // const disabledRange = {
+  //   startDate: new Date(),
+  //   endDate: addDays(new Date(), 3),
+  //   key: 'blocked',
+  //   color: 'red',
+  //   disabled: true,
+  //   autoFocus: false,
+  //   showDateDisplay: false
+  // }
+
+  // const disabledDates = [
+  //   new Date(),
+  //   df.addDays(new Date(), 1),
+  //   df.addDays(new Date(), 2),
+  //   df.addDays(new Date(), 3)
+  // ]
+
+  const blockedDates = getBlockedDays(availabilityByDate, quantity)
+  console.log({ blockedDates })
+
   return (
-    <div style={{ height: 500 }}>
+    <div>
       <label>
         quantity{' '}
         <input
@@ -55,85 +59,17 @@ export const BookingCalendar = ({
           value={quantity}
           onChange={e => setQuantity(e.target.value)}
         />
-      </label>
-
-      <DateRangePickerInputController
-        startDate={startDate}
-        endDate={endDate}
-        onDatesChange={({ startDate, endDate }) => {
-          console.log({ startDate, endDate })
-          setStartDate(startDate)
-          setEndDate(endDate)
-        }}
-        // focusedInput={focusedInput}
-        isStartDateFocused={focusedInput === START_DATE}
-        isEndDateFocused={focusedInput === END_DATE}
-        onFocusChange={focusedInput => {
-          console.log({ focusedInput })
-          setFocusedInput(focusedInput)
-        }}
-        displayFormat="L"
-      />
-
-      <DayPickerRangeController
-        startDate={startDate} // momentPropTypes.momentObj or null,
-        // startDateId="1" // PropTypes.string.isRequired,
-        endDate={endDate} // momentPropTypes.momentObj or null,
-        // endDateId="2" // PropTypes.string.isRequired,
-        onDatesChange={({ startDate, endDate }) => {
-          setStartDate(startDate)
-          setEndDate(endDate)
-        }} // PropTypes.func.isRequired,
-        focusedInput={focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-        onFocusChange={focusedInput => setFocusedInput(focusedInput)} // PropTypes.func.isRequired,
-        // showClearDates={showClearDates}
-        initialVisibleMonth={() => moment()} // PropTypes.func or null,
+      </label>{' '}
+      <DateRange
+        editableDateInputs={true}
+        onChange={item => setSelectedRange(item.selection)}
+        moveRangeOnFirstSelection={false}
+        direction="vertical"
+        scroll={{ enabled: true }}
+        ranges={[selectedRange]}
+        disabledDates={blockedDates}
         //
-        // orientation={HORIZONTAL_ORIENTATION}
-        // orientation={VERTICAL_ORIENTATION}
-        orientation={VERTICAL_SCROLLABLE}
-        numberOfMonths={6}
-        // disableScroll={false}
-        //   withFullScreenPortal={true}
-        //
-        firstDayOfWeek={1} // Monday
-        // block={false}
-        // small={small}
-        disabled={disabled}
-        // required={required}
-        //
-
-        // autoFocus={autoFocus}
-        calendarInfoPosition="top"
-        renderCalendarInfo={renderCalendarInfo}
-        //
-        // day presentation and interaction related props
-        //   renderCalendarDay={undefined}
-        //   renderDayContents={undefined}
-        minimumNights={minimumDays} // for equipement we measure workdays, not nights
-        enableOutsideDays={false} // show beginning of next month (easier to select same-week)
-        //
-        // TODO: show "day restrictions" as outside range and only "unavailable" as "isDayBlocked"
-        //
-        // "blocked" means it can not be selected due to constraints and configuration that might change over time, like availability
-        isDayBlocked={day =>
-          isDayBlocked({
-            day,
-            availabilityByDate,
-            minimumDays,
-            wantedQuantity: quantity,
-            selectedStartDate: startDate,
-            focusedInput
-          })
-        }
-        // "outside range" means it can never be selected, like any day in the past
-        isOutsideRange={day => {
-          if (isPastDay(day)) return true
-          const dayData = getDayData(day, availabilityByDate)
-          if (!dayData) return true
-        }}
-        // "highlighted" we currently have no usage for
-        isDayHighlighted={() => true}
+        // weekStartsOn={0}
       />
     </div>
   )
@@ -153,40 +89,57 @@ function getDayData(day, availabilityByDate) {
   return availabilityByDate[day.format('YYYY-MM-DD')]
 }
 
-function isDayBlocked({
-  day,
-  availabilityByDate,
-  minimumDays,
-  wantedQuantity,
-  selectedStartDate = null,
-  focusedInput = null
-}) {
-  // NOTE: for performance all checks use early return/bail out and are in descending order of cost
-  const dayData = getDayData(day, availabilityByDate)
-  if (!dayData) return true
-
-  if (focusedInput === START_DATE && dayData.startDateRestriction) return true
-  if (focusedInput === END_DATE && dayData.endDateRestriction) return true
-  if (dayData.quantity < wantedQuantity) return true
-
-  // dont allow endDate before startDate
-  if (selectedStartDate && day.isBefore(selectedStartDate, 'day')) {
-    return true
-  }
-
-  // dont allow selection of ranges that include blocked dates
-  console.log({ selectedStartDate, focusedInput })
-  if (selectedStartDate && focusedInput === END_DATE) {
-    for (let rangeDay of moment.range(selectedStartDate, day).by('day')) {
-      const rangeDayData = getDayData(rangeDay, availabilityByDate)
-      if (!rangeDayData) return true
-      if (rangeDayData.quantity < wantedQuantity) return true
-    }
-  }
+function getBlockedDays(availabilityByDate, wantedQuantity = 1) {
+  return Object.keys(availabilityByDate).map(date => {
+    const day = df.parseISO(date)
+    const dat = availabilityByDate[date]
+    if (isDayDisabled(day, dat, wantedQuantity)) return day
+  })
 }
 
+function isDayDisabled(day, dat, wantedQuantity) {
+  if (!dat) return true
+
+  if (isPastDay(day)) return true
+
+  if (dat.startDateRestriction) return true
+  if (dat.endDateRestriction) return true
+  if (dat.quantity < wantedQuantity) return true
+}
+
+// function isDayBlocked({
+//   day,
+//   availabilityByDate,
+//   minimumDays,
+//   wantedQuantity,
+//   selectedStartDate = null,
+//   focusedInput = null
+// }) {
+//   // NOTE: for performance all checks use early return/bail out and are in descending order of cost
+//   const dayData = getDayData(day, availabilityByDate)
+//   if (!dayData) return true
+
+//   if (focusedInput === START_DATE && dayData.startDateRestriction) return true
+//   if (focusedInput === END_DATE && dayData.endDateRestriction) return true
+//   if (dayData.quantity < wantedQuantity) return true
+
+//   // dont allow endDate before startDate
+//   if (selectedStartDate && day.isBefore(selectedStartDate, 'day')) {
+//     return true
+//   }
+
+//   // dont allow selection of ranges that include blocked dates
+//   if (selectedStartDate && focusedInput === END_DATE) {
+//     for (let rangeDay of moment.range(selectedStartDate, day).by('day')) {
+//       const rangeDayData = getDayData(rangeDay, availabilityByDate)
+//       if (!rangeDayData) return true
+//       if (rangeDayData.quantity < wantedQuantity) return true
+//     }
+//   }
+// }
+
 function isPastDay(day) {
-  if (!moment.isMoment(day)) return false
-  const now = moment()
-  return day.isBefore(now, 'day')
+  if (!df.isValid(day)) return false
+  const today = df.startOfDay(new Date())
+  return df.isBefore(day, today)
 }

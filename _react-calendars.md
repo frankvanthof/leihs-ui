@@ -39,7 +39,8 @@ components that allow date range selection in a calendar.
 - 14.6 kB GZ
 - mobile: usable, good interaction with inputs OOTB
 - responsive: DIY-ish, vertical scrollable very good OOTB
-- includes normal date selection input:
+- includes normal date selection input: NO
+- date lib: date-fns
 - uses [`react-list`](https://github.com/coderiety/react-list) which could be reused (12.5kB/70kB)
 
 ## `react-day-picker`
