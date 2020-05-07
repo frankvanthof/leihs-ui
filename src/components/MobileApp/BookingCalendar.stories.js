@@ -16,7 +16,6 @@ export const just_a_datepicker = () => (
 export const mock_data = () => {
   const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
   const apiData = mock.result.data
-  console.log({ apiData })
 
   return (
     <div className="mx-1 mt-2">
@@ -35,5 +34,18 @@ export const mock_data = () => {
       <h3 className="font-monospace">mock data from spec:</h3>
       <pre>{JSON.stringify(mock.spec, 0, 2)}</pre>
     </div>
+  )
+}
+
+export const classic_booking_calendar = () => {
+  const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
+  const apiData = mock.result.data
+  return (
+    <BookingCalendar
+      initialOpen={true}
+      autoFocus={true}
+      initialQuantity={1}
+      modelData={apiData}
+    />
   )
 }
