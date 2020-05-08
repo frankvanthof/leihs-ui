@@ -1,0 +1,3 @@
+[submodule "packages/react-date-range"]
+	path = packages/react-date-range
+	url = https://github.com/eins78/react-date-range

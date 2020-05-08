@@ -2,12 +2,30 @@ import React, { useState } from 'react'
 import cx from 'classnames'
 import f from 'lodash'
 
-// TODO:
-// - fix isBlocked???
-// - reset endDate if new startDate is changed AND endDate is not valid anymore
-
 import { DateRange } from 'react-date-range'
 const df = require('date-fns')
+
+// TODO:
+// - fix isBlocked - distinguish blocked visits (only start/end) and unavailable (for ranges)
+//   - how? it only has "disabled days", not "disabled ranges" :/
+//   - try using diabledDates for *unavailable*, then it behaves correct
+//   - figure out how to block visit days…
+//   - if fork: disabledDays -> blockedDays, disabledStartDays, disabledEndDays…
+// - reset endDate if new startDate is changed AND endDate is not valid anymore
+// - fix in component:
+//   - when selecting earlier start date do not reset range!
+//   - allow initial selection to be empty!
+
+const WIP_LARGE_SIZE = false
+const BASE_CLASS = 'ui-booking-calendar'
+
+const WIP_STYLES = `
+  .ui-booking-calendar { margin-left: auto !important; margin-right: auto !important; }
+  .rdrCalendarWrapper, .rdrDateRangeWrapper { margin: auto; }
+  // .rdrDayDisabled:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd) .rdrDayNumber span {
+  //   text-decoration: line-through;
+  // }
+`
 
 export const BookingCalendar = ({
   small = false,
@@ -22,43 +40,70 @@ export const BookingCalendar = ({
   cardClass = 'm-2',
   cardStyle
 }) => {
-  const now = new Date()
+  const today = df.startOfDay(new Date())
   const [quantity, setQuantity] = useState(initialQuantity)
+  const [hasUserInteracted, setHasUserInteracted] = useState(false)
   const availabilityByDate = getAvailabilityByDate(modelData)
 
-  const [selectedRange, setSelectedRange] = useState({
-    startDate: new Date(),
-    endDate: new Date(),
+  // const [selectedRange, setSelectedRange] = useState({
+  //   startDate: new Date(),
+  //   endDate: new Date(),
+  //   key: 'selection',
+  //   autoFocus: true
+  // })
+
+  // TODO: select next possible date (maybe only if next week?)
+  const initialSelectedRange = {
+    startDate: today,
+    endDate: today,
     key: 'selection',
-    autoFocus: true
-  })
+    autoFocus: true,
+    disabled: false,
+    showDateDisplay: true
+  }
 
-  const blockedDates = getBlockedDays(availabilityByDate, quantity)
-  // console.log({ blockedDates })
+  const [selectedRange, setSelectedRange] = useState(initialSelectedRange)
+  // const hasSelectedRange =
+  //   df.isValid(selectedRange.startDate) && df.isValid(selectedRange.endDate)
 
-  const isValidForm = isValidSelection(
-    selectedRange.startDate,
-    selectedRange.endDate,
-    availabilityByDate,
-    quantity
-  )
+  const clearForm = () => {
+    setQuantity(initialQuantity)
+    setSelectedRange(initialSelectedRange)
+    setHasUserInteracted(false)
+  }
 
-  const errorMessage = !isValidForm && (
-    <div className="alert alert-danger p-2 mb-3 mt-1 text-center" role="alert">
-      Something is wrong!
-    </div>
-  )
+  const allBlockedDates = calcAllBlockedDates(availabilityByDate, quantity)
+  // console.log({ allBlockedDates })
+  const { blockedDates, blockedStartDates, blockedEndDates } = allBlockedDates
+
+  const isValidForm = isValidSelection(selectedRange, allBlockedDates, quantity)
+
+  const errorMessage = hasUserInteracted &&
+    !isValidForm && (
+      <div className="alert alert-danger p-2 mb-3 mt-1 text-center" role="alert">
+        Something is wrong!
+      </div>
+    )
 
   return (
     <div
-      className={cx('card', cardClass)}
-      style={{ minWidth: '360px', ...cardStyle }}
+      className={cx('card', cardClass, BASE_CLASS)}
+      style={{
+        minWidth: '340px',
+        ...(!WIP_LARGE_SIZE && { maxWidth: '340px' }),
+        ...cardStyle
+      }}
     >
-      <style>{`
-        .rdrCalendarWrapper, .rdrDateRangeWrapper { margin: auto; }
+      <style>{WIP_STYLES}</style>
+
+      {!!WIP_LARGE_SIZE && (
+        <style>{`
+        .rdrCalendarWrapper, .rdrDateRangeWrapper {font-size: 14px; }
       `}</style>
+      )}
+
       <div className="card-header">
-        <h5 className="card-title d-inline-flex mr-3">Add to order</h5>
+        <h5 className="card-title d-inline-flex mr-3 mb-0">Add to order</h5>
         <p className="card-text d-inline-flex">AVCHD-Kamera Sony HXR-NX5E</p>
       </div>
       <div className="card-body px-2 px-sm-3 py-3 py-sm-4">
@@ -72,7 +117,10 @@ export const BookingCalendar = ({
                 required
                 min="1"
                 value={quantity}
-                onChange={e => setQuantity(e.target.value)}
+                onChange={e => {
+                  setQuantity(e.target.value)
+                  setHasUserInteracted(true)
+                }}
               />
             </label>
           </div>
@@ -91,21 +139,29 @@ export const BookingCalendar = ({
         <div style={{ display: 'flex', flexFlow: 'column nowrap' }}>
           <DateRange
             editableDateInputs={true}
-            onChange={item => setSelectedRange(item.selection)}
+            onChange={item => {
+              setSelectedRange(item.selection)
+              setHasUserInteracted(true)
+            }}
             moveRangeOnFirstSelection={false}
             direction="vertical"
-            scroll={{ enabled: true }}
+            className="m-0"
+            scroll={{
+              enabled: true,
+              monthHeight: WIP_LARGE_SIZE ? 278 : undefined
+            }}
             //
             ranges={[selectedRange]}
             //
-            minDate={now}
+            minDate={today}
             disabledDates={blockedDates}
+            disabledStartDates={blockedStartDates}
+            disabledEndDates={blockedEndDates}
             //
             weekStartsOn={1}
           />
         </div>
       </div>
-
       <div className="card-footer">
         <button
           type="submit"
@@ -119,6 +175,9 @@ export const BookingCalendar = ({
         <button type="button" href="#" className="btn btn-link">
           Cancel
         </button>
+        <button type="button" href="#" className="btn btn-link" onClick={clearForm}>
+          Clear
+        </button>
       </div>
     </div>
   )
@@ -127,93 +186,45 @@ export const BookingCalendar = ({
 function getAvailabilityByDate(modelData) {
   const models = f.get(modelData, 'models.edges')
   if (!models) return {}
-  return f.fromPairs(
-    models
-      .flatMap(edg => edg.node.availability.flatMap(avb => avb.dates))
-      .map(i => [i.date, i])
-  )
+  return f.fromPairs(models.flatMap(edg => edg.node.availability.flatMap(avb => avb.dates)).map(i => [i.date, i]))
 }
 
-function getDayData(day, availabilityByDate) {
-  return availabilityByDate[df.format(day, 'yyyy-MM-dd')]
+function getByDay(obj, date) {
+  return obj[df.format(date, 'yyyy-MM-dd')]
 }
 
-function getBlockedDays(availabilityByDate, wantedQuantity = 1) {
-  return Object.keys(availabilityByDate).map(date => {
+function calcAllBlockedDates(availabilityByDate, wantedQuantity = 1) {
+  const blockedDates = []
+  const blockedStartDates = []
+  const blockedEndDates = []
+  Object.keys(availabilityByDate).forEach(date => {
     const day = df.parseISO(date)
     const dat = availabilityByDate[date]
-    if (isDayDisabled(dat, wantedQuantity)) return day
+    if (!dat || dat.quantity < wantedQuantity) blockedDates.push(day)
+    if (dat.startDateRestriction) blockedStartDates.push(day)
+    if (dat.endDateRestriction) blockedEndDates.push(day)
   })
-}
-
-function isDayDisabled(dat, wantedQuantity) {
-  if (!dat) return true
-
-  if (dat.startDateRestriction) return true
-  if (dat.endDateRestriction) return true
-  if (dat.quantity < wantedQuantity) return true
+  return { blockedDates, blockedStartDates, blockedEndDates }
 }
 
 function isValidSelection(
-  startDate,
-  endDate,
-  availabilityByDate,
+  { startDate, endDate },
+  { blockedDates, blockedStartDates, blockedEndDates },
   wantedQuantity
 ) {
-  console.log({
-    start: startDate,
-    end: endDate,
-    range: !f.some(
-      df.eachDayOfInterval({ start: startDate, end: endDate }),
-      date =>
-        !!isDayDisabled(getDayData(date, availabilityByDate), wantedQuantity)
-    )
-  })
-  // if (df.isValid(startDate) && df.isValid(endDate)) debugger
-  return (
-    df.isValid(startDate) &&
-    df.isValid(endDate) &&
-    !f.some(
-      df.eachDayOfInterval({ start: startDate, end: endDate }),
-      date =>
-        !!isDayDisabled(getDayData(date, availabilityByDate), wantedQuantity)
-    )
-  )
-}
+  if (!df.isValid(startDate) || !df.isValid(endDate)) return false
 
-// function isDayBlocked({
-//   day,
-//   availabilityByDate,
-//   minimumDays,
-//   wantedQuantity,
-//   selectedStartDate = null,
-//   focusedInput = null
-// }) {
-//   // NOTE: for performance all checks use early return/bail out and are in descending order of cost
-//   const dayData = getDayData(day, availabilityByDate)
-//   if (!dayData) return true
+  if (getByDay(blockedStartDates, startDate)) return false
+  if (getByDay(blockedEndDates, endDate)) return false
 
-//   if (focusedInput === START_DATE && dayData.startDateRestriction) return true
-//   if (focusedInput === END_DATE && dayData.endDateRestriction) return true
-//   if (dayData.quantity < wantedQuantity) return true
-
-//   // dont allow endDate before startDate
-//   if (selectedStartDate && day.isBefore(selectedStartDate, 'day')) {
-//     return true
-//   }
-
-//   // dont allow selection of ranges that include blocked dates
-//   if (selectedStartDate && focusedInput === END_DATE) {
-//     for (let rangeDay of moment.range(selectedStartDate, day).by('day')) {
-//       const rangeDayData = getDayData(rangeDay, availabilityByDate)
-//       if (!rangeDayData) return true
-//       if (rangeDayData.quantity < wantedQuantity) return true
-//     }
-//   }
-// }
-
-function isPastDay(day) {
-  if (!df.isValid(day)) return false
-  const today = df.startOfDay(new Date())
-  return df.isBefore(day, today)
+  if (df.isSameDay(startDate, endDate)) {
+    return !getByDay(blockedDates, startDate)
+  } else {
+    if (df.isBefore(endDate, startDate)) return false // we get this from calendar sometime, need to check or interval throws RangeError!)
+    // debugger
+    if (f.isEmpty(blockedDates)) return true // dont iterate over interval if nothing is blocked!
+    return !df
+      .eachDayOfInterval({ start: df.startOfDay(startDate), end: df.startOfDay(endDate) })
+      .some(date => getByDay(blockedDates, startDate))
+  }
 }

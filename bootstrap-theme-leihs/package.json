@@ -15,8 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "bootstrap": "^4.4.1",
-    "react-date-range": "^1.0.3",
-    "react-dates": "^21.8.0"
+    "react-date-range": "https://github.com/eins78/react-date-range#ee1c39bc2ebb2dee2f20eba99485f06bd728915d"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
