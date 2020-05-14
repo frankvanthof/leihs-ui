@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import f from 'lodash'
 
 import { BookingCalendar } from './BookingCalendar'
-import { Calendar } from 'react-date-range'
+import { Calendar } from '@leihs/calendar'
 // eslint-disable-next-line no-unused-vars
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 const df = require('date-fns')
@@ -51,9 +51,9 @@ WIP_just_a_datepicker.story = {
   }
 }
 
+const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
+const apiData = mock.result.data
 export const BookingCalendar_with_mock_data = () => {
-  const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
-  const apiData = mock.result.data
   const now = new Date()
 
   const exampleProps = {
@@ -62,7 +62,6 @@ export const BookingCalendar_with_mock_data = () => {
     minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     // maxDateTotal: ,
     maxDateLoaded: df.parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
-    onLoadMoreFuture: action('fetch-future-data'),
     isLoadingFuture: true // static example can not really finish loading anyways
   }
 
@@ -72,17 +71,10 @@ export const BookingCalendar_with_mock_data = () => {
         initialOpen={true}
         initialQuantity={1}
         loadingIndicator={<span>Loading…</span>}
+        onLoadMoreFuture={action('fetch-future-data')}
+        onSubmit={action('submit')}
         {...exampleProps}
       />
-      <hr />
-      {/* <div className="p-2">
-        <h3 className="code">fake timestamp:</h3>
-        <pre>{JSON.stringify(FAKE_STYLEGUIDE_TIME)}</pre>
-        <h3 className="code">mock data used:</h3>
-        <pre>{JSON.stringify(apiData, 0, 2)}</pre>
-        <h3 className="font-monospace">mock data from spec:</h3>
-        <pre>{JSON.stringify(mock.spec, 0, 2)}</pre>
-      </div> */}
     </div>
   )
 }
@@ -90,6 +82,24 @@ export const BookingCalendar_with_mock_data = () => {
 BookingCalendar_with_mock_data.story = {
   component: BookingCalendar,
   parameters: {
-    info: { excludedPropTypes: ['_now'] }
+    info: {
+      excludedPropTypes: ['_now'],
+      text: (
+        <div>
+          <h3 className="h3 code text-monospace">
+            fake timestamp: <small>{JSON.stringify(FAKE_STYLEGUIDE_TIME)}</small>
+          </h3>
+
+          <details>
+            <summary className="h3 text-monospace">mock data used:</summary>
+            <pre>{JSON.stringify(apiData, 0, 2)}</pre>
+          </details>
+          <details>
+            <summary className="h3 text-monospace">mock data from spec:</summary>
+            <pre>{JSON.stringify(mock.spec, 0, 2)}</pre>
+          </details>
+        </div>
+      )
+    }
   }
 }

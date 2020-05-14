@@ -43,6 +43,7 @@ export const BookingCalendar = ({
   //
   onLoadMoreFuture,
   isLoadingFuture,
+  onSubmit,
   //
   showClearDates = true,
   //
@@ -189,7 +190,15 @@ export const BookingCalendar = ({
           href="#"
           className="btn btn-primary"
           disabled={!isValidForm}
-          onClick={e => alert('nope!')}
+          onClick={e => {
+            e.preventDefault()
+            onSubmit({
+              startDate: selectedRange.startDate,
+              endDate: selectedRange.endDate,
+              quantity,
+              poolId: selectedPoolId
+            })
+          }}
         >
           Add
         </button>
@@ -237,20 +246,22 @@ BookingCalendar.propTypes = {
   maxDateTotal: PropTypes.instanceOf(Date),
   /** Latest date for which data has be loaded. Navigating further will trigger "onLoadMoreFuture" callback */
   maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
-  /** callback that is called when more data needs to be loaded. arguments: `newDate`: the new date */
+  /** callback, when more data needs to be loaded. arguments: `{date}` */
   onLoadMoreFuture: PropTypes.func.isRequired,
   /** true if data is currently beeing feched for future dates (e.g. after the current `maxDateLoaded`) */
   isLoadingFuture: PropTypes.bool.isRequired,
   /** date that is initially shown */
   initialStartDate: PropTypes.instanceOf(Date),
   /** availabilty and visits info from API */
-  modelData: modelDataPropType.isRequired
+  modelData: modelDataPropType.isRequired,
+  /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
+  onSubmit: PropTypes.func.isRequired
 }
 
 function handleShownDateChange(newDate, maxDateLoaded, maxDateTotal, numMonths, callback) {
   if (!f.isFunction(callback)) return false
   const targetDate = df.min([df.addMonths(df.endOfMonth(newDate), numMonths * 3), maxDateTotal])
-  if (df.isAfter(targetDate, maxDateLoaded)) callback(targetDate)
+  if (df.isAfter(targetDate, maxDateLoaded)) callback({ date: targetDate })
 }
 
 function getAvailabilityByDateAndPool(modelData) {
@@ -260,8 +271,10 @@ function getAvailabilityByDateAndPool(modelData) {
   )
 }
 
-function getByDay(obj, date) {
-  return obj[df.format(date, 'yyyy-MM-dd')]
+function getByDay(dateList, date) {
+  if (f.isArray(dateList)) return f.find(dateList, day => df.isSameDay(day, date))
+  if (f.isObject(dateList)) return dateList[df.format(date, 'yyyy-MM-dd')]
+  throw TypeError
 }
 
 function calcAllBlockedDates(availabilityByDate, wantedQuantity = 1) {
@@ -292,7 +305,6 @@ function isValidSelection(
     return !getByDay(blockedDates, startDate)
   } else {
     if (df.isBefore(endDate, startDate)) return false // we get this from calendar sometime, need to check or interval throws RangeError!)
-    // debugger
     if (f.isEmpty(blockedDates)) return true // dont iterate over interval if nothing is blocked!
     return !df
       .eachDayOfInterval({ start: df.startOfDay(startDate), end: df.startOfDay(endDate) })
