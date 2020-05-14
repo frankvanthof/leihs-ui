@@ -1,16 +1,12 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import f from 'lodash'
 
-import { DateRange } from 'react-date-range'
+import { DateRange } from '@leihs/calendar'
 const df = require('date-fns')
 
 // TODO:
-// - fix isBlocked - distinguish blocked visits (only start/end) and unavailable (for ranges)
-//   - how? it only has "disabled days", not "disabled ranges" :/
-//   - try using diabledDates for *unavailable*, then it behaves correct
-//   - figure out how to block visit days…
-//   - if fork: disabledDays -> blockedDays, disabledStartDays, disabledEndDays…
 // - reset endDate if new startDate is changed AND endDate is not valid anymore
 // - fix in component:
 //   - when selecting earlier start date do not reset range!
@@ -27,16 +23,76 @@ const WIP_STYLES = `
   // }
 `
 
+// eslint-disable-next-line no-console, no-unused-vars
+const WIP_DEBUG_CALLBACK = name => (a, b, c) => console.log(name, { a, b, c })
+
+const modelDataPropType = PropTypes.shape({
+  models: PropTypes.shape({
+    edges: PropTypes.arrayOf(
+      PropTypes.shape({
+        node: PropTypes.shape({
+          availability: PropTypes.arrayOf(
+            PropTypes.shape({
+              dates: PropTypes.arrayOf(
+                PropTypes.shape({
+                  date: PropTypes.string.isRequired,
+                  endDateRestriction: PropTypes.oneOf(['CLOSE_TIME', 'VISITS_CAPACITY_REACHED']),
+                  quantity: PropTypes.number.isRequired,
+                  startDateRestriction: PropTypes.oneOf(['CLOSE_TIME', 'VISITS_CAPACITY_REACHED'])
+                })
+              )
+            })
+          ),
+          id: PropTypes.string.isRequired
+        })
+      })
+    )
+  })
+})
+
+const bookingCalendarPropTypes = {
+  /** minimum rental duration expressed as "nights between pickup and return" */
+  minimumNights: PropTypes.number,
+  /** earliest date that can be selected or navigated to */
+  minDateTotal: PropTypes.instanceOf(Date).isRequired,
+  /** earliest date for which data was loaded. NOTE: navigating further into past is NOT supported! */
+  minDateLoaded: PropTypes.instanceOf(Date).isRequired,
+  /** latest date that can be selected or navigated to */
+  maxDateTotal: PropTypes.instanceOf(Date),
+  /** Latest date for which data has be loaded. Navigating further will trigger "onLoadMoreFuture" callback */
+  maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
+  /** callback that is called when more data needs to be loaded. arguments: `newDate`: the new date */
+  onLoadMoreFuture: PropTypes.func.isRequired,
+  /** true if data is currently beeing feched for future dates (e.g. after the current `maxDateLoaded`) */
+  isLoadingFuture: PropTypes.bool.isRequired,
+  /** date that is initially shown */
+  initialStartDate: PropTypes.instanceOf(Date),
+  /** availabilty and visits info from API */
+  modelData: modelDataPropType.isRequired
+}
+
 export const BookingCalendar = ({
-  small = false,
-  disabled = false,
-  required = false,
-  minimumDays = 0,
-  showClearDates = true,
-  initialOpen = false,
-  autoFocus = initialOpen,
-  initialQuantity = 1,
+  _now = new Date(),
+  // minimumNights = 0, // TODO: use this…
+  //
+  /** availabilty and visits info from API */
   modelData,
+  minDateTotal = _now,
+  minDateLoaded,
+  maxDateTotal = df.parseISO('2999-12-31'),
+  maxDateLoaded,
+  // TODO: select next possible date (maybe only if next week?)
+  initialStartDate = df.max([_now, minDateTotal]),
+  initialEndDate = initialStartDate,
+  initialQuantity = 1,
+  //
+  onLoadMoreFuture,
+  isLoadingFuture,
+  //
+  showClearDates = true,
+  //
+  numMonths = 1,
+  // styling
   cardClass = 'm-2',
   cardStyle
 }) => {
@@ -45,17 +101,9 @@ export const BookingCalendar = ({
   const [hasUserInteracted, setHasUserInteracted] = useState(false)
   const availabilityByDate = getAvailabilityByDate(modelData)
 
-  // const [selectedRange, setSelectedRange] = useState({
-  //   startDate: new Date(),
-  //   endDate: new Date(),
-  //   key: 'selection',
-  //   autoFocus: true
-  // })
-
-  // TODO: select next possible date (maybe only if next week?)
   const initialSelectedRange = {
-    startDate: today,
-    endDate: today,
+    startDate: df.startOfDay(initialStartDate),
+    endDate: df.startOfDay(initialEndDate),
     key: 'selection',
     autoFocus: true,
     disabled: false,
@@ -73,7 +121,6 @@ export const BookingCalendar = ({
   }
 
   const allBlockedDates = calcAllBlockedDates(availabilityByDate, quantity)
-  // console.log({ allBlockedDates })
   const { blockedDates, blockedStartDates, blockedEndDates } = allBlockedDates
 
   const isValidForm = isValidSelection(selectedRange, allBlockedDates, quantity)
@@ -125,9 +172,10 @@ export const BookingCalendar = ({
             </label>
           </div>
           <div className="form-group form-group-sm col-8 ">
-            <label>
-              Inventory Pool{' '}
+            <label className="w-100">
+              Inventory Pool
               <select className="custom-select custom-select-sm">
+                {/* FIXME: get list from props, enable select */}
                 <option value="1">Ausleihe Toni-Areal (max. 5)</option>
               </select>
             </label>
@@ -145,20 +193,27 @@ export const BookingCalendar = ({
             }}
             moveRangeOnFirstSelection={false}
             direction="vertical"
+            months={numMonths}
             className="m-0"
-            scroll={{
-              enabled: true,
-              monthHeight: WIP_LARGE_SIZE ? 278 : undefined
-            }}
+            // scroll={{
+            //   enabled: true,
+            //   monthHeight: WIP_LARGE_SIZE ? 278 : undefined
+            // }}
             //
             ranges={[selectedRange]}
             //
             minDate={today}
+            maxDate={df.min([maxDateLoaded, maxDateTotal])}
             disabledDates={blockedDates}
             disabledStartDates={blockedStartDates}
             disabledEndDates={blockedEndDates}
             //
             weekStartsOn={1}
+            //
+            onShownDateChange={date =>
+              handleShownDateChange(date, maxDateLoaded, maxDateTotal, numMonths, onLoadMoreFuture)
+            }
+            isLoadingFuture={isLoadingFuture}
           />
         </div>
       </div>
@@ -175,12 +230,22 @@ export const BookingCalendar = ({
         <button type="button" href="#" className="btn btn-link">
           Cancel
         </button>
-        <button type="button" href="#" className="btn btn-link" onClick={clearForm}>
-          Clear
-        </button>
+        {showClearDates && (
+          <button type="button" href="#" className="btn btn-link" onClick={clearForm}>
+            Clear
+          </button>
+        )}
       </div>
     </div>
   )
+}
+
+BookingCalendar.propTypes = bookingCalendarPropTypes
+
+function handleShownDateChange(newDate, maxDateLoaded, maxDateTotal, numMonths, callback) {
+  if (!f.isFunction(callback)) return false
+  const targetDate = df.min([df.addMonths(df.endOfMonth(newDate), numMonths * 3), maxDateTotal])
+  if (df.isAfter(targetDate, maxDateLoaded)) callback(targetDate)
 }
 
 function getAvailabilityByDate(modelData) {
