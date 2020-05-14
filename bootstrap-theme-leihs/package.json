@@ -14,10 +14,10 @@
   "browserslist": "defaults, not dead",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "bootstrap": "^4.4.1",
-    "react-date-range": "https://github.com/eins78/react-date-range#ee1c39bc2ebb2dee2f20eba99485f06bd728915d"
+    "bootstrap": "^4.4.1"
   },
   "devDependencies": {
+    "@leihs/calendar": "https://github.com/leihs/leihs-calendar.git#9b11ad5",
     "autoprefixer": "^9.7.4",
     "css-loader": "^3.4.2",
     "mini-css-extract-plugin": "^0.9.0",

@@ -55,8 +55,14 @@
         "edges": [
           {
             "node": {
+              "id": "4a2db46e-7333-4238-b724-2dada5ddb75b",
+              "name": "AVCHD-Kamera Sony HXR-NX5E",
               "availability": [
                 {
+                  "inventoryPool": {
+                    "id": "7d32a165-7879-4dda-b33d-4d5c842a20de",
+                    "name": "Videopool"
+                  },
                   "dates": [
                     {
                       "date": "2020-04-24",
@@ -294,8 +300,7 @@
                     }
                   ]
                 }
-              ],
-              "id": "4a2db46e-7333-4238-b724-2dada5ddb75b"
+              ]
             }
           }
         ]

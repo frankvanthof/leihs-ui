@@ -9,6 +9,7 @@ import { Calendar } from 'react-date-range'
 // eslint-disable-next-line no-unused-vars
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 const df = require('date-fns')
+window.f = f
 
 export default {
   title: 'MobileApp/Components/Calendar',
@@ -56,7 +57,7 @@ export const BookingCalendar_with_mock_data = () => {
   const now = new Date()
 
   const exampleProps = {
-    modelData: apiData,
+    modelData: f.first(apiData.models.edges.map(edg => edg.node)),
     minDateTotal: now,
     minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     // maxDateTotal: ,
@@ -67,7 +68,12 @@ export const BookingCalendar_with_mock_data = () => {
 
   return (
     <div>
-      <BookingCalendar initialOpen={true} autoFocus={true} initialQuantity={1} {...exampleProps} />
+      <BookingCalendar
+        initialOpen={true}
+        initialQuantity={1}
+        loadingIndicator={<span>Loading…</span>}
+        {...exampleProps}
+      />
       <hr />
       {/* <div className="p-2">
         <h3 className="code">fake timestamp:</h3>

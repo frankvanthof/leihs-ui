@@ -26,51 +26,6 @@ const WIP_STYLES = `
 // eslint-disable-next-line no-console, no-unused-vars
 const WIP_DEBUG_CALLBACK = name => (a, b, c) => console.log(name, { a, b, c })
 
-const modelDataPropType = PropTypes.shape({
-  models: PropTypes.shape({
-    edges: PropTypes.arrayOf(
-      PropTypes.shape({
-        node: PropTypes.shape({
-          availability: PropTypes.arrayOf(
-            PropTypes.shape({
-              dates: PropTypes.arrayOf(
-                PropTypes.shape({
-                  date: PropTypes.string.isRequired,
-                  endDateRestriction: PropTypes.oneOf(['CLOSE_TIME', 'VISITS_CAPACITY_REACHED']),
-                  quantity: PropTypes.number.isRequired,
-                  startDateRestriction: PropTypes.oneOf(['CLOSE_TIME', 'VISITS_CAPACITY_REACHED'])
-                })
-              )
-            })
-          ),
-          id: PropTypes.string.isRequired
-        })
-      })
-    )
-  })
-})
-
-const bookingCalendarPropTypes = {
-  /** minimum rental duration expressed as "nights between pickup and return" */
-  minimumNights: PropTypes.number,
-  /** earliest date that can be selected or navigated to */
-  minDateTotal: PropTypes.instanceOf(Date).isRequired,
-  /** earliest date for which data was loaded. NOTE: navigating further into past is NOT supported! */
-  minDateLoaded: PropTypes.instanceOf(Date).isRequired,
-  /** latest date that can be selected or navigated to */
-  maxDateTotal: PropTypes.instanceOf(Date),
-  /** Latest date for which data has be loaded. Navigating further will trigger "onLoadMoreFuture" callback */
-  maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
-  /** callback that is called when more data needs to be loaded. arguments: `newDate`: the new date */
-  onLoadMoreFuture: PropTypes.func.isRequired,
-  /** true if data is currently beeing feched for future dates (e.g. after the current `maxDateLoaded`) */
-  isLoadingFuture: PropTypes.bool.isRequired,
-  /** date that is initially shown */
-  initialStartDate: PropTypes.instanceOf(Date),
-  /** availabilty and visits info from API */
-  modelData: modelDataPropType.isRequired
-}
-
 export const BookingCalendar = ({
   _now = new Date(),
   // minimumNights = 0, // TODO: use this…
@@ -97,9 +52,9 @@ export const BookingCalendar = ({
   cardStyle
 }) => {
   const today = df.startOfDay(new Date())
-  const [quantity, setQuantity] = useState(initialQuantity)
-  const [hasUserInteracted, setHasUserInteracted] = useState(false)
-  const availabilityByDate = getAvailabilityByDate(modelData)
+
+  const inventoryPools = f.map(modelData.availability, 'inventoryPool')
+  const availabilityByDateAndPool = getAvailabilityByDateAndPool(modelData)
 
   const initialSelectedRange = {
     startDate: df.startOfDay(initialStartDate),
@@ -114,13 +69,17 @@ export const BookingCalendar = ({
   // const hasSelectedRange =
   //   df.isValid(selectedRange.startDate) && df.isValid(selectedRange.endDate)
 
+  const [quantity, setQuantity] = useState(initialQuantity)
+  const [hasUserInteracted, setHasUserInteracted] = useState(false)
+  const [selectedPoolId, setSelectedPoolId] = useState(f.first(inventoryPools).id)
+
   const clearForm = () => {
     setQuantity(initialQuantity)
     setSelectedRange(initialSelectedRange)
     setHasUserInteracted(false)
   }
 
-  const allBlockedDates = calcAllBlockedDates(availabilityByDate, quantity)
+  const allBlockedDates = calcAllBlockedDates(availabilityByDateAndPool[selectedPoolId], quantity)
   const { blockedDates, blockedStartDates, blockedEndDates } = allBlockedDates
 
   const isValidForm = isValidSelection(selectedRange, allBlockedDates, quantity)
@@ -151,7 +110,7 @@ export const BookingCalendar = ({
 
       <div className="card-header">
         <h5 className="card-title d-inline-flex mr-3 mb-0">Add to order</h5>
-        <p className="card-text d-inline-flex">AVCHD-Kamera Sony HXR-NX5E</p>
+        <p className="card-text d-inline-flex">{modelData.name}</p>
       </div>
       <div className="card-body px-2 px-sm-3 py-3 py-sm-4">
         <div className="form-row">
@@ -174,9 +133,16 @@ export const BookingCalendar = ({
           <div className="form-group form-group-sm col-8 ">
             <label className="w-100">
               Inventory Pool
-              <select className="custom-select custom-select-sm">
-                {/* FIXME: get list from props, enable select */}
-                <option value="1">Ausleihe Toni-Areal (max. 5)</option>
+              <select
+                className="custom-select custom-select-sm"
+                value={selectedPoolId}
+                onChange={e => setSelectedPoolId(e.target.value)}
+              >
+                {inventoryPools.map(({ id, name }) => (
+                  <option key={id} value={id}>
+                    {name} (max. XXX)
+                  </option>
+                ))}
               </select>
             </label>
           </div>
@@ -195,10 +161,10 @@ export const BookingCalendar = ({
             direction="vertical"
             months={numMonths}
             className="m-0"
-            // scroll={{
-            //   enabled: true,
-            //   monthHeight: WIP_LARGE_SIZE ? 278 : undefined
-            // }}
+            scroll={{
+              enabled: true,
+              monthHeight: WIP_LARGE_SIZE ? 278 : undefined
+            }}
             //
             ranges={[selectedRange]}
             //
@@ -240,7 +206,46 @@ export const BookingCalendar = ({
   )
 }
 
-BookingCalendar.propTypes = bookingCalendarPropTypes
+const modelDataPropType = PropTypes.shape({
+  id: PropTypes.string,
+  availability: PropTypes.arrayOf(
+    PropTypes.shape({
+      inventoryPool: PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string
+      }),
+      dates: PropTypes.arrayOf(
+        PropTypes.shape({
+          date: PropTypes.string,
+          endDateRestriction: PropTypes.any,
+          quantity: PropTypes.number,
+          startDateRestriction: PropTypes.any
+        })
+      )
+    })
+  )
+})
+
+BookingCalendar.propTypes = {
+  // /** minimum rental duration expressed as "nights between pickup and return" */
+  // minimumNights: PropTypes.number,
+  /** earliest date that can be selected or navigated to */
+  minDateTotal: PropTypes.instanceOf(Date).isRequired,
+  /** earliest date for which data was loaded. NOTE: navigating further into past is NOT supported! */
+  minDateLoaded: PropTypes.instanceOf(Date).isRequired,
+  /** latest date that can be selected or navigated to */
+  maxDateTotal: PropTypes.instanceOf(Date),
+  /** Latest date for which data has be loaded. Navigating further will trigger "onLoadMoreFuture" callback */
+  maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
+  /** callback that is called when more data needs to be loaded. arguments: `newDate`: the new date */
+  onLoadMoreFuture: PropTypes.func.isRequired,
+  /** true if data is currently beeing feched for future dates (e.g. after the current `maxDateLoaded`) */
+  isLoadingFuture: PropTypes.bool.isRequired,
+  /** date that is initially shown */
+  initialStartDate: PropTypes.instanceOf(Date),
+  /** availabilty and visits info from API */
+  modelData: modelDataPropType.isRequired
+}
 
 function handleShownDateChange(newDate, maxDateLoaded, maxDateTotal, numMonths, callback) {
   if (!f.isFunction(callback)) return false
@@ -248,10 +253,11 @@ function handleShownDateChange(newDate, maxDateLoaded, maxDateTotal, numMonths, 
   if (df.isAfter(targetDate, maxDateLoaded)) callback(targetDate)
 }
 
-function getAvailabilityByDate(modelData) {
-  const models = f.get(modelData, 'models.edges')
-  if (!models) return {}
-  return f.fromPairs(models.flatMap(edg => edg.node.availability.flatMap(avb => avb.dates)).map(i => [i.date, i]))
+function getAvailabilityByDateAndPool(modelData) {
+  if (!modelData) return {}
+  return f.fromPairs(
+    f.map(modelData.availability, abp => [abp.inventoryPool.id, f.fromPairs(abp.dates.map(i => [i.date, i]))])
+  )
 }
 
 function getByDay(obj, date) {
