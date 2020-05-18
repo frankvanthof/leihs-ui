@@ -51,10 +51,10 @@ WIP_just_a_datepicker.story = {
   }
 }
 
-const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
-const apiData = mock.result.data
 export const BookingCalendar_with_mock_data = () => {
   const now = new Date()
+  const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
+  const apiData = mock.result.data
 
   const exampleProps = {
     modelData: f.first(apiData.models.edges.map(edg => edg.node)),
@@ -75,6 +75,21 @@ export const BookingCalendar_with_mock_data = () => {
         onSubmit={action('submit')}
         {...exampleProps}
       />
+      <hr />
+      <div className="m-4">
+        <h3 className="h4 code text-monospace">
+          fake timestamp: <small key="small">{JSON.stringify(FAKE_STYLEGUIDE_TIME)}</small>
+        </h3>
+
+        <details>
+          <summary className="h4 text-monospace">mock data used:</summary>
+          <pre>{JSON.stringify(apiData, 0, 2)}</pre>
+        </details>
+        <details>
+          <summary className="h4 text-monospace">mock data from spec:</summary>
+          <pre>{JSON.stringify(mock.spec, 0, 2)}</pre>
+        </details>
+      </div>
     </div>
   )
 }
@@ -83,23 +98,7 @@ BookingCalendar_with_mock_data.story = {
   component: BookingCalendar,
   parameters: {
     info: {
-      excludedPropTypes: ['_now'],
-      text: (
-        <div>
-          <h3 className="h3 code text-monospace">
-            fake timestamp: <small>{JSON.stringify(FAKE_STYLEGUIDE_TIME)}</small>
-          </h3>
-
-          <details>
-            <summary className="h3 text-monospace">mock data used:</summary>
-            <pre>{JSON.stringify(apiData, 0, 2)}</pre>
-          </details>
-          <details>
-            <summary className="h3 text-monospace">mock data from spec:</summary>
-            <pre>{JSON.stringify(mock.spec, 0, 2)}</pre>
-          </details>
-        </div>
-      )
+      excludedPropTypes: ['_now']
     }
   }
 }
