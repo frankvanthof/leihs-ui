@@ -18,6 +18,12 @@ const BASE_CLASS = 'ui-booking-calendar'
 const WIP_STYLES = `
   .ui-booking-calendar { margin-left: auto !important; margin-right: auto !important; }
   .rdrCalendarWrapper, .rdrDateRangeWrapper { margin: auto; }
+
+  .rdrMonth, .rdrMonthIsLoading, .rdrMonthName, .rdrWeekDays { padding-left: 0; padding-right: 0; }
+  .rdrNextPrevButton { margin-left: 0; margin-right: 0; }
+
+  .rdrMonth, .rdrMonthIsLoading { width: initial }
+
   // .rdrDayDisabled:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd) .rdrDayNumber span {
   //   text-decoration: line-through;
   // }
@@ -216,23 +222,24 @@ export const BookingCalendar = ({
 }
 
 const modelDataPropType = PropTypes.shape({
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   availability: PropTypes.arrayOf(
     PropTypes.shape({
       inventoryPool: PropTypes.shape({
-        id: PropTypes.string,
-        name: PropTypes.string
-      }),
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired
+      }).isRequired,
       dates: PropTypes.arrayOf(
         PropTypes.shape({
-          date: PropTypes.string,
+          date: PropTypes.string.isRequired,
           endDateRestriction: PropTypes.any,
-          quantity: PropTypes.number,
+          quantity: PropTypes.number.isRequired,
           startDateRestriction: PropTypes.any
         })
-      )
+      ).isRequired
     })
-  )
+  ).isRequired
 })
 
 BookingCalendar.propTypes = {
