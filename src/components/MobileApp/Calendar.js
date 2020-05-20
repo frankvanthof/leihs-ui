@@ -176,7 +176,7 @@ export const BookingCalendar = ({
             ranges={[selectedRange]}
             //
             minDate={today}
-            maxDate={df.min([maxDateLoaded, maxDateTotal])}
+            maxDate={maxDateLoaded ? df.min([maxDateLoaded, maxDateTotal]) : maxDateTotal}
             disabledDates={blockedDates}
             disabledStartDates={blockedStartDates}
             disabledEndDates={blockedEndDates}

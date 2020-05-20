@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import React, { useState } from 'react'
 import f from 'lodash'
 
-import { BookingCalendar } from './BookingCalendar'
+import { BookingCalendar } from './Calendar'
 import { Calendar } from '@leihs/calendar'
 // eslint-disable-next-line no-unused-vars
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
@@ -58,10 +58,10 @@ export const BookingCalendar_with_mock_data = () => {
 
   const exampleProps = {
     modelData: f.first(apiData.models.edges.map(edg => edg.node)),
-    minDateTotal: now,
-    minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
+    // minDateTotal: now,
+    // minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     // maxDateTotal: ,
-    maxDateLoaded: df.parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
+    // maxDateLoaded: df.parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     isLoadingFuture: true // static example can not really finish loading anyways
   }
 
