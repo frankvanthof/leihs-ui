@@ -27,6 +27,10 @@ const WIP_STYLES = `
   // .rdrDayDisabled:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd) .rdrDayNumber span {
   //   text-decoration: line-through;
   // }
+
+  .rdrMonthPassiveOverlay {
+    // background: rebeccapurple;
+  }
 `
 
 // eslint-disable-next-line no-console, no-unused-vars
@@ -40,8 +44,9 @@ export const BookingCalendar = ({
   /** availabilty and visits info from API */
   modelData,
   minDateTotal = _now,
-  minDateLoaded,
-  maxDateTotal = df.parseISO('2999-12-31'),
+  // minDateLoaded,
+  // maxDateTotal = df.parseISO('2999-12-31'),
+  maxDateTotal = df.parseISO('2037-12-31'),
   maxDateLoaded,
   // TODO: select next possible date (maybe only if next week?)
   initialStartDate = df.max([_now, minDateTotal]),
@@ -51,8 +56,10 @@ export const BookingCalendar = ({
   inventoryPools,
   initialInventoryPoolId,
   //
+  // TODO: rename prop (on show date change, on date navigation, …)
   onLoadMoreFuture,
-  isLoadingFuture,
+  loadingIndicator,
+  //
   onDatesChange = noop,
   onQuantityChange = noop,
   onInventoryPoolChange = noop,
@@ -177,34 +184,37 @@ export const BookingCalendar = ({
         <div style={{ display: 'flex', flexFlow: 'column nowrap' }}>
           <DateRange
             editableDateInputs={true}
-            onChange={item => {
-              setSelectedRange(item.selection)
-              setHasUserInteracted(true)
-              onDatesChange(stateForCallbacks())
-            }}
+            onChange={noop}
+            // onChange={item => {
+            //   setSelectedRange(item.selection)
+            //   // setSelectedRange(Object.assign(selectedRange, item.selection))
+            //   setHasUserInteracted(true)
+            //   onDatesChange(stateForCallbacks())
+            // }}
             moveRangeOnFirstSelection={false}
             direction="vertical"
             months={numMonths}
             className="m-0"
             scroll={{
-              enabled: true,
-              monthHeight: WIP_LARGE_SIZE ? 278 : undefined
+              enabled: true
+              // monthHeight: WIP_LARGE_SIZE ? 278 : undefined
             }}
             //
             ranges={[selectedRange]}
             //
             minDate={today}
-            maxDate={df.min([maxDateLoaded, maxDateTotal])}
+            maxDate={maxDateTotal}
+            maxDateLoaded={maxDateLoaded}
             disabledDates={blockedDates}
             disabledStartDates={blockedStartDates}
             disabledEndDates={blockedEndDates}
             //
             weekStartsOn={1}
             //
-            onShownDateChange={date =>
+            onShownDateChange={date => {
               handleShownDateChange(date, maxDateLoaded, maxDateTotal, numMonths, onLoadMoreFuture)
-            }
-            isLoadingFuture={isLoadingFuture}
+            }}
+            loadingIndicator={loadingIndicator}
           />
         </div>
       </div>
@@ -267,8 +277,8 @@ BookingCalendar.propTypes = {
   maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
   /** callback, when more data needs to be loaded. arguments: `{date}` */
   onLoadMoreFuture: PropTypes.func.isRequired,
-  /** true if data is currently beeing feched for future dates (e.g. after the current `maxDateLoaded`) */
-  isLoadingFuture: PropTypes.bool.isRequired,
+  /** content overlayed over Month when data has not loaded (when any day is before `maxDateloaded`) */
+  loadingIndicator: PropTypes.node,
   /** date that is initially shown */
   initialStartDate: PropTypes.instanceOf(Date),
   /** availabilty and visits info from API */
@@ -336,8 +346,8 @@ function isValidSelection(
   } else {
     if (df.isBefore(endDate, startDate)) return false // we get this from calendar sometime, need to check or interval throws RangeError!)
     if (f.isEmpty(blockedDates)) return true // dont iterate over interval if nothing is blocked!
-    return !df
-      .eachDayOfInterval({ start: df.startOfDay(startDate), end: df.startOfDay(endDate) })
-      .some(date => getByDay(blockedDates, startDate))
+    // return !df
+    //   .eachDayOfInterval({ start: df.startOfDay(startDate), end: df.startOfDay(endDate) })
+    return !df.eachDayOfInterval({ start: startDate, end: endDate }).some(date => getByDay(blockedDates, startDate))
   }
 }

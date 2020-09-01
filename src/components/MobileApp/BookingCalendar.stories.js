@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import f from 'lodash'
 
 import { BookingCalendar } from './BookingCalendar'
-import { Calendar } from '@leihs/calendar'
+import { DateRange } from '@leihs/calendar'
 // eslint-disable-next-line no-unused-vars
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 const df = require('date-fns')
@@ -33,13 +33,20 @@ export const WIP_just_a_datepicker = () => {
       <p className="d-block m-auto">
         selected date: <samp>{JSON.stringify(selectedDate)}</samp>
       </p>
-      <Calendar
+      <DateRange
         className="m-auto"
         displayMode="date"
         months={1}
         minDate={onlyFuture ? now : null}
         date={selectedDate}
         onChange={onChange}
+        // TMP:
+        maxDateLoaded={df.parseISO('2020-07-31')}
+        loadingIndicator={'cargando…'}
+        scroll={{
+          enabled: true
+          // monthHeight: WIP_LARGE_SIZE ? 278 : undefined
+        }}
       />
     </div>
   )
@@ -47,7 +54,7 @@ export const WIP_just_a_datepicker = () => {
 
 WIP_just_a_datepicker.story = {
   parameters: {
-    info: { inline: true, text: 'Hi!!!' }
+    info: { inline: true, text: 'testing…' }
   }
 }
 
@@ -75,8 +82,7 @@ export const BookingCalendar_with_mock_data = () => {
     minDateTotal: now,
     minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     // maxDateTotal: ,
-    maxDateLoaded: df.parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
-    isLoadingFuture: true // static example can not really finish loading anyways
+    maxDateLoaded: df.parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date'))
   }
 
   return (
@@ -84,7 +90,7 @@ export const BookingCalendar_with_mock_data = () => {
       <BookingCalendar
         initialOpen={true}
         initialQuantity={1}
-        loadingIndicator={<span>Loading…</span>}
+        loadingIndicator={'cargando…'}
         onLoadMoreFuture={action('fetch-future-data')}
         onDatesChange={action('dates-changed')}
         onQuantityChange={action('quantity-changed')}
