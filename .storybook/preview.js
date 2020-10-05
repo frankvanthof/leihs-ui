@@ -8,8 +8,8 @@ import '../src/theme/bootstrap-leihs.css'
 // addDecorator(withInfo)
 
 addParameters({
-  viewport: {
-    // viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
-    // defaultViewport: 'mobile2'
-  }
+  // viewport: {
+  //   // viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
+  //   // defaultViewport: 'mobile2'
+  // }
 })
