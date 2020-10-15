@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AppWrapper, MainView, Navbar, Page } from './AppLayout'
+import { AppWrapper, MainView, Navbar, Page, CallToAction } from './AppLayout'
 
 export default {
   title: 'MobileApp/Components/AppLayout',
@@ -15,15 +15,9 @@ export const EmptyCart = () => (
   <AppWrapper>
     <MainView navbar={fakeNavbar}>
       <Page title={'Bestellübersicht'}>
-        <div className="bg-content-muted text-center my-4 px-2 py-4 rounded-lg">
-          <div className="text-base">Deine Bestellung ist leer</div>
-          <a
-            href="/app/borrow/"
-            className="d-inline-block text-xl bg-content-inverse text-color-content-inverse rounded-pill px-4 py-2 my-4"
-          >
-            Gegenstände ausleihen
-          </a>
-        </div>
+        <CallToAction className="my-4" actions={[{ href: '#/app/borrow/', children: 'Gegenstände ausleihen' }]}>
+          Deine Bestellung ist leer
+        </CallToAction>
       </Page>
     </MainView>
   </AppWrapper>

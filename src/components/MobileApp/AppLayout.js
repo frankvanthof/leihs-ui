@@ -1,4 +1,5 @@
 import React from 'react'
+import cx from 'classnames'
 
 export const AppWrapper = ({ children }) => <div id="app">{children}</div>
 
@@ -8,6 +9,26 @@ export const MainView = ({ navbar = false, errors = false, children }) => (
     {errors}
     {children}
   </main>
+)
+
+export const CallToAction = ({ className, children, actions = [] }) => (
+  <div className={cx(className, 'bg-content-muted text-center px-2 py-4 rounded-lg')}>
+    <div className="text-base">{children}</div>
+    <div className="my-3">
+      {actions.map(({ className, ...props }, i) => (
+        <a
+          key={i}
+          {...props}
+          className={cx(className, 'btn btn-link d-inline-block text-xl rounded-pill px-4 py-2 my-1', {
+            'bg-content-inverse text-color-content-inverse': i === 0,
+            'text-color-content': i !== 0
+          })}
+        >
+          Gegenstände ausleihen
+        </a>
+      ))}
+    </div>
+  </div>
 )
 
 export const Navbar = ({ brandName = 'LEIHS', menuItem, cartItem }) => (
