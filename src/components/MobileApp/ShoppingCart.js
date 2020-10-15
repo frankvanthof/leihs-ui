@@ -22,6 +22,7 @@ export const ReservationLine = ({ reservation, quantity, isEditing, isInvalid })
       <Let src={f.get(model, 'coverImage.image-url')}>
         {({ src }) => (
           <img
+            alt={model.name}
             style={{ maxWidth: '4rem', maxHeight: '4rem' }}
             className="img-fluid img-thumbnail mr-3"
             href={'#modelShow'}

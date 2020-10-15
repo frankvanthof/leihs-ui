@@ -15006,11 +15006,13 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Token Was Expire
 </div>
 `;
 
-exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart 1`] = `
+exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart With Call To Action 1`] = `
 <div
   id="app"
 >
-  <main>
+  <main
+    className="ui-mainview"
+  >
     <nav
       className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
       style={
@@ -15081,30 +15083,43 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart 1`] = `
       </div>
     </nav>
     <div
-      className="p-2"
+      className="container-md p-1 p-sm-2"
+      style={
+        Object {
+          "maxWidth": "720px",
+        }
+      }
     >
-      <h1
-        className="mt-3 font-bold text-3xl"
-      >
-        Bestellübersicht
-      </h1>
       <div
-        className="my-4 bg-content-muted text-center px-2 py-4 rounded-lg"
+        className="ui-page p-2"
       >
-        <div
-          className="text-base"
+        <h1
+          className="font-bold text-3xl mt-3 mb-3"
         >
-          Deine Bestellung ist leer
-        </div>
+          Bestellübersicht
+        </h1>
         <div
-          className="my-3"
+          className="d-flex"
         >
-          <a
-            className="btn btn-link d-inline-block text-xl rounded-pill px-4 py-2 my-1 bg-content-inverse text-color-content-inverse"
-            href="#/app/borrow/"
+          <div
+            className="xmy-4 w-100 my-auto ui-calltoaction bg-content-muted text-center px-2 py-4 rounded-lg"
           >
-            Gegenstände ausleihen
-          </a>
+            <div
+              className="text-base"
+            >
+              Deine Bestellung ist leer
+            </div>
+            <div
+              className="mt-2 mb-0"
+            >
+              <a
+                className="btn btn-link d-inline-block text-xl rounded-pill px-4 py-2 my-2 mx-1 bg-content-inverse text-color-content-inverse"
+                href="#/app/borrow/"
+              >
+                Gegenstände ausleihen
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -15112,23 +15127,877 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
+exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] = `
 <div
-  className="p-4"
+  id="app"
 >
-  <ul
-    className="XXXlist-group XXXlist-group-flush"
-    style={
-      Object {
-        "margin": "auto",
-        "maxWidth": "650px",
+  <main
+    className="ui-mainview"
+  >
+    <nav
+      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      style={
+        Object {
+          "WebkitBackdropFilter": "blur(12px)",
+          "backgroundColor": "rgba(255, 255, 255, 0.83)",
+          "backgroundPosition": "initial initial",
+          "backgroundRepeat": "initial initial",
+          "borderBottomColor": "rgba(0, 0, 0, 0.08)",
+          "top": "0px",
+          "zIndex": 1000,
+        }
       }
-    }
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="#/app/borrow/about"
+          >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-black text-xl"
+          href="#/app/borrow/order"
+        >
+           LEIHS 
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow/order"
+          >
+            <span
+              className="ui-icon ui-icon-colored ui-shopping-cart-icon"
+            >
+              🛒
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      className="container-md p-1 p-sm-2"
+      style={
+        Object {
+          "maxWidth": "720px",
+        }
+      }
+    >
+      <div
+        className="ui-page p-2"
+      >
+        <h1
+          className="font-bold text-3xl mt-3 mb-3"
+        >
+          Title
+        </h1>
+        Content
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = `
+<div
+  id="app"
+>
+  <main
+    className="ui-mainview"
+  >
+    <nav
+      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      style={
+        Object {
+          "WebkitBackdropFilter": "blur(12px)",
+          "backgroundColor": "rgba(255, 255, 255, 0.83)",
+          "backgroundPosition": "initial initial",
+          "backgroundRepeat": "initial initial",
+          "borderBottomColor": "rgba(0, 0, 0, 0.08)",
+          "top": "0px",
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="#/app/borrow/about"
+          >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-black text-xl"
+          href="#/app/borrow/order"
+        >
+           LEIHS 
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow/order"
+          >
+            <span
+              className="ui-icon ui-icon-colored ui-shopping-cart-icon"
+            >
+              🛒
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      className="container-md p-1 p-sm-2"
+      style={
+        Object {
+          "maxWidth": "720px",
+        }
+      }
+    >
+      <div
+        className="ui-page p-2"
+      >
+        <div
+          Xstyle={
+            Object {
+              "boxShadow": "rgba(0, 0, 0, 0.15) 0px 0rem 2rem inset",
+            }
+          }
+          className="px-3 py-4 bg-light Xbg-content-muted mt-2 mb-3"
+        >
+          <form
+            action="/search"
+            className="form form-compact"
+          >
+            <div
+              className="form-group"
+            >
+              <label
+                className="row"
+              >
+                <span
+                  className="text-xs col-3 col-form-label"
+                >
+                  Suche 
+                </span>
+                <div
+                  className="col-9"
+                >
+                  <input
+                    className="form-control "
+                    name="search-term"
+                    placeholder="Suche"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <label
+              className="row"
+            >
+              <span
+                className="text-xs col-3 col-form-label"
+              >
+                Aus 
+              </span>
+              <div
+                className="col-9"
+              >
+                <select
+                  className="form-control"
+                  name="user-id"
+                >
+                  <option
+                    selected=""
+                    value="all"
+                  >
+                    Allen Geräteparks
+                  </option>
+                  <option
+                    value="8bd16d45-056d-5590-bc7f-12849f034351"
+                  >
+                    Ausleihe Toni-Areal
+                  </option>
+                  <option
+                    value="a02b8163-9a16-5066-b48e-9eb74cf8b791"
+                  >
+                    Fundus-DDK
+                  </option>
+                  <option
+                    value="5dd25b58-fa56-5095-bd97-2696d92c2fb1"
+                  >
+                    IT-Zentrum
+                  </option>
+                  <option
+                    value="4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04"
+                  >
+                    ITZ-Ausstellungen
+                  </option>
+                  <option
+                    value="3977012c-ce0e-501f-889b-8715fdb5d83b"
+                  >
+                    ITZ-Software
+                  </option>
+                </select>
+              </div>
+            </label>
+            <div
+              className="form-group"
+            >
+              <div
+                className="row"
+              >
+                <span
+                  className="text-xs col-3 col-form-label"
+                >
+                  Time Span
+                </span>
+                <div
+                  className="col-9"
+                >
+                  <label
+                    className="custom-control custom-checkbox"
+                  >
+                    <input
+                      className="custom-control-input"
+                      name="only-available"
+                      type="checkbox"
+                    />
+                    <span
+                      className="custom-control-label"
+                    >
+                      Show available only
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button
+              className="btn btn-success dont-invert rounded-pill mt-2"
+              type="submit"
+            >
+              Get Results
+            </button>
+            <button
+              className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+              type="button"
+            >
+              Clear
+            </button>
+          </form>
+        </div>
+        <div
+          className="mt-2 mb-4 ui-calltoaction bg-content-muted text-center px-2 py-4 rounded-lg"
+        >
+          <div
+            className="text-base"
+          >
+            Du hast bald eine Abholung!
+          </div>
+          <div
+            className="mt-2 mb-0"
+          >
+            <a
+              className="btn btn-link d-inline-block text-xl rounded-pill px-4 py-2 my-2 mx-1 bg-content-inverse text-color-content-inverse"
+              href="#/app/borrow/orders"
+            >
+              Abholungen ansehen
+            </a>
+          </div>
+        </div>
+        <section
+          className="ui-subsection"
+          data-title="Kategorien"
+        >
+          <div
+            className="mt-2 d-flex align-items-baseline justify-content-between"
+          >
+            <h2
+              className="font-bold text-2xl"
+            >
+              Kategorien
+            </h2>
+            <a
+              className="font-semibold text-color-content text-l"
+              href="#"
+            >
+              Alle
+            </a>
+          </div>
+          <div
+            className="ui-models-list row no-gutters d-flex flex-wrap mx-n2"
+          >
+            <div
+              className="col-6 col-sm-3 min-h-16"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <div
+                  className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+                >
+                  <a
+                    href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                  >
+                    <img
+                      alt=""
+                      className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+                      src="5d302b26-5737-48e7-a90d-e65f22d8c065.jpg"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="mx-0 mt-1 text-base leading-snug"
+                >
+                  <a
+                    className="text-color-content"
+                    href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                  >
+                    <span
+                      className="d-block text-truncate font-bold"
+                    >
+                      Audio
+                    </span>
+                    <span
+                      className="d-block text-truncate"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-6 col-sm-3 min-h-16"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <div
+                  className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+                >
+                  <a
+                    href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
+                  >
+                    <img
+                      alt=""
+                      className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+                      src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="mx-0 mt-1 text-base leading-snug"
+                >
+                  <a
+                    className="text-color-content"
+                    href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
+                  >
+                    <span
+                      className="d-block text-truncate font-bold"
+                    >
+                      Beleuchtungstechnik
+                    </span>
+                    <span
+                      className="d-block text-truncate"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-6 col-sm-3 min-h-16"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <div
+                  className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+                >
+                  <a
+                    href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
+                  >
+                    <img
+                      alt=""
+                      className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+                      src="fdfb06be-9bfc-5377-a82b-5d9fb0cc28fb.jpg"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="mx-0 mt-1 text-base leading-snug"
+                >
+                  <a
+                    className="text-color-content"
+                    href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
+                  >
+                    <span
+                      className="d-block text-truncate font-bold"
+                    >
+                      Effektgeräte Veranstaltungstechnik
+                    </span>
+                    <span
+                      className="d-block text-truncate"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-6 col-sm-3 min-h-16"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <div
+                  className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+                >
+                  <a
+                    href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
+                  >
+                    <div
+                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="mx-0 mt-1 text-base leading-snug"
+                >
+                  <a
+                    className="text-color-content"
+                    href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
+                  >
+                    <span
+                      className="d-block text-truncate font-bold"
+                    >
+                      Externe Massenspeicher
+                    </span>
+                    <span
+                      className="d-block text-truncate"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Cart 1`] = `
+<div
+  id="app"
+>
+  <main
+    className="ui-mainview"
+  >
+    <nav
+      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      style={
+        Object {
+          "WebkitBackdropFilter": "blur(12px)",
+          "backgroundColor": "rgba(255, 255, 255, 0.83)",
+          "backgroundPosition": "initial initial",
+          "backgroundRepeat": "initial initial",
+          "borderBottomColor": "rgba(0, 0, 0, 0.08)",
+          "top": "0px",
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="#/app/borrow/about"
+          >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-black text-xl"
+          href="#/app/borrow/order"
+        >
+           LEIHS 
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow/order"
+          >
+            <span
+              className="ui-icon ui-icon-colored ui-shopping-cart-icon"
+            >
+              🛒
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      className="container-md p-1 p-sm-2"
+      style={
+        Object {
+          "maxWidth": "720px",
+        }
+      }
+    >
+      <div
+        className="ui-page p-2"
+      >
+        <h1
+          className="font-bold text-3xl mt-3 mb-3"
+        >
+          Warenkorb
+        </h1>
+        <ul
+          className="list-unstyled"
+        >
+          <li
+            className="media border-bottom pb-2 mb-2 align-items-center"
+          >
+            <img
+              alt="AVCHD-Kamera Sony HXR-NX5E"
+              className="img-fluid img-thumbnail mr-3"
+              href="#modelShow"
+              onClick={[Function]}
+              src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
+              style={
+                Object {
+                  "maxHeight": "4rem",
+                  "maxWidth": "4rem",
+                }
+              }
+            />
+            <div
+              className="media-body"
+            >
+              <div
+                className="container-fluid"
+              >
+                <div
+                  className="row flex-nowrap align-items-end"
+                >
+                  <div
+                    className="col"
+                  >
+                    <p
+                      className="font-semibold mb-0"
+                    >
+                      AVCHD-Kamera Sony HXR-NX5E
+                    </p>
+                    <p
+                      className="small mb-0"
+                    >
+                      3
+                       item(s)
+                    </p>
+                    <p
+                      className="small mb-0"
+                    >
+                      3
+                       item(s)
+                    </p>
+                  </div>
+                  <div
+                    className="col-2 align-self-center flex-grow-1"
+                  >
+                    <div
+                      className="btn-group-vertical"
+                    >
+                      <button
+                        className="btn btn-sm btn-link text-muted text-center"
+                        onClick={[Function]}
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="svg-inline--fa fa-edit fa-w-18 fa-fw "
+                          data-icon="edit"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          style={Object {}}
+                          viewBox="0 0 576 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
+                            fill="currentColor"
+                            style={Object {}}
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        className="btn btn-sm btn-link text-muted text-center"
+                        onClick={[Function]}
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="svg-inline--fa fa-trash-alt fa-w-14 fa-fw "
+                          data-icon="trash-alt"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          style={Object {}}
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
+                            fill="currentColor"
+                            style={Object {}}
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li
+            className="media border-bottom pb-2 mb-2 align-items-center"
+          >
+            <img
+              alt="Videostativ Manfrotto 755XB/MVH500AH Videoneiger"
+              className="img-fluid img-thumbnail mr-3"
+              href="#modelShow"
+              onClick={[Function]}
+              src="0350f864-3e72-43dc-9365-b5f8ca277063.jpg"
+              style={
+                Object {
+                  "maxHeight": "4rem",
+                  "maxWidth": "4rem",
+                }
+              }
+            />
+            <div
+              className="media-body"
+            >
+              <div
+                className="container-fluid"
+              >
+                <div
+                  className="row flex-nowrap align-items-end"
+                >
+                  <div
+                    className="col"
+                  >
+                    <p
+                      className="font-semibold mb-0"
+                    >
+                      Videostativ Manfrotto 755XB/MVH500AH Videoneiger
+                    </p>
+                    <p
+                      className="small mb-0"
+                    >
+                      1
+                       item(s)
+                    </p>
+                    <p
+                      className="small mb-0"
+                    >
+                      1
+                       item(s)
+                    </p>
+                  </div>
+                  <div
+                    className="col-2 align-self-center flex-grow-1"
+                  >
+                    <div
+                      className="btn-group-vertical"
+                    >
+                      <button
+                        className="btn btn-sm btn-link text-muted text-center"
+                        onClick={[Function]}
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="svg-inline--fa fa-edit fa-w-18 fa-fw "
+                          data-icon="edit"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          style={Object {}}
+                          viewBox="0 0 576 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
+                            fill="currentColor"
+                            style={Object {}}
+                          />
+                        </svg>
+                      </button>
+                      <button
+                        className="btn btn-sm btn-link text-muted text-center"
+                        onClick={[Function]}
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="svg-inline--fa fa-trash-alt fa-w-14 fa-fw "
+                          data-icon="trash-alt"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          style={Object {}}
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
+                            fill="currentColor"
+                            style={Object {}}
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
+<div>
+  <ul
+    className="list-unstyled"
   >
     <li
       className="media border-bottom pb-2 mb-2 align-items-center"
     >
       <img
+        alt="AVCHD-Kamera Sony HXR-NX5E"
         className="img-fluid img-thumbnail mr-3"
         href="#modelShow"
         onClick={[Function]}
@@ -15171,7 +16040,7 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
               </p>
             </div>
             <div
-              className="col-2 align-self-center"
+              className="col-2 align-self-center flex-grow-1"
             >
               <div
                 className="btn-group-vertical"
@@ -15230,6 +16099,7 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
       className="media border-bottom pb-2 mb-2 align-items-center"
     >
       <img
+        alt="Videostativ Manfrotto 755XB/MVH500AH Videoneiger"
         className="img-fluid img-thumbnail mr-3"
         href="#modelShow"
         onClick={[Function]}
@@ -15272,7 +16142,7 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
               </p>
             </div>
             <div
-              className="col-2 align-self-center"
+              className="col-2 align-self-center flex-grow-1"
             >
               <div
                 className="btn-group-vertical"

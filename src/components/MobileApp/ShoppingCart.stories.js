@@ -5,8 +5,8 @@ import { AppWrapper, MainView, Navbar, Page } from './AppLayout'
 import { ReservationLines } from './ShoppingCart.js'
 
 export default {
-  title: 'MobileApp/Components/ShoppingCart'
-  // component: ReservationLines
+  title: 'MobileApp/Components/ShoppingCart',
+  component: ReservationLines
 }
 
 const fakeNavbar = (

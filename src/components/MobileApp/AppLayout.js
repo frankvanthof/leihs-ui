@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 export const AppWrapper = ({ children }) => <div id="app">{children}</div>
 
-export const MainView = ({ navbar = false, errors = false, children }) => (
-  <main>
+export const MainView = ({ navbar = false, errors = false, className, children }) => (
+  <main className={cx(className, 'ui-mainview')}>
     {navbar}
     {/* NOTE: max width because we dont support larger screens yet */}
     <div className="container-md p-1 p-sm-2" style={{ maxWidth: '720px' }}>
@@ -14,15 +15,27 @@ export const MainView = ({ navbar = false, errors = false, children }) => (
   </main>
 )
 
-export const Page = ({ title, children }) => (
-  <div className="p-2">
-    <h1 className="mt-3 font-bold text-3xl">{title}</h1>
+export const Page = ({ title, className, children }) => (
+  <div className={cx(className, 'ui-page p-2')}>
+    {!!title && <h1 className="font-bold text-3xl mt-3 mb-3">{title}</h1>}
     {children}
   </div>
 )
 
+export const SubSection = ({ title, className, moreLink = {}, children, Elm = 'section' }) => (
+  <Elm className={cx(className, 'ui-subsection')} data-title={title}>
+    <div className="mt-2 d-flex align-items-baseline justify-content-between">
+      <h2 className="font-bold text-2xl">{title}</h2>
+      {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
+      {!!moreLink.href && <a className="font-semibold text-color-content text-l" {...moreLink} />}
+    </div>
+    {children}
+  </Elm>
+)
+SubSection.propTypes = { title: PropTypes.string.isRequired }
+
 export const CallToAction = ({ className, children, actions = [] }) => (
-  <div className={cx(className, 'bg-content-muted text-center px-2 py-4 rounded-lg')}>
+  <div className={cx(className, 'ui-calltoaction bg-content-muted text-center px-2 py-4 rounded-lg')}>
     <div className="text-base">{children}</div>
     <div className="mt-2 mb-0">
       {actions.map(({ className, children, ...props }, i) => (
@@ -74,6 +87,7 @@ export const Navbar = ({ brandName = 'LEIHS', menuItem, cartItem }) => (
           <span className="text-color-info" />
         </div>{' '}
         <a href="/app/borrow/order" className="nav-item nav-link px-0">
+          {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
           <span className="ui-icon ui-icon-colored ui-shopping-cart-icon">🛒</span>
         </a>
       </div>
