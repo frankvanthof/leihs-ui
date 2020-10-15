@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Components/Navbar [broken] Colors 1`] = `
+exports[`HTML Snapshots Components/Navbar [broken] Colors 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -9188,7 +9188,7 @@ exports[`Storyshots Components/Navbar [broken] Colors 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Navbar All Config Options 1`] = `
+exports[`HTML Snapshots Components/Navbar All Config Options 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -9866,7 +9866,7 @@ exports[`Storyshots Components/Navbar All Config Options 1`] = `
 </div>
 `;
 
-exports[`Storyshots Components/Navbar Config Variants 1`] = `
+exports[`HTML Snapshots Components/Navbar Config Variants 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11060,7 +11060,7 @@ exports[`Storyshots Components/Navbar Config Variants 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/HomePage Logged Out 1`] = `
+exports[`HTML Snapshots Features/HomePage Logged Out 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11346,7 +11346,7 @@ exports[`Storyshots Features/HomePage Logged Out 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/Login Page Invalid User 1`] = `
+exports[`HTML Snapshots Features/Login Page Invalid User 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11602,7 +11602,7 @@ exports[`Storyshots Features/Login Page Invalid User 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/Login Page No User 1`] = `
+exports[`HTML Snapshots Features/Login Page No User 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11839,7 +11839,7 @@ exports[`Storyshots Features/Login Page No User 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/Login Page Step 2 2 External Auth Options And No Password 1`] = `
+exports[`HTML Snapshots Features/Login Page Step 2 2 External Auth Options And No Password 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12096,7 +12096,7 @@ exports[`Storyshots Features/Login Page Step 2 2 External Auth Options And No Pa
 </div>
 `;
 
-exports[`Storyshots Features/Login Page Step 2 Password And External Auth 1`] = `
+exports[`HTML Snapshots Features/Login Page Step 2 Password And External Auth 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12424,7 +12424,7 @@ exports[`Storyshots Features/Login Page Step 2 Password And External Auth 1`] = 
 </div>
 `;
 
-exports[`Storyshots Features/Login Page Step 2 Password Auth Only 1`] = `
+exports[`HTML Snapshots Features/Login Page Step 2 Password Auth Only 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12692,7 +12692,7 @@ exports[`Storyshots Features/Login Page Step 2 Password Auth Only 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/Login Page Wrong Password 1`] = `
+exports[`HTML Snapshots Features/Login Page Wrong Password 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12948,7 +12948,7 @@ exports[`Storyshots Features/Login Page Wrong Password 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13170,7 +13170,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Invalid User 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Invalid User 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13411,7 +13411,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Invalid User 1`] = `
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Invalid User User Has No Email 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Invalid User User Has No Email 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13652,7 +13652,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Invalid User User Ha
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Prefilled Username 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Prefilled Username 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13874,7 +13874,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Prefilled Username 1
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Reset Passwort Form 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Form 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14087,7 +14087,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Reset Passwort Form 
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Reset Passwort Form From Email 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Form From Email 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14346,7 +14346,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Reset Passwort Form 
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Reset Passwort Success 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Success 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14548,7 +14548,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Reset Passwort Succe
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Success Message 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Success Message 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14770,7 +14770,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Success Message 1`] 
 </div>
 `;
 
-exports[`Storyshots Features/Passwort Reset Forgot Password Token Was Expired 1`] = `
+exports[`HTML Snapshots Features/Passwort Reset Forgot Password Token Was Expired 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -15006,7 +15006,7 @@ exports[`Storyshots Features/Passwort Reset Forgot Password Token Was Expired 1`
 </div>
 `;
 
-exports[`Storyshots MobileApp/Components/AppLayout Empty Cart 1`] = `
+exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart 1`] = `
 <div
   id="app"
 >
@@ -15033,7 +15033,7 @@ exports[`Storyshots MobileApp/Components/AppLayout Empty Cart 1`] = `
         >
           <a
             className="nav-item nav-link px-0"
-            href="/app/borrow/about"
+            href="#/app/borrow/about"
           >
             <span
               className="ui-icon ui-menu-icon"
@@ -15048,7 +15048,7 @@ exports[`Storyshots MobileApp/Components/AppLayout Empty Cart 1`] = `
       >
         <a
           className="navbar-brand m-0 font-black text-xl"
-          href="/app/borrow/order"
+          href="#/app/borrow/order"
         >
            LEIHS 
         </a>

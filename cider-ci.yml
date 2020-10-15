@@ -39,4 +39,8 @@ jobs:
       scripts:
         jest:
           timeout: 10 minutes
-          body: 'npm ci && npm test'
+          body: |
+            set -exu
+            npm ci
+            npm add ./test/
+            npm run test
