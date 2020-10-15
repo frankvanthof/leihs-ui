@@ -6,25 +6,35 @@ export const AppWrapper = ({ children }) => <div id="app">{children}</div>
 export const MainView = ({ navbar = false, errors = false, children }) => (
   <main>
     {navbar}
-    {errors}
-    {children}
+    {/* NOTE: max width because we dont support larger screens yet */}
+    <div className="container-md p-1 p-sm-2" style={{ maxWidth: '720px' }}>
+      {errors}
+      {children}
+    </div>
   </main>
+)
+
+export const Page = ({ title, children }) => (
+  <div className="p-2">
+    <h1 className="mt-3 font-bold text-3xl">{title}</h1>
+    {children}
+  </div>
 )
 
 export const CallToAction = ({ className, children, actions = [] }) => (
   <div className={cx(className, 'bg-content-muted text-center px-2 py-4 rounded-lg')}>
     <div className="text-base">{children}</div>
-    <div className="my-3">
-      {actions.map(({ className, ...props }, i) => (
+    <div className="mt-2 mb-0">
+      {actions.map(({ className, children, ...props }, i) => (
         <a
           key={i}
           {...props}
-          className={cx(className, 'btn btn-link d-inline-block text-xl rounded-pill px-4 py-2 my-1', {
+          className={cx(className, 'btn btn-link d-inline-block text-xl rounded-pill px-4 py-2 my-2 mx-1', {
             'bg-content-inverse text-color-content-inverse': i === 0,
-            'text-color-content': i !== 0
+            'bg-content text-color-content': i !== 0
           })}
         >
-          Gegenstände ausleihen
+          {children}
         </a>
       ))}
     </div>
@@ -69,11 +79,4 @@ export const Navbar = ({ brandName = 'LEIHS', menuItem, cartItem }) => (
       </div>
     </div>
   </nav>
-)
-
-export const Page = ({ title, children }) => (
-  <div className="p-2">
-    <h1 className="mt-3 font-bold text-3xl">{title}</h1>
-    {children}
-  </div>
 )

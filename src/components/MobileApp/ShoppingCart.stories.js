@@ -1,15 +1,17 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import f from 'lodash'
 
-import { Let } from '../Util'
-import Icon from '../Icons'
-// import { ImgPlaceholder } from './ImageThumbnail'
+import { AppWrapper, MainView, Navbar, Page } from './AppLayout'
+
+import { ReservationLines } from './ShoppingCart.js'
 
 export default {
-  title: 'MobileApp/Components/ShoppingCart',
-  component: ReservationLines
+  title: 'MobileApp/Components/ShoppingCart'
+  // component: ReservationLines
 }
+
+const fakeNavbar = (
+  <Navbar brandName="LEIHS" menuItem={{ href: '#/app/borrow/about' }} cartItem={{ href: '#/app/borrow/order' }} />
+)
 
 const FAKE_DATA = {
   lines: [
@@ -28,7 +30,6 @@ const FAKE_DATA = {
           }
         },
         'start-date': '2020-10-12T00:00:00Z',
-        status: 'UNSUBMITTED',
         user: { id: '7da6733c-c819-5613-8cad-2a40f51c90da' }
       },
       quantity: 3,
@@ -50,7 +51,6 @@ const FAKE_DATA = {
           }
         },
         'start-date': '2020-10-12T00:00:00Z',
-        status: 'UNSUBMITTED',
         user: { id: '7da6733c-c819-5613-8cad-2a40f51c90da' }
       },
       quantity: 1,
@@ -60,90 +60,21 @@ const FAKE_DATA = {
   ]
 }
 
-const ReservationLines = ({ lines }) => (
-  <ul className="XXXlist-group XXXlist-group-flush" style={{ maxWidth: '650px', margin: 'auto' }}>
-    {f.map(lines, (line, i) => (
-      <ReservationLine key={i} {...line} />
-    ))}
-  </ul>
-)
-
-const ReservationLine = ({ reservation, quantity, isEditing, isInvalid }) => {
-  const { model } = reservation
-
-  return (
-    <li className="media border-bottom pb-2 mb-2 align-items-center">
-      {/* <div className="media"> */}
-      <Let src={f.get(model, 'coverImage.image-url')}>
-        {({ src }) => (
-          <img
-            style={{ maxWidth: '4rem', maxHeight: '4rem' }}
-            className="img-fluid img-thumbnail mr-3"
-            href={'#modelShow'}
-            onClick={() => alert('would go to model page')}
-            src={src}
-          />
-        )}
-      </Let>
-      <div className="media-body">
-        <div className="container-fluid">
-          <div className="row flex-nowrap align-items-end">
-            <div className="col">
-              <p className="font-semibold mb-0">
-                {model.name}
-                {/* <small>{model.manufacturer}</small> */}
-              </p>
-              <p className="small mb-0">{quantity} item(s)</p>
-              <p className="small mb-0">{quantity} item(s)</p>
-              {/* <pre className="mb-1">{JSON.stringify(reservation, 0, 2)}</pre> */}
-            </div>
-            <div className="col-2 align-self-center">
-              <div className="btn-group-vertical">
-                <button className="btn btn-sm btn-link text-muted text-center" onClick={() => alert('edit!')}>
-                  <Icon.Edit fixedWidth />
-                </button>
-                <button className="btn btn-sm btn-link text-muted text-center" onClick={() => alert('delete!')}>
-                  <Icon.Trash fixedWidth />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* </div> */}
-    </li>
-  )
-}
-
-ReservationLines.propTypes = {
-  lines: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      model: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        coverImage: PropTypes.shape({
-          id: PropTypes.string.isRequired,
-          'image-url': PropTypes.string.isRequired
-        })
-      }).isRequired,
-      'inventory-pool': PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired
-      }).isRequired,
-      'start-date': PropTypes.string.isRequired,
-      'end-date': PropTypes.string.isRequired,
-      status: PropTypes.string.isRequired,
-      user: PropTypes.shape({
-        id: PropTypes.string.isRequired
-      }).isRequired
-    })
-  ).isRequired
-}
-
 export const ExampleLines = () => (
-  <div className="p-4">
+  <div>
     {/* <pre>{JSON.stringify(FAKE_DATA, 0, 2)}</pre> */}
     <ReservationLines lines={FAKE_DATA.lines} />
   </div>
 )
+
+export const ExampleCart = () => (
+  <AppWrapper>
+    <MainView navbar={fakeNavbar}>
+      <Page title={'Warenkorb'}>
+        {/* <pre>{JSON.stringify(FAKE_DATA, 0, 2)}</pre> */}
+        <ReservationLines lines={FAKE_DATA.lines} />
+      </Page>
+    </MainView>
+  </AppWrapper>
+)
+ExampleCart.parameters = { layout: 'fullscreen' }

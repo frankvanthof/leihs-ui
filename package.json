@@ -46,6 +46,7 @@
   "devDependencies": {
     "@babel/polyfill": "^7.11.5",
     "@babel/runtime-corejs3": "^7.12.0",
+    "@leihs/ui-tests": "file:test",
     "@storybook/addon-a11y": "^6.0.26",
     "@storybook/addon-actions": "^6.0.26",
     "@storybook/addon-backgrounds": "^6.0.26",
