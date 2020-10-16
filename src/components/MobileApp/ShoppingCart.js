@@ -19,18 +19,20 @@ export const ReservationLine = ({ reservation, quantity, isEditing, isInvalid })
 
   return (
     <li className="media border-bottom pb-2 mb-2 align-items-center">
-      <Let src={f.get(model, 'coverImage.image-url')}>
-        {({ src }) => (
-          <img
-            alt={model.name}
-            style={{ maxWidth: '4rem', maxHeight: '4rem' }}
-            className="img-fluid img-thumbnail mr-3"
-            href={'#modelShow'}
-            onClick={() => alert('would go to model page')}
-            src={src}
-          />
-        )}
-      </Let>
+      <div className="d-flex">
+        <Let src={f.get(model, 'coverImage.image-url')}>
+          {({ src }) => (
+            <img
+              alt={model.name}
+              style={{ maxWidth: '4rem', maxHeight: '4rem' }}
+              className="img-fluid img-thumbnail mr-3"
+              href={'#modelShow'}
+              onClick={() => alert('would go to model page')}
+              src={src}
+            />
+          )}
+        </Let>
+      </div>
       <div className="media-body">
         <div className="container-fluid">
           <div className="row flex-nowrap align-items-end">
