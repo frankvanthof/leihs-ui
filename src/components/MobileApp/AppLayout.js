@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
+import cx from 'classnames/dedupe'
 
 export const AppWrapper = ({ children }) => <div id="app">{children}</div>
 
@@ -8,23 +8,31 @@ export const MainView = ({ navbar = false, errors = false, className, children }
   <main className={cx(className, 'ui-mainview')}>
     {navbar}
     {/* NOTE: max width because we dont support larger screens yet */}
-    <div className="container-md p-1 p-sm-2" style={{ maxWidth: '720px' }}>
+    <div className="container-md" style={{ maxWidth: '720px' }}>
       {errors}
       {children}
     </div>
   </main>
 )
 
-export const Page = ({ title, className, children }) => (
-  <div className={cx(className, 'ui-page p-2')}>
-    {!!title && <h1 className="font-bold text-3xl mt-3 mb-3">{title}</h1>}
+export const Page = ({ title, backLink, className, children }) => (
+  <div className={cx('ui-page p-2 p-sm-3', className)}>
+    <header className="mt-3 mb-3">
+      {!!backLink && (
+        <a {...backLink} className={cx('font-semibold', backLink.className)}>
+          {'← '}
+          {backLink.children || false}
+        </a>
+      )}
+      {!!title && <h1 className="text-3xl font-bold">{title}</h1>}
+    </header>
     {children}
   </div>
 )
 
 export const SubSection = ({ title, className, moreLink = {}, children, Elm = 'section' }) => (
   <Elm className={cx(className, 'ui-subsection')} data-title={title}>
-    <div className="mt-2 d-flex align-items-baseline justify-content-between">
+    <div className="mt-2 pb-2 d-flex align-items-baseline justify-content-between">
       <h2 className="font-bold text-2xl">{title}</h2>
       {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
       {!!moreLink.href && <a className="font-semibold text-color-content text-l" {...moreLink} />}
