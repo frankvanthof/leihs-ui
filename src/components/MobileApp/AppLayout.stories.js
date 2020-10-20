@@ -74,6 +74,15 @@ export const empty_page = () => (
     </MainView>
   </AppWrapper>
 )
+export const empty_page_with_subtitle_and_backlink = () => (
+  <AppWrapper>
+    <MainView navbar={fakeNavbar}>
+      <Page title={'Title'} backLink={{ href: '#', children: 'back' }} subTitle="Subtitle">
+        Content
+      </Page>
+    </MainView>
+  </AppWrapper>
+)
 
 export const empty_cart_with_call_to_action = () => (
   <AppWrapper>

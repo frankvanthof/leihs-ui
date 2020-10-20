@@ -15,16 +15,21 @@ export const MainView = ({ navbar = false, errors = false, className, children }
   </main>
 )
 
-export const Page = ({ title, backLink, className, children }) => (
+export const Page = ({ title, subTitle, backLink, className, children }) => (
   <div className={cx('ui-page p-2 p-sm-3', className)}>
-    <header className="mt-3 mb-3">
-      {!!backLink && (
-        <a {...backLink} className={cx('font-semibold', backLink.className)}>
+    <header className="mt-3 mb-4">
+      {!!(backLink && backLink.href) && (
+        <a {...backLink} className={cx('d-block mb-1 font-semibold', backLink.className)}>
           {'← '}
           {backLink.children || false}
         </a>
       )}
-      {!!title && <h1 className="text-3xl font-bold">{title}</h1>}
+      {!!title && (
+        <h1 className="text-3xl font-bold">
+          {title}
+          {!!subTitle && <small className="d-block mt-2 text-muted text-base">{subTitle}</small>}
+        </h1>
+      )}
     </header>
     {children}
   </div>
