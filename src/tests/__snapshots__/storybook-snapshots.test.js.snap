@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HTML Snapshots Components/Navbar [broken] Colors 1`] = `
+exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -9188,7 +9188,7 @@ exports[`HTML Snapshots Components/Navbar [broken] Colors 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Components/Navbar All Config Options 1`] = `
+exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -9866,7 +9866,7 @@ exports[`HTML Snapshots Components/Navbar All Config Options 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Components/Navbar Config Variants 1`] = `
+exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11060,7 +11060,7 @@ exports[`HTML Snapshots Components/Navbar Config Variants 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Features/HomePage Logged Out 1`] = `
+exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11346,7 +11346,7 @@ exports[`HTML Snapshots Features/HomePage Logged Out 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Features/Login Page Invalid User 1`] = `
+exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11602,7 +11602,7 @@ exports[`HTML Snapshots Features/Login Page Invalid User 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Features/Login Page No User 1`] = `
+exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -11839,7 +11839,7 @@ exports[`HTML Snapshots Features/Login Page No User 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Features/Login Page Step 2 2 External Auth Options And No Password 1`] = `
+exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Options And No Password 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12096,7 +12096,7 @@ exports[`HTML Snapshots Features/Login Page Step 2 2 External Auth Options And N
 </div>
 `;
 
-exports[`HTML Snapshots Features/Login Page Step 2 Password And External Auth 1`] = `
+exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And External Auth 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12424,7 +12424,7 @@ exports[`HTML Snapshots Features/Login Page Step 2 Password And External Auth 1`
 </div>
 `;
 
-exports[`HTML Snapshots Features/Login Page Step 2 Password Auth Only 1`] = `
+exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12692,7 +12692,7 @@ exports[`HTML Snapshots Features/Login Page Step 2 Password Auth Only 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Features/Login Page Wrong Password 1`] = `
+exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -12948,7 +12948,7 @@ exports[`HTML Snapshots Features/Login Page Wrong Password 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13170,7 +13170,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Invalid User 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invalid User 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13411,7 +13411,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Invalid User 1`]
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Invalid User User Has No Email 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invalid User User Has No Email 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13652,7 +13652,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Invalid User Use
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Prefilled Username 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefilled Username 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -13874,7 +13874,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Prefilled Userna
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Form 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Form 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14087,7 +14087,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort F
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Form From Email 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Form From Email 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14346,7 +14346,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort F
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Success 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort Success 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14548,7 +14548,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Reset Passwort S
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Success Message 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Success Message 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -14770,7 +14770,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Success Message 
 </div>
 `;
 
-exports[`HTML Snapshots Features/Passwort Reset Forgot Password Token Was Expired 1`] = `
+exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token Was Expired 1`] = `
 <div
   className="bg-paper h-100"
 >
@@ -15006,7 +15006,7 @@ exports[`HTML Snapshots Features/Passwort Reset Forgot Password Token Was Expire
 </div>
 `;
 
-exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart With Call To Action 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Cart With Call To Action 1`] = `
 <div
   id="app"
 >
@@ -15083,7 +15083,7 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart With Call To A
       </div>
     </nav>
     <div
-      className="container-md p-1 p-sm-2"
+      className="container-fluid p-0"
       style={
         Object {
           "maxWidth": "720px",
@@ -15091,13 +15091,17 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart With Call To A
       }
     >
       <div
-        className="ui-page p-2"
+        className="ui-page p-3 p-sm-3"
       >
-        <h1
-          className="font-bold text-3xl mt-3 mb-3"
+        <header
+          className="mt-3 mb-4"
         >
-          Bestellübersicht
-        </h1>
+          <h1
+            className="text-3xl font-bold"
+          >
+            Bestellübersicht
+          </h1>
+        </header>
         <div
           className="d-flex"
         >
@@ -15127,7 +15131,7 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Cart With Call To A
 </div>
 `;
 
-exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] = `
 <div
   id="app"
 >
@@ -15204,7 +15208,7 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] = `
       </div>
     </nav>
     <div
-      className="container-md p-1 p-sm-2"
+      className="container-fluid p-0"
       style={
         Object {
           "maxWidth": "720px",
@@ -15212,13 +15216,17 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] = `
       }
     >
       <div
-        className="ui-page p-2"
+        className="ui-page p-3 p-sm-3"
       >
-        <h1
-          className="font-bold text-3xl mt-3 mb-3"
+        <header
+          className="mt-3 mb-4"
         >
-          Title
-        </h1>
+          <h1
+            className="text-3xl font-bold"
+          >
+            Title
+          </h1>
+        </header>
         Content
       </div>
     </div>
@@ -15226,7 +15234,7 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page With Subtitle And Backlink 1`] = `
 <div
   id="app"
 >
@@ -15303,7 +15311,7 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = `
       </div>
     </nav>
     <div
-      className="container-md p-1 p-sm-2"
+      className="container-fluid p-0"
       style={
         Object {
           "maxWidth": "720px",
@@ -15311,8 +15319,126 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = `
       }
     >
       <div
-        className="ui-page p-2"
+        className="ui-page p-3 p-sm-3"
       >
+        <header
+          className="mt-3 mb-4"
+        >
+          <a
+            className="d-block mb-1 font-semibold"
+            href="#"
+          >
+            ← 
+            back
+          </a>
+          <h1
+            className="text-3xl font-bold"
+          >
+            Title
+            <small
+              className="d-block mt-2 text-muted text-base"
+            >
+              Subtitle
+            </small>
+          </h1>
+        </header>
+        Content
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = `
+<div
+  id="app"
+>
+  <main
+    className="ui-mainview"
+  >
+    <nav
+      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      style={
+        Object {
+          "WebkitBackdropFilter": "blur(12px)",
+          "backgroundColor": "rgba(255, 255, 255, 0.83)",
+          "backgroundPosition": "initial initial",
+          "backgroundRepeat": "initial initial",
+          "borderBottomColor": "rgba(0, 0, 0, 0.08)",
+          "top": "0px",
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="#/app/borrow/about"
+          >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-black text-xl"
+          href="#/app/borrow/order"
+        >
+           LEIHS 
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow/order"
+          >
+            <span
+              className="ui-icon ui-icon-colored ui-shopping-cart-icon"
+            >
+              🛒
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      className="container-fluid p-0"
+      style={
+        Object {
+          "maxWidth": "720px",
+        }
+      }
+    >
+      <div
+        className="ui-page p-3 p-sm-3"
+      >
+        <header
+          className="mt-3 mb-4"
+        />
         <div
           Xstyle={
             Object {
@@ -15467,7 +15593,7 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = `
           data-title="Kategorien"
         >
           <div
-            className="mt-2 d-flex align-items-baseline justify-content-between"
+            className="mt-2 pb-2 d-flex align-items-baseline justify-content-between"
           >
             <h2
               className="font-bold text-2xl"
@@ -15682,7 +15808,565 @@ exports[`HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Cart 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Page with Crash (Error Boundary) 1`] = `
+<div
+  id="app"
+>
+  <main
+    className="ui-mainview"
+  >
+    <div
+      className="container-fluid p-0"
+      style={
+        Object {
+          "maxWidth": "720px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "background": "blue",
+            "color": "white",
+            "minHeight": "100vh",
+            "padding": "1em",
+          }
+        }
+      >
+        <h2>
+          Something went wrong!
+        </h2>
+        <details
+          open={true}
+          style={
+            Object {
+              "whiteSpace": "pre-wrap",
+            }
+          }
+        >
+          Error: I crashed!
+          <br />
+          
+    in ErrorThrower (at AppLayout.stories.js:131)
+    in div (at AppLayout.js:21)
+    in Page (at AppLayout.stories.js:130)
+    in ErrorBoundary (at AppLayout.js:12)
+    in div (at AppLayout.js:11)
+    in main (at AppLayout.js:8)
+    in MainView (at AppLayout.stories.js:129)
+    in div (at AppLayout.js:5)
+    in AppWrapper (at AppLayout.stories.js:128)
+    in deprecated
+        </details>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Components/CategoryList Example 1 1`] = `
+<div
+  className="ui-models-list row no-gutters d-flex flex-wrap mx-n2"
+>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="5d302b26-5737-48e7-a90d-e65f22d8c065.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            Audio
+          </span>
+          <span
+            className="d-block text-truncate"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            Beleuchtungstechnik
+          </span>
+          <span
+            className="d-block text-truncate"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="fdfb06be-9bfc-5377-a82b-5d9fb0cc28fb.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            Effektgeräte Veranstaltungstechnik
+          </span>
+          <span
+            className="d-block text-truncate"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            Externe Massenspeicher
+          </span>
+          <span
+            className="d-block text-truncate"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] = `
+<div
+  className="ui-models-list row no-gutters d-flex flex-wrap mx-n2"
+>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            Assitasche zu Alexa / Sony
+          </span>
+          <span
+            className="d-block text-truncate"
+          >
+            Birkle / Steiner
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            AVCHD-Kamera Sony HXR-NX5E
+          </span>
+          <span
+            className="d-block text-truncate"
+          >
+            Sony
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 0.35,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="43cd9671-8ab2-5960-8426-4f9b235b449d.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            AVCHD-Kamera Sony HXR-NX5R
+          </span>
+          <span
+            className="d-block text-truncate"
+          >
+            Sony
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="4d446da0-81ae-5dd4-a2b0-f9adae2de0d4.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            BluRay-Player Sony BDP-S490 3D
+          </span>
+          <span
+            className="d-block text-truncate"
+          >
+            Sony
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="8e17238d-9ee2-402c-a469-20300d7b08fc.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            CD-Player Sony CDP-XE370
+          </span>
+          <span
+            className="d-block text-truncate"
+          >
+            Sony
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 0.35,
+      }
+    }
+  >
+    <div
+      className="ui-models-list-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
+        >
+          <img
+            alt=""
+            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            src="ad8a36fd-1bec-5be5-a702-326e4e49d756.jpg"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
+        >
+          <span
+            className="d-block text-truncate font-bold"
+          >
+            Fernbedienung Kamera Sony RM-1BP
+          </span>
+          <span
+            className="d-block text-truncate"
+          >
+            Sony
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Cart 1`] = `
 <div
   id="app"
 >
@@ -15759,7 +16443,7 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Cart 1`] = `
       </div>
     </nav>
     <div
-      className="container-md p-1 p-sm-2"
+      className="container-fluid p-0"
       style={
         Object {
           "maxWidth": "720px",
@@ -15767,32 +16451,40 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Cart 1`] = `
       }
     >
       <div
-        className="ui-page p-2"
+        className="ui-page p-3 p-sm-3"
       >
-        <h1
-          className="font-bold text-3xl mt-3 mb-3"
+        <header
+          className="mt-3 mb-4"
         >
-          Warenkorb
-        </h1>
+          <h1
+            className="text-3xl font-bold"
+          >
+            Warenkorb
+          </h1>
+        </header>
         <ul
           className="list-unstyled"
         >
           <li
             className="media border-bottom pb-2 mb-2 align-items-center"
           >
-            <img
-              alt="AVCHD-Kamera Sony HXR-NX5E"
-              className="img-fluid img-thumbnail mr-3"
-              href="#modelShow"
-              onClick={[Function]}
-              src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
-              style={
-                Object {
-                  "maxHeight": "4rem",
-                  "maxWidth": "4rem",
+            <div
+              className="d-flex"
+            >
+              <img
+                alt="AVCHD-Kamera Sony HXR-NX5E"
+                className="img-fluid img-thumbnail mr-3"
+                href="#modelShow"
+                onClick={[Function]}
+                src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
+                style={
+                  Object {
+                    "maxHeight": "4rem",
+                    "maxWidth": "4rem",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <div
               className="media-body"
             >
@@ -15882,19 +16574,23 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Cart 1`] = `
           <li
             className="media border-bottom pb-2 mb-2 align-items-center"
           >
-            <img
-              alt="Videostativ Manfrotto 755XB/MVH500AH Videoneiger"
-              className="img-fluid img-thumbnail mr-3"
-              href="#modelShow"
-              onClick={[Function]}
-              src="0350f864-3e72-43dc-9365-b5f8ca277063.jpg"
-              style={
-                Object {
-                  "maxHeight": "4rem",
-                  "maxWidth": "4rem",
+            <div
+              className="d-flex"
+            >
+              <img
+                alt="Videostativ Manfrotto 755XB/MVH500AH Videoneiger"
+                className="img-fluid img-thumbnail mr-3"
+                href="#modelShow"
+                onClick={[Function]}
+                src="0350f864-3e72-43dc-9365-b5f8ca277063.jpg"
+                style={
+                  Object {
+                    "maxHeight": "4rem",
+                    "maxWidth": "4rem",
+                  }
                 }
-              }
-            />
+              />
+            </div>
             <div
               className="media-body"
             >
@@ -15988,7 +16684,7 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Cart 1`] = `
 </div>
 `;
 
-exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
 <div>
   <ul
     className="list-unstyled"
@@ -15996,19 +16692,23 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
     <li
       className="media border-bottom pb-2 mb-2 align-items-center"
     >
-      <img
-        alt="AVCHD-Kamera Sony HXR-NX5E"
-        className="img-fluid img-thumbnail mr-3"
-        href="#modelShow"
-        onClick={[Function]}
-        src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
-        style={
-          Object {
-            "maxHeight": "4rem",
-            "maxWidth": "4rem",
+      <div
+        className="d-flex"
+      >
+        <img
+          alt="AVCHD-Kamera Sony HXR-NX5E"
+          className="img-fluid img-thumbnail mr-3"
+          href="#modelShow"
+          onClick={[Function]}
+          src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
+          style={
+            Object {
+              "maxHeight": "4rem",
+              "maxWidth": "4rem",
+            }
           }
-        }
-      />
+        />
+      </div>
       <div
         className="media-body"
       >
@@ -16098,19 +16798,23 @@ exports[`HTML Snapshots MobileApp/Components/ShoppingCart Example Lines 1`] = `
     <li
       className="media border-bottom pb-2 mb-2 align-items-center"
     >
-      <img
-        alt="Videostativ Manfrotto 755XB/MVH500AH Videoneiger"
-        className="img-fluid img-thumbnail mr-3"
-        href="#modelShow"
-        onClick={[Function]}
-        src="0350f864-3e72-43dc-9365-b5f8ca277063.jpg"
-        style={
-          Object {
-            "maxHeight": "4rem",
-            "maxWidth": "4rem",
+      <div
+        className="d-flex"
+      >
+        <img
+          alt="Videostativ Manfrotto 755XB/MVH500AH Videoneiger"
+          className="img-fluid img-thumbnail mr-3"
+          href="#modelShow"
+          onClick={[Function]}
+          src="0350f864-3e72-43dc-9365-b5f8ca277063.jpg"
+          style={
+            Object {
+              "maxHeight": "4rem",
+              "maxWidth": "4rem",
+            }
           }
-        }
-      />
+        />
+      </div>
       <div
         className="media-body"
       >

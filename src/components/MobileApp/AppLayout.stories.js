@@ -65,6 +65,13 @@ const fakeSearchForm = (
   </div>
 )
 
+class ErrorThrower extends React.Component {
+  /* eslint-disable-next-line react/require-render-return */
+  render() {
+    throw new Error('I crashed!')
+  }
+}
+
 // stories
 
 export const empty_page = () => (
@@ -116,3 +123,14 @@ export const homepage = () => (
     </MainView>
   </AppWrapper>
 )
+
+export const page_with_error_crash = () => (
+  <AppWrapper>
+    <MainView>
+      <Page>
+        <ErrorThrower />
+      </Page>
+    </MainView>
+  </AppWrapper>
+)
+page_with_error_crash.storyName = 'Page with Crash (Error Boundary)'

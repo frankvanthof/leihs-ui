@@ -19,10 +19,13 @@ const baseConfig = Object.assign({}, createReactAppConfig, {
     {
       apply: compiler => {
         compiler.hooks.afterEmit.tap('AfterEmitPlugin', compilation => {
-          exec('touch ../src/client/leihs/borrow/app.cljsx', (err, stdout, stderr) => {
-            if (stdout) process.stdout.write(stdout)
-            if (stderr) process.stderr.write(stderr)
-          })
+          exec(
+            'test -f ../src/client/leihs/borrow/app.cljs && touch ../src/client/leihs/borrow/app.cljs',
+            (err, stdout, stderr) => {
+              if (stdout) process.stdout.write(stdout)
+              if (stderr) process.stderr.write(stderr)
+            }
+          )
         })
       }
     }
