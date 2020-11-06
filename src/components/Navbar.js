@@ -249,11 +249,11 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
             const isCurrent = !!currentLang && lang.id === currentLang.id
             return (
               <DropdownItem
-                key={lang.id}
+                key={lang.locale}
                 tag="button"
                 type="submit"
-                name="language_id"
-                value={lang.id}
+                name="language_locale"
+                value={lang.locale}
                 disabled={isCurrent}
                 className={cx({ 'text-dark ui-selected-lang': isCurrent })}
               >

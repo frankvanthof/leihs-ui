@@ -16,29 +16,29 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
       </mark>
     </h3>
     <p>
-      same example data as 
+      same example data as
       "All Config Options"
       , but with using each color from
-       
+
       <a
         href="http://clrs.cc"
       >
         COLORS
       </a>
-       as a 
+       as a
       <code>
         tint
       </code>
-      . 
+      .
       <code>
         base
       </code>
        color is the purple from
-       
+
       <a
         href="https://getbootstrap.com"
       >
-        bootstrap 
+        bootstrap
         doc's
          purple
       </a>
@@ -47,18 +47,18 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
       <b>
         NOTE:
       </b>
-       the 
+       the
       <code>
         tint
       </code>
        is applied while keeping
-       
+
       <a
         href="https://www.w3.org/TR/WCAG20/#relativeluminancedef"
       >
         luminosity/relative luminance
       </a>
-       and saturation from 
+       and saturation from
       <code>
         base
       </code>
@@ -149,7 +149,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -178,7 +178,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -207,7 +207,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -236,7 +236,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -303,7 +303,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -336,7 +336,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -369,7 +369,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -401,7 +401,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -570,7 +570,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -584,7 +584,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -596,7 +596,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -608,7 +608,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -620,7 +620,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -719,7 +719,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -748,7 +748,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -777,7 +777,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -806,7 +806,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -873,7 +873,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -906,7 +906,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -939,7 +939,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -971,7 +971,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -1140,7 +1140,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -1154,7 +1154,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1166,7 +1166,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1178,7 +1178,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1190,7 +1190,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1289,7 +1289,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -1318,7 +1318,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -1347,7 +1347,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -1376,7 +1376,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -1443,7 +1443,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -1476,7 +1476,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -1509,7 +1509,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -1541,7 +1541,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -1710,7 +1710,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -1724,7 +1724,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1736,7 +1736,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1748,7 +1748,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1760,7 +1760,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -1859,7 +1859,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -1888,7 +1888,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -1917,7 +1917,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -1946,7 +1946,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -2013,7 +2013,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -2046,7 +2046,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -2079,7 +2079,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -2111,7 +2111,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -2280,7 +2280,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -2294,7 +2294,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2306,7 +2306,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2318,7 +2318,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2330,7 +2330,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2429,7 +2429,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -2458,7 +2458,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -2487,7 +2487,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -2516,7 +2516,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -2583,7 +2583,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -2616,7 +2616,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -2649,7 +2649,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -2681,7 +2681,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -2850,7 +2850,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -2864,7 +2864,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2876,7 +2876,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2888,7 +2888,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2900,7 +2900,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -2999,7 +2999,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -3028,7 +3028,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -3057,7 +3057,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -3086,7 +3086,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -3153,7 +3153,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -3186,7 +3186,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -3219,7 +3219,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -3251,7 +3251,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -3420,7 +3420,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -3434,7 +3434,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -3446,7 +3446,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -3458,7 +3458,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -3470,7 +3470,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -3569,7 +3569,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -3598,7 +3598,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -3627,7 +3627,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -3656,7 +3656,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -3723,7 +3723,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -3756,7 +3756,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -3789,7 +3789,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -3821,7 +3821,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -3990,7 +3990,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -4004,7 +4004,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4016,7 +4016,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4028,7 +4028,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4040,7 +4040,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4139,7 +4139,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -4168,7 +4168,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -4197,7 +4197,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -4226,7 +4226,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -4293,7 +4293,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -4326,7 +4326,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -4359,7 +4359,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -4391,7 +4391,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -4560,7 +4560,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -4574,7 +4574,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4586,7 +4586,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4598,7 +4598,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4610,7 +4610,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -4709,7 +4709,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -4738,7 +4738,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -4767,7 +4767,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -4796,7 +4796,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -4863,7 +4863,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -4896,7 +4896,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -4929,7 +4929,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -4961,7 +4961,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -5130,7 +5130,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -5144,7 +5144,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5156,7 +5156,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5168,7 +5168,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5180,7 +5180,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5279,7 +5279,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -5308,7 +5308,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -5337,7 +5337,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -5366,7 +5366,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -5433,7 +5433,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -5466,7 +5466,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -5499,7 +5499,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -5531,7 +5531,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -5700,7 +5700,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -5714,7 +5714,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5726,7 +5726,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5738,7 +5738,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5750,7 +5750,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -5849,7 +5849,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -5878,7 +5878,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -5907,7 +5907,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -5936,7 +5936,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -6003,7 +6003,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -6036,7 +6036,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -6069,7 +6069,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -6101,7 +6101,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -6270,7 +6270,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -6284,7 +6284,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6296,7 +6296,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6308,7 +6308,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6320,7 +6320,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6419,7 +6419,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -6448,7 +6448,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -6477,7 +6477,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -6506,7 +6506,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -6573,7 +6573,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -6606,7 +6606,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -6639,7 +6639,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -6671,7 +6671,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -6840,7 +6840,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -6854,7 +6854,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6866,7 +6866,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6878,7 +6878,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6890,7 +6890,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -6989,7 +6989,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -7018,7 +7018,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -7047,7 +7047,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -7076,7 +7076,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -7143,7 +7143,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -7176,7 +7176,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -7209,7 +7209,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -7241,7 +7241,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -7410,7 +7410,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -7424,7 +7424,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -7436,7 +7436,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -7448,7 +7448,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -7460,7 +7460,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -7559,7 +7559,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -7588,7 +7588,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -7617,7 +7617,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -7646,7 +7646,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -7713,7 +7713,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -7746,7 +7746,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -7779,7 +7779,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -7811,7 +7811,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -7980,7 +7980,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -7994,7 +7994,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8006,7 +8006,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8018,7 +8018,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8030,7 +8030,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8129,7 +8129,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -8158,7 +8158,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -8187,7 +8187,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -8216,7 +8216,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -8283,7 +8283,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -8316,7 +8316,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -8349,7 +8349,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -8381,7 +8381,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -8550,7 +8550,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -8564,7 +8564,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8576,7 +8576,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8588,7 +8588,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8600,7 +8600,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -8699,7 +8699,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -8728,7 +8728,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -8757,7 +8757,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -8786,7 +8786,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -8853,7 +8853,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -8886,7 +8886,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -8919,7 +8919,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -8951,7 +8951,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -9120,7 +9120,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -9134,7 +9134,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9146,7 +9146,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9158,7 +9158,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9170,7 +9170,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9248,7 +9248,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             AAA
           </a>
         </li>
@@ -9277,7 +9277,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             BBB
           </a>
         </li>
@@ -9306,7 +9306,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             CCC
           </a>
         </li>
@@ -9335,7 +9335,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 style={Object {}}
               />
             </svg>
-             
+
             Kontakt
           </a>
         </li>
@@ -9402,7 +9402,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Ausleihen
             </a>
             <div
@@ -9435,7 +9435,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Admin
             </a>
             <div
@@ -9468,7 +9468,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Bedarfsermittlung
             </a>
             <div
@@ -9500,7 +9500,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                   style={Object {}}
                 />
               </svg>
-               
+
               Geräteparks
             </h6>
             <a
@@ -9669,7 +9669,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -9683,7 +9683,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9695,7 +9695,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9707,7 +9707,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9719,7 +9719,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -9749,13 +9749,13 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
     <p
       className="lead"
     >
-      See 
+      See
       <a
         href="./colors"
       >
         all the colors
       </a>
-       and 
+       and
       <a
         href="./variants"
       >
@@ -9862,7 +9862,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
 }
     </pre>
   </div>
-   
+
 </div>
 `;
 
@@ -9935,7 +9935,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     style={Object {}}
                   />
                 </svg>
-                 
+
                 AAA
               </a>
             </li>
@@ -9964,7 +9964,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     style={Object {}}
                   />
                 </svg>
-                 
+
                 BBB
               </a>
             </li>
@@ -9993,7 +9993,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     style={Object {}}
                   />
                 </svg>
-                 
+
                 CCC
               </a>
             </li>
@@ -10022,7 +10022,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     style={Object {}}
                   />
                 </svg>
-                 
+
                 Kontakt
               </a>
             </li>
@@ -10089,7 +10089,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Ausleihen
                 </a>
                 <div
@@ -10122,7 +10122,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Admin
                 </a>
                 <div
@@ -10155,7 +10155,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Bedarfsermittlung
                 </a>
                 <div
@@ -10187,7 +10187,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Geräteparks
                 </h6>
                 <a
@@ -10356,7 +10356,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="text-dark ui-selected-lang disabled dropdown-item"
                     data-trigger={true}
                     disabled={true}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="-1"
                     type="submit"
@@ -10370,7 +10370,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10382,7 +10382,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10394,7 +10394,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10406,7 +10406,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10519,7 +10519,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Ausleihen
                 </a>
                 <div
@@ -10552,7 +10552,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Admin
                 </a>
                 <div
@@ -10585,7 +10585,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Bedarfsermittlung
                 </a>
                 <div
@@ -10617,7 +10617,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                       style={Object {}}
                     />
                   </svg>
-                   
+
                   Geräteparks
                 </h6>
                 <a
@@ -10786,7 +10786,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="text-dark ui-selected-lang disabled dropdown-item"
                     data-trigger={true}
                     disabled={true}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="-1"
                     type="submit"
@@ -10800,7 +10800,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10812,7 +10812,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10824,7 +10824,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10836,7 +10836,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -10991,7 +10991,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="text-dark ui-selected-lang disabled dropdown-item"
                     data-trigger={true}
                     disabled={true}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="-1"
                     type="submit"
@@ -11005,7 +11005,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -11017,7 +11017,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -11029,7 +11029,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -11041,7 +11041,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="language_locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
@@ -11198,7 +11198,7 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -11212,7 +11212,7 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11224,7 +11224,7 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11236,7 +11236,7 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11248,7 +11248,7 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11322,7 +11322,7 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
         >
           <h5>
             leihs
-             
+
             <a
               href="/release"
             >
@@ -11432,7 +11432,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -11446,7 +11446,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11458,7 +11458,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11470,7 +11470,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11482,7 +11482,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11533,7 +11533,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
             <p
               className="font-weight-bold"
             >
-              Anmelden ist mit diesem Benutzerkonto nicht möglich! 
+              Anmelden ist mit diesem Benutzerkonto nicht möglich!
             </p>
             <p
               className="small"
@@ -11688,7 +11688,7 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -11702,7 +11702,7 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11714,7 +11714,7 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11726,7 +11726,7 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11738,7 +11738,7 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11925,7 +11925,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -11939,7 +11939,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11951,7 +11951,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11963,7 +11963,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -11975,7 +11975,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12182,7 +12182,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -12196,7 +12196,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12208,7 +12208,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12220,7 +12220,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12232,7 +12232,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12510,7 +12510,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -12524,7 +12524,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12536,7 +12536,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12548,7 +12548,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12560,7 +12560,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12778,7 +12778,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -12792,7 +12792,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12804,7 +12804,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12816,7 +12816,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12828,7 +12828,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -12879,7 +12879,7 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
             <p
               className="font-weight-bold"
             >
-              Falsches Passwort! 
+              Falsches Passwort!
             </p>
             <p
               className="small"
@@ -13034,7 +13034,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -13048,7 +13048,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13060,7 +13060,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13072,7 +13072,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13084,7 +13084,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13256,7 +13256,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -13270,7 +13270,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13282,7 +13282,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13294,7 +13294,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13306,7 +13306,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13362,7 +13362,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
             <p
               className="font-weight-bold"
             >
-              Anmelden ist mit diesem Benutzerkonto nicht möglich! 
+              Anmelden ist mit diesem Benutzerkonto nicht möglich!
             </p>
             <p
               className="small"
@@ -13497,7 +13497,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -13511,7 +13511,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13523,7 +13523,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13535,7 +13535,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13547,7 +13547,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13738,7 +13738,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -13752,7 +13752,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13764,7 +13764,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13776,7 +13776,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13788,7 +13788,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13960,7 +13960,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -13974,7 +13974,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13986,7 +13986,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -13998,7 +13998,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14010,7 +14010,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14173,7 +14173,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -14187,7 +14187,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14199,7 +14199,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14211,7 +14211,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14223,7 +14223,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14432,7 +14432,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -14446,7 +14446,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14458,7 +14458,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14470,7 +14470,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14482,7 +14482,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14634,7 +14634,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -14648,7 +14648,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14660,7 +14660,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14672,7 +14672,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14684,7 +14684,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14856,7 +14856,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
@@ -14870,7 +14870,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14882,7 +14882,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14894,7 +14894,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -14906,7 +14906,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="language_locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
@@ -15052,7 +15052,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Cart With
           className="navbar-brand m-0 font-black text-xl"
           href="#/app/borrow/order"
         >
-           LEIHS 
+           LEIHS
         </a>
       </div>
       <div
@@ -15068,7 +15068,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Cart With
               className="text-color-info"
             />
           </div>
-           
+
           <a
             className="nav-item nav-link px-0"
             href="/app/borrow/order"
@@ -15177,7 +15177,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] 
           className="navbar-brand m-0 font-black text-xl"
           href="#/app/borrow/order"
         >
-           LEIHS 
+           LEIHS
         </a>
       </div>
       <div
@@ -15193,7 +15193,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] 
               className="text-color-info"
             />
           </div>
-           
+
           <a
             className="nav-item nav-link px-0"
             href="/app/borrow/order"
@@ -15280,7 +15280,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page With
           className="navbar-brand m-0 font-black text-xl"
           href="#/app/borrow/order"
         >
-           LEIHS 
+           LEIHS
         </a>
       </div>
       <div
@@ -15296,7 +15296,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page With
               className="text-color-info"
             />
           </div>
-           
+
           <a
             className="nav-item nav-link px-0"
             href="/app/borrow/order"
@@ -15328,7 +15328,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page With
             className="d-block mb-1 font-semibold"
             href="#"
           >
-            ← 
+            ←
             back
           </a>
           <h1
@@ -15395,7 +15395,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
           className="navbar-brand m-0 font-black text-xl"
           href="#/app/borrow/order"
         >
-           LEIHS 
+           LEIHS
         </a>
       </div>
       <div
@@ -15411,7 +15411,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
               className="text-color-info"
             />
           </div>
-           
+
           <a
             className="nav-item nav-link px-0"
             href="/app/borrow/order"
@@ -15460,7 +15460,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
                 <span
                   className="text-xs col-3 col-form-label"
                 >
-                  Suche 
+                  Suche
                 </span>
                 <div
                   className="col-9"
@@ -15481,7 +15481,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
               <span
                 className="text-xs col-3 col-form-label"
               >
-                Aus 
+                Aus
               </span>
               <div
                 className="col-9"
@@ -15846,7 +15846,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Page with Crash
         >
           Error: I crashed!
           <br />
-          
+
     in ErrorThrower (at AppLayout.stories.js:131)
     in div (at AppLayout.js:21)
     in Page (at AppLayout.stories.js:130)
@@ -16412,7 +16412,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Cart
           className="navbar-brand m-0 font-black text-xl"
           href="#/app/borrow/order"
         >
-           LEIHS 
+           LEIHS
         </a>
       </div>
       <div
@@ -16428,7 +16428,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Cart
               className="text-color-info"
             />
           </div>
-           
+
           <a
             className="nav-item nav-link px-0"
             href="/app/borrow/order"

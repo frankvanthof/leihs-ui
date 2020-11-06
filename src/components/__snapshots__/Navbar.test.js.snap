@@ -221,7 +221,7 @@ exports[`no user, marks default lang: renders correctly 1`] = `
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
@@ -233,7 +233,7 @@ exports[`no user, marks default lang: renders correctly 1`] = `
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
@@ -383,7 +383,7 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
@@ -395,7 +395,7 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
@@ -545,7 +545,7 @@ exports[`no user, with selected lang: renders correctly 1`] = `
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
@@ -559,7 +559,7 @@ exports[`no user, with selected lang: renders correctly 1`] = `
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
@@ -728,7 +728,7 @@ exports[`usage in shared app: renders correctly 1`] = `
               style={Object {}}
             />
           </svg>
-           
+
           one
         </a>
       </li>
@@ -757,7 +757,7 @@ exports[`usage in shared app: renders correctly 1`] = `
               style={Object {}}
             />
           </svg>
-           
+
           two
         </a>
       </li>
@@ -1040,7 +1040,7 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
@@ -1054,7 +1054,7 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
@@ -1246,7 +1246,7 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
@@ -1258,7 +1258,7 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="lang_locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
