@@ -40,7 +40,15 @@ export const Page = ({ title, subTitle, backLink, className, children }) => (
 export const SubSection = ({ title, titleHref, className, moreLink = {}, children, Elm = 'section' }) => (
   <Elm className={cx(className, 'ui-subsection')} data-title={title}>
     <div className="mt-2 pb-2 d-flex align-items-baseline justify-content-between">
-      <h2 className="font-bold text-2xl">{!titleHref ? title : <a href={titleHref}>{title}</a>}</h2>
+      <h2 className="font-bold text-2xl">
+        {!titleHref ? (
+          title
+        ) : (
+          <a className="text-color-content" href={titleHref}>
+            {title}
+          </a>
+        )}
+      </h2>
       {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
       {!!moreLink.href && <a className="font-semibold text-color-content text-l" {...moreLink} />}
     </div>
