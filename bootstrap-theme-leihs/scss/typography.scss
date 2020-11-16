@@ -3,6 +3,10 @@ body {
   hyphens: auto;
 }
 
+.preserve-linebreaks {
+  white-space: pre-wrap;
+}
+
 /* from tailwinds */
 .font-black {
   font-weight: 900;
