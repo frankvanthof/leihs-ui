@@ -19,7 +19,7 @@ const bsSizeUtils = ({ m, p, ...props }) => {
     if (!f.isString(prop)) return
     let parts = prop.split(' ')
     if (parts.length > 1) return extract(letter, parts)
-    return `${letter}${prop}`
+    return `${letter}-${prop}`
   }
   const margin = extract('m', m)
   const padding = extract('p', p)
@@ -70,13 +70,16 @@ export const Anchor = ({ target, rel, ...p }) => {
   return <Node tag="a" target={target} rel={rel} {...p} />
 }
 
-export const Button = ({ massive, className, cls, ...props }) => (
-  <BsButton
-    type="button" // default in case not given, otherwise its 'submit'
-    {...props}
-    className={cx(className, cls, { 'btn-massive': massive })}
-  />
-)
+export const Button = ({ massive, ...props }) => {
+  const [bsClasses, restProps] = bsSizeUtils(props)
+  return (
+    <BsButton
+      type="button" // default in case not given, otherwise its 'submit'
+      {...restProps}
+      className={cx(bsClasses, { 'btn-massive': massive })}
+    />
+  )
+}
 Button.propTypes = {
   className: PropTypes.string,
   massive: PropTypes.bool

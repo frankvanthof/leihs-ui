@@ -17,7 +17,7 @@ const fakeNavbar = (
 const fakeSearchForm = (
   <div
     className="px-3 py-4 bg-light Xbg-content-muted mt-2 mb-3"
-    Xstyle={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 0rem 2rem inset' }}
+    // style={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 0rem 2rem inset' }}
   >
     <form action="/search" className="form form-compact">
       <div className="form-group">

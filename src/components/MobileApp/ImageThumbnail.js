@@ -14,7 +14,7 @@ export const ImageThumbnail = ({ href, imgSrc, className, ...restProps }) => (
           className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
         />
       ) : (
-        <ImgPlaceholder />
+        <ImgPlaceholder className="" />
       )}
     </a>
   </div>
