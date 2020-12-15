@@ -250,7 +250,7 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
             const isCurrent = !!currentLang && lang.locale === currentLang.locale
             return (
               <DropdownItem
-                key={lang.id}
+                key={lang.locale}
                 tag="button"
                 type="submit"
                 name="locale"

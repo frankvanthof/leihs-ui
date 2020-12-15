@@ -15435,11 +15435,6 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
           className="mt-3 mb-4"
         />
         <div
-          Xstyle={
-            Object {
-              "boxShadow": "rgba(0, 0, 0, 0.15) 0px 0rem 2rem inset",
-            }
-          }
           className="px-3 py-4 bg-light Xbg-content-muted mt-2 mb-3"
         >
           <form
