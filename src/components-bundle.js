@@ -1,4 +1,5 @@
 import * as AppLayout from './components/MobileApp/AppLayout'
+import * as ShoppingCart from './components/MobileApp/ShoppingCart'
 import Bold from './components/Bold'
 import DebugProps from './components/DebugProps'
 import Navbar from './components/Navbar'
@@ -17,6 +18,7 @@ export const Components = {
   Navbar,
 
   AppLayout,
+  ShoppingCart,
   CategoryList: require('./components/MobileApp/CategoryList').default,
   ModelList: require('./components/MobileApp/ModelList').default,
   ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
