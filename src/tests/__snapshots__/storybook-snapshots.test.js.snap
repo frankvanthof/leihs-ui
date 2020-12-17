@@ -15009,10 +15009,9 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Cart With
     className="ui-mainview"
   >
     <nav
-      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      className="ui-main-nav navbar navbar-light text-xl shadow-md backdrop-blur-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
       style={
         Object {
-          "WebkitBackdropFilter": "blur(12px)",
           "backgroundColor": "rgba(255, 255, 255, 0.83)",
           "backgroundPosition": "initial initial",
           "backgroundRepeat": "initial initial",
@@ -15134,10 +15133,9 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page 1`] 
     className="ui-mainview"
   >
     <nav
-      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      className="ui-main-nav navbar navbar-light text-xl shadow-md backdrop-blur-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
       style={
         Object {
-          "WebkitBackdropFilter": "blur(12px)",
           "backgroundColor": "rgba(255, 255, 255, 0.83)",
           "backgroundPosition": "initial initial",
           "backgroundRepeat": "initial initial",
@@ -15237,10 +15235,9 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Empty Page With
     className="ui-mainview"
   >
     <nav
-      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      className="ui-main-nav navbar navbar-light text-xl shadow-md backdrop-blur-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
       style={
         Object {
-          "WebkitBackdropFilter": "blur(12px)",
           "backgroundColor": "rgba(255, 255, 255, 0.83)",
           "backgroundPosition": "initial initial",
           "backgroundRepeat": "initial initial",
@@ -15352,10 +15349,9 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
     className="ui-mainview"
   >
     <nav
-      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      className="ui-main-nav navbar navbar-light text-xl shadow-md backdrop-blur-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
       style={
         Object {
-          "WebkitBackdropFilter": "blur(12px)",
           "backgroundColor": "rgba(255, 255, 255, 0.83)",
           "backgroundPosition": "initial initial",
           "backgroundRepeat": "initial initial",
@@ -16871,10 +16867,9 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Cart
     className="ui-mainview"
   >
     <nav
-      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      className="ui-main-nav navbar navbar-light text-xl shadow-md backdrop-blur-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
       style={
         Object {
-          "WebkitBackdropFilter": "blur(12px)",
           "backgroundColor": "rgba(255, 255, 255, 0.83)",
           "backgroundPosition": "initial initial",
           "backgroundRepeat": "initial initial",

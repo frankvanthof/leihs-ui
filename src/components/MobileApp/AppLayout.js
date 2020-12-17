@@ -81,12 +81,11 @@ export const CallToAction = ({ className, children, actions = [] }) => {
 
 export const Navbar = ({ brandName = 'LEIHS', menuItem, cartItem }) => (
   <nav
-    className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+    className="ui-main-nav navbar navbar-light text-xl shadow-md backdrop-blur-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
     style={{
       top: '0px',
       zIndex: 1000,
       borderBottomColor: 'rgba(0, 0, 0, 0.08)',
-      WebkitBackdropFilter: 'blur(12px)',
       backgroundColor: 'rgba(255, 255, 255, 0.83)',
       backgroundPosition: 'initial initial',
       backgroundRepeat: 'initial initial'
