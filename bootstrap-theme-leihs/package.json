@@ -13,6 +13,7 @@
   "license": "ISC",
   "browserslist": "defaults, not dead",
   "dependencies": {
+    "@coreui/coreui": "^3.4.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "bootstrap": "^4.5.3"
   },

@@ -1,6 +1,13 @@
 @import './custom';
 @import './scss/reset';
+
+// bootstrap core
 @import './node_modules/bootstrap/scss/bootstrap';
+
+// test coreUI
+@import './node_modules/@coreui/coreui/scss/coreui.scss';
+
+// icons
 @import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 @import './node_modules/@leihs/calendar/dist/styles.css'; // main css file
@@ -12,6 +19,8 @@
 @import './scss/bootstrap-extensions';
 @import './scss/bootstrap-fixes';
 @import './scss/app-fixes';
+
+
 
 // globals
 html,
