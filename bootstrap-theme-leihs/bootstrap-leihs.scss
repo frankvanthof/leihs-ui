@@ -1,11 +1,22 @@
-@import './custom';
 @import './scss/reset';
+
+// our bootstrap vars
+@import './custom';
+// our AdminLTE var
+@import './custom-adminlte';
+// bootstrap
 @import './node_modules/bootstrap/scss/bootstrap';
+// adminLTE extensions
+@import './node_modules/admin-lte/build/scss/AdminLTE-raw.scss';
+
+// icon styles (NOT iconfont!)
 @import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
+// calendar components
 @import './node_modules/@leihs/calendar/dist/styles.css'; // main css file
 @import './node_modules/@leihs/calendar/dist/theme/default.css'; // theme css file
 
+// custom styles
 @import './scss/decoration';
 @import './scss/typography';
 @import './scss/colors';
