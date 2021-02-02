@@ -14,8 +14,8 @@
   "browserslist": "defaults, not dead",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "admin-lte": "^3.0.5",
-    "bootstrap": "^4.5.3"
+    "admin-lte": "3.1.0-rc",
+    "bootstrap": "4.x.x"
   },
   "devDependencies": {
     "@leihs/calendar": "2.0.0-beta.5",
