@@ -1,12 +1,93 @@
 import React from 'react'
+import cx from 'classnames'
 
 import Navbar from '../../components/Navbar'
 import sharedNavbarProps from '../_sharedNavbarProps.json'
+
+// TMP
+// require('../../fontawesome-all.css')
 
 export default {
   title: 'Admin/Layout',
   parameters: { layout: 'fullscreen', viewport: null }
 }
+
+const fakeMenuTree = [
+  {
+    id: 'manage',
+    label: 'Manage',
+    children: [
+      {
+        id: 'pools',
+        label: 'Inventory-Pools'
+      },
+      {
+        id: 'aa54457f-e470-4cca-bb12-516552e98777',
+        label: 'ITZ-Ausstellungen',
+        active: true,
+        children: [
+          { id: 'users', label: 'Users', icon: 'fa-user-friends' },
+          { id: 'groups', label: 'Groups', icon: 'fa-users', active: true },
+          { id: 'delegations', label: 'Delegations', icon: 'fa-hands-helping' },
+          { id: 'entitlement-groups', label: 'Entitlement-Groups', icon: 'fa-hands' },
+          { id: 'mail-templates', label: 'Mail Templates', icon: 'fa-list' },
+          { id: 'fields', label: 'Fields', icon: 'fa-list' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'reports',
+    label: 'reports',
+    children: [
+      { id: 'statistics', label: 'Statistics', icon: 'fa-chart-line' },
+      { id: 'inventory', label: 'Inventory', icon: 'fa-cube' },
+      { id: 'status-info', label: 'Status Info', icon: 'fa-thermometer-half' },
+      {
+        id: 'audits',
+        label: 'Audits',
+        icon: 'fa-history',
+        children: [
+          { id: 'legacy', label: 'Legacy', icon: 'fa-history' },
+          { id: 'audited-changes', label: 'Audited Changes', icon: 'fa-save' },
+          { id: 'audited-requests', label: 'Audited Requests', icon: 'fa-exchange-alt' }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'configuration',
+    label: 'Configuration',
+
+    children: [
+      { label: 'Fields', icon: 'fa-list' },
+      { label: 'Buildings', icon: 'fa-list' },
+      { label: 'Rooms', icon: 'fa-list' },
+      { label: 'Suppliers', icon: 'fa-list' },
+      { label: 'Languages', icon: 'fa-list' },
+      { label: 'Mail Templates', icon: 'fa-list' }
+    ]
+  },
+  {
+    id: 'administration',
+    label: 'Administration',
+    children: [
+      { label: 'Users', icon: 'fa-user-friends' },
+      { label: 'Groups', icon: 'fa-users' },
+      { label: 'System-Admins', icon: 'fa-user-astronaut' },
+      { label: 'Authentication-Systems', icon: 'fa-id-card' },
+      {
+        label: 'Settings',
+        children: [
+          { label: 'Languages', icon: 'fa-globe' },
+          { label: 'Miscellaneous', icon: 'fa-box-open' },
+          { label: 'SMTP', icon: 'fa-paper-plane' },
+          { label: 'System & Security', icon: 'fa-shield-alt' }
+        ]
+      }
+    ]
+  }
+]
 
 const fakeAdminNavbarProps = {
   ...sharedNavbarProps,
@@ -35,6 +116,8 @@ const fakeAdminNavbarProps = {
   }
 }
 
+const FAKE_GROUPS = require('../fake-data/admin-groups').default.slice(0, 50)
+
 const FakePoolGroupsPage = () => (
   <div className="inventory-pool-groups">
     <div className="row nav-component mt-3 breadcrumbs-bar">
@@ -62,7 +145,7 @@ const FakePoolGroupsPage = () => (
             </a>
           </li>
           <li className="breadcrumb-item ">
-            <a href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04">
+            <a href="/admin/inventory-pools/fa70f3fa-8407-42b1-9a93-5a4612bb4925">
               <span>
                 <i className="fas fa-cube" /> Inventory-Pool{' '}
               </span>
@@ -83,8 +166,8 @@ const FakePoolGroupsPage = () => (
       <h1>
         Groups with their Roles <span> in the Inventory-Pool </span>
         <span>
-          <a href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04">
-            <em>ITZ-Ausstellungen</em>
+          <a href="/admin/inventory-pools/fa70f3fa-8407-42b1-9a93-5a4612bb4925">
+            <em>Flowerlake Campus</em>
           </a>
         </span>
       </h1>
@@ -156,14 +239,14 @@ const FakePoolGroupsPage = () => (
           <div className="float-left">
             <a
               className="btn btn-outline-primary btn-sm disabled"
-              href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/?page=0&per-page=50&org-member=&term=&including-user=&role=any"
+              href="/admin/inventory-pools/fa70f3fa-8407-42b1-9a93-5a4612bb4925/groups/?page=0&per-page=50&org-member=&term=&including-user=&role=any"
             >
               <i className="fas fa-arrow-circle-left" /> previous{' '}
             </a>
           </div>
           <div className="float-right">
             <a
-              href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/?page=2&per-page=50&org-member=&term=&including-user=&role=any"
+              href="/admin/inventory-pools/fa70f3fa-8407-42b1-9a93-5a4612bb4925/groups/?page=2&per-page=50&org-member=&term=&including-user=&role=any"
               className="btn btn-outline-primary btn-sm"
             >
               {' '}
@@ -182,1320 +265,48 @@ const FakePoolGroupsPage = () => (
             </tr>
           </thead>
           <tbody>
-            <tr className="group">
-              <td>1</td>
-              <td>no</td>
-              <td>8</td>
-              <td>
-                <a href="/admin/groups/9d12c34b-467c-4931-b7c8-235ddb4908fe">
-                  <span>Anonyme</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/9d12c34b-467c-4931-b7c8-235ddb4908fe/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>2</td>
-              <td>no</td>
-              <td>6562</td>
-              <td>
-                <a href="/admin/groups/a9dbe377-429f-4de3-999a-5d5cb276e90c">
-                  <span>App_Intranet-Business-Applikationen-Admin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/a9dbe377-429f-4de3-999a-5d5cb276e90c/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>3</td>
-              <td>no</td>
-              <td>6488</td>
-              <td>
-                <a href="/admin/groups/4daf3591-76dc-43f3-b172-5a581c8752a2">
-                  <span>App_Intranet-Formular-DMU-Wettbewerbe</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/4daf3591-76dc-43f3-b172-5a581c8752a2/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>4</td>
-              <td>no</td>
-              <td>6490</td>
-              <td>
-                <a href="/admin/groups/836e4066-1b25-4bcd-a7eb-501b50821c8c">
-                  <span>App_Intranet-Formular-ITZ-Ausstellungen</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/836e4066-1b25-4bcd-a7eb-501b50821c8c/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>5</td>
-              <td>no</td>
-              <td>6492</td>
-              <td>
-                <a href="/admin/groups/9fd93bb2-0816-43be-b5a4-f8d946480303">
-                  <span>App_Intranet-Formular-Jahresbericht</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/9fd93bb2-0816-43be-b5a4-f8d946480303/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>6</td>
-              <td>no</td>
-              <td>6494</td>
-              <td>
-                <a href="/admin/groups/75abb90b-8270-484b-9051-e220a34c2198">
-                  <span>App_Intranet-Formular-Personalrat-Feedback</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/75abb90b-8270-484b-9051-e220a34c2198/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>7</td>
-              <td>no</td>
-              <td>6496</td>
-              <td>
-                <a href="/admin/groups/3aa42892-1d00-4c98-b8bf-75e8a73619d2">
-                  <span>App_Intranet-ILV</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/3aa42892-1d00-4c98-b8bf-75e8a73619d2/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>8</td>
-              <td>no</td>
-              <td>6566</td>
-              <td>
-                <a href="/admin/groups/1d90cc3b-1ca9-4c52-bbe2-5a800aa6121e">
-                  <span>App_Intranet-ITZ-DevIn-PHP</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/1d90cc3b-1ca9-4c52-bbe2-5a800aa6121e/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>9</td>
-              <td>no</td>
-              <td>6500</td>
-              <td>
-                <a href="/admin/groups/a81b343c-2ad2-4a1c-95fd-04aa63695aca">
-                  <span>App_Intranet-Orchesteradministration-DMU-Admin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/a81b343c-2ad2-4a1c-95fd-04aa63695aca/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>10</td>
-              <td>no</td>
-              <td>6502</td>
-              <td>
-                <a href="/admin/groups/da011c35-0d8c-42cf-92e0-19c47ef09c50">
-                  <span>App_Intranet-Personendaten-Account-Info</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/da011c35-0d8c-42cf-92e0-19c47ef09c50/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>11</td>
-              <td>no</td>
-              <td>6504</td>
-              <td>
-                <a href="/admin/groups/18a48df1-1f66-44dd-bdc3-f2cb3c42da0d">
-                  <span>App_Intranet-Personendaten-Adresse</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/18a48df1-1f66-44dd-bdc3-f2cb3c42da0d/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>12</td>
-              <td>no</td>
-              <td>6508</td>
-              <td>
-                <a href="/admin/groups/c3a76d66-c6ab-4fbf-9990-3385d0d24f7d">
-                  <span>App_Intranet-Personendaten-Anmeldung-Stjg-Status-Start-Ende</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/c3a76d66-c6ab-4fbf-9990-3385d0d24f7d/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>13</td>
-              <td>no</td>
-              <td>6510</td>
-              <td>
-                <a href="/admin/groups/7b69b913-4da7-46c1-9251-5e7c94fa55c0">
-                  <span>App_Intranet-Personendaten-Anmeldung-Stjg-Unterbruch-Urlaub</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/7b69b913-4da7-46c1-9251-5e7c94fa55c0/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>14</td>
-              <td>no</td>
-              <td>6512</td>
-              <td>
-                <a href="/admin/groups/ddfe742d-ca1f-4443-8ae4-a220696fc6a1">
-                  <span>App_Intranet-Personendaten-Benutzergruppen</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/ddfe742d-ca1f-4443-8ae4-a220696fc6a1/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>15</td>
-              <td>no</td>
-              <td>6514</td>
-              <td>
-                <a href="/admin/groups/99f8e46b-6742-4b49-ac31-b1f14378b0b5">
-                  <span>App_Intranet-Personendaten-Benutzername</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/99f8e46b-6742-4b49-ac31-b1f14378b0b5/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>16</td>
-              <td>no</td>
-              <td>6516</td>
-              <td>
-                <a href="/admin/groups/25d88eb7-ae39-4b08-bd63-fd9e3256fdc9">
-                  <span>App_Intranet-Personendaten-CC-Nebisnr-Matrikelnr</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/25d88eb7-ae39-4b08-bd63-fd9e3256fdc9/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>17</td>
-              <td>no</td>
-              <td>6518</td>
-              <td>
-                <a href="/admin/groups/a51a6faf-529d-4b11-b27a-b101e0f7ccac">
-                  <span>App_Intranet-Personendaten-CMS-Info</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/a51a6faf-529d-4b11-b27a-b101e0f7ccac/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>18</td>
-              <td>no</td>
-              <td>6520</td>
-              <td>
-                <a href="/admin/groups/99e7d238-25b4-4d8b-ac77-f35dd5ec33a1">
-                  <span>App_Intranet-Personendaten-Email-privat</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/99e7d238-25b4-4d8b-ac77-f35dd5ec33a1/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>19</td>
-              <td>no</td>
-              <td>6522</td>
-              <td>
-                <a href="/admin/groups/1ce65f61-91a8-490f-a956-5376d421545d">
-                  <span>App_Intranet-Personendaten-Foto</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/1ce65f61-91a8-490f-a956-5376d421545d/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>20</td>
-              <td>no</td>
-              <td>6524</td>
-              <td>
-                <a href="/admin/groups/a31e7451-1261-4c60-a45c-7060c6230dfd">
-                  <span>App_Intranet-Personendaten-Foto-CC</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/a31e7451-1261-4c60-a45c-7060c6230dfd/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>21</td>
-              <td>no</td>
-              <td>6526</td>
-              <td>
-                <a href="/admin/groups/69bde307-7636-4d68-9bd8-cb37aca417dd">
-                  <span>App_Intranet-Personendaten-Geburtsdatum-Bürgerort</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/69bde307-7636-4d68-9bd8-cb37aca417dd/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>22</td>
-              <td>no</td>
-              <td>6528</td>
-              <td>
-                <a href="/admin/groups/063aec02-d2bf-45a8-ad57-09741e56e19f">
-                  <span>App_Intranet-Personendaten-Geburtsjahr</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/063aec02-d2bf-45a8-ad57-09741e56e19f/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>23</td>
-              <td>no</td>
-              <td>6530</td>
-              <td>
-                <a href="/admin/groups/b9a1f040-d6be-476a-8551-c7fdc5a818ae">
-                  <span>App_Intranet-Personendaten-Person-Info</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/b9a1f040-d6be-476a-8551-c7fdc5a818ae/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>24</td>
-              <td>no</td>
-              <td>6532</td>
-              <td>
-                <a href="/admin/groups/8b125aa9-9c17-4bae-9a67-ac7dc8c86a53">
-                  <span>App_Intranet-Personendaten-Personalnr</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/8b125aa9-9c17-4bae-9a67-ac7dc8c86a53/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>25</td>
-              <td>no</td>
-              <td>6534</td>
-              <td>
-                <a href="/admin/groups/8f11faf0-5916-4720-b5d2-fd235da15de1">
-                  <span>App_Intranet-Personendaten-SWITCH-edu-ID</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/8f11faf0-5916-4720-b5d2-fd235da15de1/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>26</td>
-              <td>no</td>
-              <td>6536</td>
-              <td>
-                <a href="/admin/groups/ad4b6097-1373-4256-99f0-08622b93d62b">
-                  <span>App_Intranet-Personendaten-Telefon-privat-Fax-Mobile-Business</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/ad4b6097-1373-4256-99f0-08622b93d62b/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>27</td>
-              <td>no</td>
-              <td>6538</td>
-              <td>
-                <a href="/admin/groups/45a6060a-cbda-408e-b2cc-42ae743cea65">
-                  <span>App_Intranet-Personendaten-ZHdK-Angehörige</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/45a6060a-cbda-408e-b2cc-42ae743cea65/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>28</td>
-              <td>no</td>
-              <td>6506</td>
-              <td>
-                <a href="/admin/groups/32c925ee-0c95-459a-8e3e-9ff63826a902">
-                  <span>App_Intranet-Personendaten-alle-Personen</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/32c925ee-0c95-459a-8e3e-9ff63826a902/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>29</td>
-              <td>no</td>
-              <td>6564</td>
-              <td>
-                <a href="/admin/groups/68a8a71c-c9d8-49f1-9b17-ba2fabdf16e1">
-                  <span>App_Intranet-Personensuche-Admin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/68a8a71c-c9d8-49f1-9b17-ba2fabdf16e1/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>30</td>
-              <td>no</td>
-              <td>6540</td>
-              <td>
-                <a href="/admin/groups/5920cad9-d2f8-4974-8e2c-1813a198c9ff">
-                  <span>App_Intranet-Qualitaetsmanagement</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/5920cad9-d2f8-4974-8e2c-1813a198c9ff/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>31</td>
-              <td>no</td>
-              <td>6546</td>
-              <td>
-                <a href="/admin/groups/3b5fd240-9606-40b0-98b1-80a9445bacda">
-                  <span>App_Intranet-Studiosession-DMU-Admin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/3b5fd240-9606-40b0-98b1-80a9445bacda/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>32</td>
-              <td>no</td>
-              <td>6552</td>
-              <td>
-                <a href="/admin/groups/d09a41db-c31c-4307-8719-d47193c942fc">
-                  <span>App_Intranet-Themenkoordination</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/d09a41db-c31c-4307-8719-d47193c942fc/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>33</td>
-              <td>no</td>
-              <td>6554</td>
-              <td>
-                <a href="/admin/groups/9e061b91-8a2d-4f39-b9c6-e6f7f8b32699">
-                  <span>App_Intranet-Typo3-Redaktionen</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/9e061b91-8a2d-4f39-b9c6-e6f7f8b32699/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>34</td>
-              <td>no</td>
-              <td>6556</td>
-              <td>
-                <a href="/admin/groups/e4644d03-ee77-40e2-95ad-36245bd4875f">
-                  <span>App_Intranet-Typo3-Redaktionsleitung</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/e4644d03-ee77-40e2-95ad-36245bd4875f/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>35</td>
-              <td>no</td>
-              <td>6484</td>
-              <td>
-                <a href="/admin/groups/2c4f0dae-7b36-4ddc-b4ca-fbad25207070">
-                  <span>App_Intranet_ClickEnroll-Admin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/2c4f0dae-7b36-4ddc-b4ca-fbad25207070/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>36</td>
-              <td>no</td>
-              <td>6486</td>
-              <td>
-                <a href="/admin/groups/9be57823-f135-4b76-9b9c-4988bc9388fe">
-                  <span>App_Intranet_Einschreibung-DMU-SuperAdmin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/9be57823-f135-4b76-9b9c-4988bc9388fe/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>37</td>
-              <td>no</td>
-              <td>6548</td>
-              <td>
-                <a href="/admin/groups/65e53ede-6cda-4008-9cab-72a02687bc38">
-                  <span>App_Intranet_Studiosession-FTM-Superadmin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/65e53ede-6cda-4008-9cab-72a02687bc38/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>38</td>
-              <td>no</td>
-              <td>6558</td>
-              <td>
-                <a href="/admin/groups/bdf70c87-43c3-4a05-b813-9f5684cd4f30">
-                  <span>App_Intranet_ZuKoIA-Admin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/bdf70c87-43c3-4a05-b813-9f5684cd4f30/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>39</td>
-              <td>no</td>
-              <td>6498</td>
-              <td>
-                <a href="/admin/groups/9a6bc260-909a-44c1-9e0d-99e03010b741">
-                  <span>App_RaumRes-Jahreskalender</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/9a6bc260-909a-44c1-9e0d-99e03010b741/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>40</td>
-              <td>no</td>
-              <td>6542</td>
-              <td>
-                <a href="/admin/groups/e294544d-d177-4e03-9986-e9a9b6091758">
-                  <span>App_RaumRes-Raumadministratoren</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/e294544d-d177-4e03-9986-e9a9b6091758/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>41</td>
-              <td>no</td>
-              <td>6544</td>
-              <td>
-                <a href="/admin/groups/2d8541fa-6494-4fa7-9db5-072e27b637fc">
-                  <span>App_RaumRes-Raumadministratoren-Theoriepoolraeume</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/2d8541fa-6494-4fa7-9db5-072e27b637fc/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>42</td>
-              <td>no</td>
-              <td>6550</td>
-              <td>
-                <a href="/admin/groups/4e5aa139-d14c-47ce-838e-a95a504dc976">
-                  <span>App_RaumRes-SuperAdmin</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/4e5aa139-d14c-47ce-838e-a95a504dc976/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>43</td>
-              <td>no</td>
-              <td>4084</td>
-              <td>
-                <a href="/admin/groups/703affd6-c9c0-4454-9600-8c9e27fcab37">
-                  <span>BA.alle</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/703affd6-c9c0-4454-9600-8c9e27fcab37/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>44</td>
-              <td>no</td>
-              <td>4088</td>
-              <td>
-                <a href="/admin/groups/33bfa0f8-e0f8-4ae2-9ae7-8f7b94a09eea">
-                  <span>BA.studierende</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/33bfa0f8-e0f8-4ae2-9ae7-8f7b94a09eea/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>45</td>
-              <td>no</td>
-              <td>6053</td>
-              <td>
-                <a href="/admin/groups/5925d58b-8d7f-43dd-adf7-a690f2cd3085">
-                  <span>CASARS_18F.studierende</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/5925d58b-8d7f-43dd-adf7-a690f2cd3085/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>46</td>
-              <td>no</td>
-              <td>12</td>
-              <td>
-                <a href="/admin/groups/c23cfeff-0a81-4c06-a7ac-edaf161bfde5">
-                  <span>DDE.alle</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/c23cfeff-0a81-4c06-a7ac-edaf161bfde5/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>47</td>
-              <td>no</td>
-              <td>2311</td>
-              <td>
-                <a href="/admin/groups/71f0190a-4097-446b-bddf-ce4e7631edd0">
-                  <span>DDE.alle_angestellte</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/71f0190a-4097-446b-bddf-ce4e7631edd0/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>48</td>
-              <td>no</td>
-              <td>13</td>
-              <td>
-                <a href="/admin/groups/d3b79401-18eb-462e-860f-7b98da47607b">
-                  <span>DDE.dozierende</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/d3b79401-18eb-462e-860f-7b98da47607b/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>49</td>
-              <td>no</td>
-              <td>14</td>
-              <td>
-                <a href="/admin/groups/47d4fbf2-b3a7-4391-956a-fc5c0cae36b2">
-                  <span>DDE.mittelbau</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/47d4fbf2-b3a7-4391-956a-fc5c0cae36b2/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
-            <tr className="group">
-              <td>50</td>
-              <td>no</td>
-              <td>15</td>
-              <td>
-                <a href="/admin/groups/ec0baf9f-93d6-4f0e-ae48-6590d4459872">
-                  <span>DDE.personal</span>
-                </a>
-              </td>
-              <td>
-                <div className="mb-1">
-                  <div />
-                  <div />
-                  <div />
-                  <div />
-                </div>
-                <a
-                  href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/ec0baf9f-93d6-4f0e-ae48-6590d4459872/roles"
-                  className="btn btn-outline-primary btn-sm"
-                >
-                  <span>
-                    <i className="fas fa-plus-circle" /> Add{' '}
-                  </span>
-                </a>
-              </td>
-            </tr>
+            {FAKE_GROUPS.map((group, index) => (
+              <tr className="group" key={index}>
+                <td>{index}</td>
+                <td>{group.protected}</td>
+                <td>{group.org_id}</td>
+                <td>
+                  <a href={`/admin/groups/${group.id}`}>
+                    <span>{group.name}</span>
+                  </a>
+                </td>
+                <td>
+                  <div className="mb-1">
+                    <div />
+                    <div />
+                    <div />
+                    <div />
+                  </div>
+                  <a
+                    href="/admin/inventory-pools/fa70f3fa-8407-42b1-9a93-5a4612bb4925/groups/ec0baf9f-93d6-4f0e-ae48-6590d4459872/roles"
+                    className="btn btn-outline-primary btn-sm"
+                  >
+                    <span>
+                      <i className="fas fa-plus-circle" /> Add{' '}
+                    </span>
+                  </a>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
         <div className="clearfix mt-2 mb-2">
           <div className="float-left">
             <a
               className="btn btn-outline-primary btn-sm disabled"
-              href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/?page=0&per-page=50&org-member=&term=&including-user=&role=any"
+              href="/admin/inventory-pools/fa70f3fa-8407-42b1-9a93-5a4612bb4925/groups/?page=0&per-page=50&org-member=&term=&including-user=&role=any"
             >
               <i className="fas fa-arrow-circle-left" /> previous{' '}
             </a>
           </div>
           <div className="float-right">
             <a
-              href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/?page=2&per-page=50&org-member=&term=&including-user=&role=any"
+              href="/admin/inventory-pools/fa70f3fa-8407-42b1-9a93-5a4612bb4925/groups/?page=2&per-page=50&org-member=&term=&including-user=&role=any"
               className="btn btn-outline-primary btn-sm"
             >
               {' '}
@@ -1508,17 +319,318 @@ const FakePoolGroupsPage = () => (
   </div>
 )
 
-export const some_entity_page = () => (
-  <>
-    <Navbar {...fakeAdminNavbarProps} />
-    <div id="app">
-      <main>
-        <div className="container-fluid">
-          <FakePoolGroupsPage />
-        </div>
-      </main>
-    </div>
-  </>
+const SidebarMenu = ({ menuTree }) => (
+  <nav>
+    <ul
+      className="nav XXXnav-pills nav-flat nav-sidebar nav-child-indent flex-column"
+      data-widget="treeview"
+      role="menu"
+    >
+      {menuTree.map(({ id, label, children }) => (
+        <>
+          <li key={id} className="nav-header text-uppercase font-weight-bold">
+            {label} {/* manage */}
+          </li>
+
+          {!!children &&
+            children.map(({ id, label, icon, active, link = { href: '#' }, children }) => (
+              <li key={id} className="nav-item menu-open nav-sidebar-level-1">
+                <a {...link} className={cx('nav-link', link.className, { active: active })}>
+                  <i className={cx('nav-icon', icon ? ['fa', icon] : 'fa fa-circle')} />
+                  <p>{label}</p> {/* PoolName */}
+                  {!!children && (
+                    <>
+                      {' '}
+                      <i className="right fas fa-angle-left" />
+                    </>
+                  )}
+                </a>
+
+                {!!children && (
+                  <ul className={cx('nav nav-treeview')}>
+                    {children.map(({ id, label, icon, active, link = { href: '#' }, children }) => {
+                      if (children) throw new Error('menu level too deep!')
+                      return (
+                        <li key={id} className="nav-item menu-open nav-sidebar-level-2">
+                          <a {...link} className={cx('nav-link', link.className, { active: active })}>
+                            <i className={cx('nav-icon', icon ? ['fa', icon] : 'fa fa-circle')} />
+                            <p>{label}</p>
+                          </a>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                )}
+              </li>
+            ))}
+        </>
+      ))}
+    </ul>
+  </nav>
 )
 
-// loggedOut.storyName = 'to Storybook'
+const Sidebar = () => (
+  <aside
+    className="main-sidebar sidebar-dark-primary sidebar-no-expand XXXnav-flat XXXnav-compact XXXelevation-4"
+    style={{ marginTop: '3rem' }}
+  >
+    {/* <a href="index3.html" className="brand-link">
+      <span className="brand-text font-weight-light">Leihs</span>
+    </a> */}
+    <div className="sidebar">
+      <SidebarMenu menuTree={fakeMenuTree} />
+    </div>
+  </aside>
+)
+
+const FakeLTESidebar = () => (
+  <aside className="main-sidebar sidebar-dark-primary elevation-4">
+    {/* Brand Logo */}
+    <a href="index3.html" className="brand-link">
+      {/* <img
+        src="dist/img/AdminLTELogo.png"
+        alt="AdminLTE Logo"
+        className="brand-image img-circle elevation-3"
+        style={{ opacity: '.8' }}
+      /> */}
+      <span className="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+    {/* Sidebar */}
+    <div className="sidebar">
+      {/* Sidebar user panel (optional) */}
+      <div className="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div className="image">
+          <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
+        </div>
+        <div className="info">
+          <a href="#" className="d-block">
+            Alexander Pierce
+          </a>
+        </div>
+      </div>
+      {/* Sidebar Menu */}
+      <FakeLTESidebarContent />
+
+      {/* /.sidebar-menu */}
+    </div>
+    {/* /.sidebar */}
+  </aside>
+)
+
+const FakeLTESidebarContent = () => (
+  <nav className="mt-2">
+    <ul className="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
+      <li className="nav-item menu-open">
+        <a href="/docs/3.1//components" className="nav-link active">
+          <i className="nav-icon fas fa-th" />
+          <p>
+            Components
+            <i className="right fas fa-angle-left" />
+          </p>
+        </a>
+        <ul className="nav nav-treeview" style={{ display: 'block' }}>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/main-sidebar.html" className="nav-link active">
+              <i className="far fa-circle nav-icon" />
+              <p>Main Sidebar</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/control-sidebar.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Control Sidebar</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/cards.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Card</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/boxes.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Small-/ Info-Box</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/direct-chat.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Direct Chat</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/timeline.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Timeline</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/ribbons.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Ribbons</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/miscellaneous.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Miscellaneous</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//components/plugins.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Plugins</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li className="nav-item">
+        <a href="/docs/3.1//javascript" className="nav-link">
+          <i className="nav-icon fas fa-code" />
+          <p>
+            JavaScript
+            <i className="right fas fa-angle-left" />
+          </p>
+        </a>
+        <ul className="nav nav-treeview">
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/layout.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Layout</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/push-menu.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Push Menu</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/treeview.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Treeview</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/card-widget.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Card Widget</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/card-refresh.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>CardRefresh</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/control-sidebar.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Control Sidebar</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/direct-chat.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Direct Chat</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/todo-list.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Todo List</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/toasts.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Toasts</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/sidebar-search.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Sidebar Search</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/expandable-tables.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>Expandable Tables</p>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="/docs/3.1//javascript/iframe.html" className="nav-link">
+              <i className="far fa-circle nav-icon" />
+              <p>IFrame</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li className="nav-item">
+        <a href="/docs/3.1//browser-support.html" className="nav-link">
+          <i className="nav-icon fab fa-chrome" />
+          <p>Browser Support</p>
+        </a>
+      </li>
+      <li className="nav-item">
+        <a href="/docs/3.1//implementations.html" className="nav-link">
+          <i className="nav-icon fas fa-bookmark" />
+          <p>Implementations</p>
+        </a>
+      </li>
+      <li className="nav-item">
+        <a href="/docs/3.1//additional-styles.html" className="nav-link">
+          <i className="nav-icon fas fa-mortar-pestle" />
+          <p>Additional Styles</p>
+        </a>
+      </li>
+      <li className="nav-item">
+        <a href="/docs/3.1//upgrade-guide.html" className="nav-link">
+          <i className="nav-icon fas fa-hand-point-up" />
+          <p>Upgrade Guide</p>
+        </a>
+      </li>
+      <li className="nav-item">
+        <a href="/docs/3.1//faq.html" className="nav-link">
+          <i className="nav-icon fas fa-question-circle" />
+          <p>FAQ</p>
+        </a>
+      </li>
+      <li className="nav-item">
+        <a href="/docs/3.1//license.html" className="nav-link">
+          <i className="nav-icon fas fa-file-contract" />
+          <p>License</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+)
+
+export const some_entity_page = () => {
+  const FIXED_LAYOUT = false
+  return (
+    <>
+      <div
+        id="app-body"
+        className={cx({ 'layout-fixed': FIXED_LAYOUT, 'layout-navbar-fixed': FIXED_LAYOUT, 'sidebar-collapse': false })}
+      >
+        <div className="wrapper">
+          <Navbar {...fakeAdminNavbarProps} />
+          {/* <FakeLTESidebar /> */}
+          <Sidebar />
+          <div id="app">
+            <div className="content-wrapper">
+              <main>
+                <div className="container-fluid">
+                  <FakePoolGroupsPage />
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
