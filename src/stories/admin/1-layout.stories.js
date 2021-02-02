@@ -83,82 +83,16 @@ const FakePoolGroupsPage = () => (
       <h1>
         Groups with their Roles <span> in the Inventory-Pool </span>
         <span>
-          <div style={{ display: 'none' }} className="hidden-routing-state-component">
-            <pre>
-              {'{'}:route-params{'\n'} {'{'}:inventory-pool-id "4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04"{'}'},{'\n'}{' '}
-              :handler-key :inventory-pool-groups,{'\n'} :page{'\n'}{' '}
-              #'leihs.admin.resources.inventory-pools.inventory-pool.groups.main/index-page,{'\n'} :url{'\n'}{' '}
-              "http://localhost:3220/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/?page=1&amp;per-page=50&amp;org-member=&amp;term=&amp;including-user=&amp;role=any",
-              {'\n'} :path{'\n'} "/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/",{'\n'}{' '}
-              :query-params-raw{'\n'} {'{'}:page "1",{'\n'}
-              {'  '}:per-page "50",{'\n'}
-              {'  '}:org-member "",{'\n'}
-              {'  '}:term "",{'\n'}
-              {'  '}:including-user "",{'\n'}
-              {'  '}:role "any"{'}'},{'\n'} :query-params{'\n'} {'{'}:page 1,{'\n'}
-              {'  '}:per-page 50,{'\n'}
-              {'  '}:org-member "", {'\n'}
-              {'  '}:term "", {'\n'}
-              {'  '}:including-user "", {'\n'}
-              {'  '}:role "any"{'}'}
-              {'}'}
-              {'\n'}
-            </pre>
-          </div>
           <a href="/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04">
             <em>ITZ-Ausstellungen</em>
           </a>
         </span>
       </h1>
       <div>
-        <div style={{ display: 'none' }} className="hidden-routing-state-component">
-          <pre>
-            {'{'}:route-params{'\n'} {'{'}:inventory-pool-id "4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04"{'}'},{'\n'}{' '}
-            :handler-key :inventory-pool-groups,{'\n'} :page{'\n'}{' '}
-            #'leihs.admin.resources.inventory-pools.inventory-pool.groups.main/index-page,{'\n'} :url{'\n'}{' '}
-            "http://localhost:3220/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/?page=1&amp;per-page=50&amp;org-member=&amp;term=&amp;including-user=&amp;role=any",
-            {'\n'} :path{'\n'} "/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/",{'\n'}{' '}
-            :query-params-raw{'\n'} {'{'}:page "1",{'\n'}
-            {'  '}:per-page "50",{'\n'}
-            {'  '}:org-member "",{'\n'}
-            {'  '}:term "",{'\n'}
-            {'  '}:including-user "",{'\n'}
-            {'  '}:role "any"{'}'},{'\n'} :query-params{'\n'} {'{'}:page 1,{'\n'}
-            {'  '}:per-page 50,{'\n'}
-            {'  '}:org-member "", {'\n'}
-            {'  '}:term "", {'\n'}
-            {'  '}:including-user "", {'\n'}
-            {'  '}:role "any"{'}'}
-            {'}'}
-            {'\n'}
-          </pre>
-        </div>
         <div className="card bg-light">
           <div className="card-body">
             <div className="form-row">
               <div className="form-group ml-2 mr-2 mt-2 col-md-3">
-                <div style={{ display: 'none' }} className="hidden-routing-state-component">
-                  <pre>
-                    {'{'}:route-params{'\n'} {'{'}:inventory-pool-id "4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04"{'}'},{'\n'}{' '}
-                    :handler-key :inventory-pool-groups,{'\n'} :page{'\n'}{' '}
-                    #'leihs.admin.resources.inventory-pools.inventory-pool.groups.main/index-page,{'\n'} :url{'\n'}{' '}
-                    "http://localhost:3220/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/?page=1&amp;per-page=50&amp;org-member=&amp;term=&amp;including-user=&amp;role=any",
-                    {'\n'} :path{'\n'} "/admin/inventory-pools/4a1ba40c-467e-5efe-8cf1-e8d3dbb59f04/groups/",{'\n'}{' '}
-                    :query-params-raw{'\n'} {'{'}:page "1",{'\n'}
-                    {'  '}:per-page "50",{'\n'}
-                    {'  '}:org-member "",{'\n'}
-                    {'  '}:term "",{'\n'}
-                    {'  '}:including-user "",{'\n'}
-                    {'  '}:role "any"{'}'},{'\n'} :query-params{'\n'} {'{'}:page 1,{'\n'}
-                    {'  '}:per-page 50,{'\n'}
-                    {'  '}:org-member "", {'\n'}
-                    {'  '}:term "", {'\n'}
-                    {'  '}:including-user "", {'\n'}
-                    {'  '}:role "any"{'}'}
-                    {'}'}
-                    {'\n'}
-                  </pre>
-                </div>
                 <label htmlFor="term">Search</label>
                 <input
                   type="text"
