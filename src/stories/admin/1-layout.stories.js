@@ -43,7 +43,7 @@ const fakeMenuTree = [
     label: 'reports',
     submenu: [
       { id: 'statistics', label: 'Statistics', icon: Icon.AdminStatistics },
-      { id: 'inventory', label: 'Inventory', icon: Icon.AdminExportInventory },
+      { id: 'inventory', label: 'Inventory Export', icon: Icon.AdminExportInventory },
       { id: 'status-info', label: 'Status Info', icon: Icon.AdminStatusInfo },
       {
         id: 'audits',
@@ -62,34 +62,43 @@ const fakeMenuTree = [
     label: 'Configuration',
 
     submenu: [
-      { label: 'Fields', icon: Icon.MenuItem, iconName: 'fa-list' },
-      { label: 'Buildings', icon: Icon.MenuItem, iconName: 'fa-list' },
-      { label: 'Rooms', icon: Icon.MenuItem, iconName: 'fa-list' },
-      { label: 'Suppliers', icon: Icon.MenuItem, iconName: 'fa-list' },
-      { label: 'Languages', icon: Icon.MenuItem, iconName: 'fa-list' },
-      { label: 'Mail Templates', icon: Icon.MenuItem, iconName: 'fa-list' }
+      { label: 'Fields', icon: Icon.AdminMenuItemSettings },
+      { label: 'Buildings', icon: Icon.AdminMenuItemSettings },
+      { label: 'Rooms', icon: Icon.AdminMenuItemSettings },
+      { label: 'Suppliers', icon: Icon.AdminMenuItemSettings },
+      { label: 'Languages', icon: Icon.AdminMenuItemSettings },
+      { label: 'Mail Templates', icon: Icon.AdminMenuItemSettings }
     ]
   },
   {
     id: 'administration',
     label: 'Administration',
     submenu: [
-      { label: 'Users', icon: Icon.MenuItem, iconName: 'fa-user-friends' },
-      { label: 'Groups', icon: Icon.MenuItem, iconName: 'fa-users' },
-      { label: 'System-Admins', icon: Icon.MenuItem, iconName: 'fa-user-astronaut' },
-      { label: 'Authentication-Systems', icon: Icon.MenuItem, iconName: 'fa-id-card' },
+      { label: 'Users', icon: Icon.AdminUsers },
+      { label: 'Groups', icon: Icon.AdminGroups },
+      { label: 'System-Admins', icon: Icon.AdminSystemAdmins },
+      { label: 'Authentication-Systems', icon: Icon.AdminAuthSystems },
       {
+        id: 'settings',
         label: 'Settings',
+        icon: Icon.AdminMenuItemSettings,
         submenu: [
-          { label: 'Languages', icon: Icon.MenuItem, iconName: 'fa-globe' },
-          { label: 'Miscellaneous', icon: Icon.MenuItem, iconName: 'fa-box-open' },
-          { label: 'SMTP', icon: Icon.MenuItem, iconName: 'fa-paper-plane' },
-          { label: 'System & Security', icon: Icon.MenuItem, iconName: 'fa-shield-alt' }
+          { label: 'Languages', icon: Icon.AdminLanguages },
+          { label: 'Miscellaneous', icon: Icon.AdminSettingsMisc },
+          { label: 'SMTP', icon: Icon.AdminSettingsSMTP },
+          { label: 'System & Security', icon: Icon.AdminSettingsSystemSecurity }
         ]
       }
     ]
   }
 ]
+
+// // for json-to-edn…
+// console.log(
+//   JSON.stringify(fakeMenuTree, (k, v) => {
+//     return k === 'icon' ? v.displayName : v
+//   })
+// )
 
 const fakeAdminNavbarProps = {
   ...sharedNavbarProps,
@@ -330,13 +339,21 @@ const SidebarMenu = ({ menuTree, dark }) => {
       <li key={id} className="nav-item menu-open nav-sidebar-level-2">
         <a {...link} className={cx('nav-link', link.className, { active: active })}>
           <IconElm className="nav-icon" /> <p>{label}</p>
+          {!!children && (
+            <>
+              {' '}
+              <Icon.MenuAngleDown className="nav-icon right" />
+            </>
+          )}
         </a>
         {children}
       </li>
     )
   }
+
   return (
     <div className={cx('sidebar', dark ? 'sidebar-dark-primary' : 'sidebar-light-primary')}>
+      {/* <div className={cx('sidebar', dark ? 'sidebar-dark-primary' : 'sidebar-light-primary')}> */}
       <ul className="nav nav-flat nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
         {menuTree.map(({ id, label, submenu }) => (
           <>
@@ -367,7 +384,10 @@ const SidebarMenu = ({ menuTree, dark }) => {
 }
 
 const Sidebar = () => (
-  <nav className="main-sidebar bg-dark sidebar-no-expand elevation-4" style={{ marginTop: '3.21875rem' }}>
+  <nav
+    className="main-sidebar bg-dark sidebar-no-expand elevation-1"
+    style={{ marginTop: '3.21875rem', fontWeight: '300 !important' }}
+  >
     <SidebarMenu menuTree={fakeMenuTree.slice(0, 1)} />
     <SidebarMenu dark menuTree={fakeMenuTree.slice(1)} />
   </nav>

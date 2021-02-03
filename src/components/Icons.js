@@ -62,7 +62,13 @@ import {
   faChartLine,
   faThermometerHalf,
   faSave,
-  faHistory
+  faHistory,
+  faBoxes,
+  faUserAstronaut,
+  faIdCard,
+  faShieldAlt,
+  faPaperPlane,
+  faBoxOpen
 } from '@fortawesome/free-solid-svg-icons'
 import { faCircle as faCircleEmpty } from '@fortawesome/free-regular-svg-icons'
 
@@ -250,7 +256,7 @@ const ICONS = {
     src: faChartLine
   },
   AdminExportInventory: {
-    src: faCube
+    src: faBoxes
   },
   AdminStatusInfo: {
     src: faThermometerHalf
@@ -267,11 +273,23 @@ const ICONS = {
   AdminAuditedRequests: {
     src: faExchangeAlt
   },
-  Admin: {
+  AdminSystemAdmins: {
+    src: faUserAstronaut
+  },
+  AdminAuthSystems: {
+    src: faIdCard
+  },
+  AdminLanguages: {
     src: faUserFriends
   },
-  Admin: {
-    src: faUserFriends
+  AdminSettingsMisc: {
+    src: faBoxOpen
+  },
+  AdminSettingsSMTP: {
+    src: faPaperPlane
+  },
+  AdminSettingsSystemSecurity: {
+    src: faShieldAlt
   }
 }
 
