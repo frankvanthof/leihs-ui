@@ -319,16 +319,12 @@ const FakePoolGroupsPage = () => (
   </div>
 )
 
-const SidebarMenu = ({ menuTree }) => (
-  <nav>
-    <ul
-      className="nav XXXnav-pills nav-flat nav-sidebar nav-child-indent flex-column"
-      data-widget="treeview"
-      role="menu"
-    >
+const SidebarMenu = ({ menuTree, dark }) => (
+  <div className={cx('sidebar', dark ? 'sidebar-dark-primary' : 'sidebar-light-primary')}>
+    <ul className="nav nav-flat nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
       {menuTree.map(({ id, label, children }) => (
         <>
-          <li key={id} className="nav-header text-uppercase font-weight-bold">
+          <li key={id} className="nav-header px-4 py-3 text-uppercase font-weight-bold">
             {label} {/* manage */}
           </li>
 
@@ -366,245 +362,13 @@ const SidebarMenu = ({ menuTree }) => (
         </>
       ))}
     </ul>
-  </nav>
+  </div>
 )
 
 const Sidebar = () => (
-  <aside
-    className="main-sidebar sidebar-dark-primary sidebar-no-expand XXXnav-flat XXXnav-compact XXXelevation-4"
-    style={{ marginTop: '3rem' }}
-  >
-    {/* <a href="index3.html" className="brand-link">
-      <span className="brand-text font-weight-light">Leihs</span>
-    </a> */}
-    <div className="sidebar">
-      <SidebarMenu menuTree={fakeMenuTree} />
-    </div>
-  </aside>
-)
-
-const FakeLTESidebar = () => (
-  <aside className="main-sidebar sidebar-dark-primary elevation-4">
-    {/* Brand Logo */}
-    <a href="index3.html" className="brand-link">
-      {/* <img
-        src="dist/img/AdminLTELogo.png"
-        alt="AdminLTE Logo"
-        className="brand-image img-circle elevation-3"
-        style={{ opacity: '.8' }}
-      /> */}
-      <span className="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-    {/* Sidebar */}
-    <div className="sidebar">
-      {/* Sidebar user panel (optional) */}
-      <div className="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div className="image">
-          <img src="dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
-        </div>
-        <div className="info">
-          <a href="#" className="d-block">
-            Alexander Pierce
-          </a>
-        </div>
-      </div>
-      {/* Sidebar Menu */}
-      <FakeLTESidebarContent />
-
-      {/* /.sidebar-menu */}
-    </div>
-    {/* /.sidebar */}
-  </aside>
-)
-
-const FakeLTESidebarContent = () => (
-  <nav className="mt-2">
-    <ul className="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
-      <li className="nav-item menu-open">
-        <a href="/docs/3.1//components" className="nav-link active">
-          <i className="nav-icon fas fa-th" />
-          <p>
-            Components
-            <i className="right fas fa-angle-left" />
-          </p>
-        </a>
-        <ul className="nav nav-treeview" style={{ display: 'block' }}>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/main-sidebar.html" className="nav-link active">
-              <i className="far fa-circle nav-icon" />
-              <p>Main Sidebar</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/control-sidebar.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Control Sidebar</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/cards.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Card</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/boxes.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Small-/ Info-Box</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/direct-chat.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Direct Chat</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/timeline.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Timeline</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/ribbons.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Ribbons</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/miscellaneous.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Miscellaneous</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//components/plugins.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Plugins</p>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li className="nav-item">
-        <a href="/docs/3.1//javascript" className="nav-link">
-          <i className="nav-icon fas fa-code" />
-          <p>
-            JavaScript
-            <i className="right fas fa-angle-left" />
-          </p>
-        </a>
-        <ul className="nav nav-treeview">
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/layout.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Layout</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/push-menu.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Push Menu</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/treeview.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Treeview</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/card-widget.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Card Widget</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/card-refresh.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>CardRefresh</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/control-sidebar.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Control Sidebar</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/direct-chat.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Direct Chat</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/todo-list.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Todo List</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/toasts.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Toasts</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/sidebar-search.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Sidebar Search</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/expandable-tables.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>Expandable Tables</p>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="/docs/3.1//javascript/iframe.html" className="nav-link">
-              <i className="far fa-circle nav-icon" />
-              <p>IFrame</p>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li className="nav-item">
-        <a href="/docs/3.1//browser-support.html" className="nav-link">
-          <i className="nav-icon fab fa-chrome" />
-          <p>Browser Support</p>
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="/docs/3.1//implementations.html" className="nav-link">
-          <i className="nav-icon fas fa-bookmark" />
-          <p>Implementations</p>
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="/docs/3.1//additional-styles.html" className="nav-link">
-          <i className="nav-icon fas fa-mortar-pestle" />
-          <p>Additional Styles</p>
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="/docs/3.1//upgrade-guide.html" className="nav-link">
-          <i className="nav-icon fas fa-hand-point-up" />
-          <p>Upgrade Guide</p>
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="/docs/3.1//faq.html" className="nav-link">
-          <i className="nav-icon fas fa-question-circle" />
-          <p>FAQ</p>
-        </a>
-      </li>
-      <li className="nav-item">
-        <a href="/docs/3.1//license.html" className="nav-link">
-          <i className="nav-icon fas fa-file-contract" />
-          <p>License</p>
-        </a>
-      </li>
-    </ul>
+  <nav className="main-sidebar bg-dark sidebar-no-expand elevation-4" style={{ marginTop: '3rem' }}>
+    <SidebarMenu menuTree={fakeMenuTree.slice(0, 1)} />
+    <SidebarMenu dark menuTree={fakeMenuTree.slice(1)} />
   </nav>
 )
 
@@ -614,11 +378,15 @@ export const some_entity_page = () => {
     <>
       <div
         id="app-body"
-        className={cx({ 'layout-fixed': FIXED_LAYOUT, 'layout-navbar-fixed': FIXED_LAYOUT, 'sidebar-collapse': false })}
+        className={cx('sidebar-no-expand', {
+          'layout-fixed': FIXED_LAYOUT,
+          'layout-navbar-fixed': FIXED_LAYOUT,
+          'sidebar-collapse': false
+        })}
       >
         <div className="wrapper">
           <Navbar {...fakeAdminNavbarProps} />
-          {/* <FakeLTESidebar /> */}
+
           <Sidebar />
           <div id="app">
             <div className="content-wrapper">
