@@ -1,6 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
+import Icon from '../../components/Icons'
 import Navbar from '../../components/Navbar'
 import sharedNavbarProps from '../_sharedNavbarProps.json'
 
@@ -16,7 +17,7 @@ const fakeMenuTree = [
   {
     id: 'manage',
     label: 'Manage',
-    children: [
+    submenu: [
       {
         id: 'pools',
         label: 'Inventory-Pools'
@@ -24,14 +25,15 @@ const fakeMenuTree = [
       {
         id: 'aa54457f-e470-4cca-bb12-516552e98777',
         label: 'ITZ-Ausstellungen',
+        icon: Icon.AdminPool,
         active: true,
-        children: [
-          { id: 'users', label: 'Users', icon: 'fa-user-friends' },
-          { id: 'groups', label: 'Groups', icon: 'fa-users', active: true },
-          { id: 'delegations', label: 'Delegations', icon: 'fa-hands-helping' },
-          { id: 'entitlement-groups', label: 'Entitlement-Groups', icon: 'fa-hands' },
-          { id: 'mail-templates', label: 'Mail Templates', icon: 'fa-list' },
-          { id: 'fields', label: 'Fields', icon: 'fa-list' }
+        submenu: [
+          { id: 'users', label: 'Users', icon: Icon.AdminUsers },
+          { id: 'groups', label: 'Groups', icon: Icon.AdminGroups, active: true },
+          { id: 'delegations', label: 'Delegations', icon: Icon.AdminDelegations },
+          { id: 'entitlement-groups', label: 'Entitlement-Groups', icon: Icon.AdminEntitlementGroups },
+          { id: 'mail-templates', label: 'Mail Templates', icon: Icon.AdminMenuItemSettings },
+          { id: 'fields', label: 'Fields', icon: Icon.AdminMenuItemSettings }
         ]
       }
     ]
@@ -39,18 +41,18 @@ const fakeMenuTree = [
   {
     id: 'reports',
     label: 'reports',
-    children: [
-      { id: 'statistics', label: 'Statistics', icon: 'fa-chart-line' },
-      { id: 'inventory', label: 'Inventory', icon: 'fa-cube' },
-      { id: 'status-info', label: 'Status Info', icon: 'fa-thermometer-half' },
+    submenu: [
+      { id: 'statistics', label: 'Statistics', icon: Icon.AdminStatistics },
+      { id: 'inventory', label: 'Inventory', icon: Icon.AdminExportInventory },
+      { id: 'status-info', label: 'Status Info', icon: Icon.AdminStatusInfo },
       {
         id: 'audits',
         label: 'Audits',
-        icon: 'fa-history',
-        children: [
-          { id: 'legacy', label: 'Legacy', icon: 'fa-history' },
-          { id: 'audited-changes', label: 'Audited Changes', icon: 'fa-save' },
-          { id: 'audited-requests', label: 'Audited Requests', icon: 'fa-exchange-alt' }
+        icon: Icon.AdminAudits,
+        submenu: [
+          { id: 'legacy', label: 'Legacy', icon: Icon.AdminAuditsLegacy },
+          { id: 'audited-changes', label: 'Audited Changes', icon: Icon.AdminAuditedChanges },
+          { id: 'audited-requests', label: 'Audited Requests', icon: Icon.AdminAuditedRequests }
         ]
       }
     ]
@@ -59,30 +61,30 @@ const fakeMenuTree = [
     id: 'configuration',
     label: 'Configuration',
 
-    children: [
-      { label: 'Fields', icon: 'fa-list' },
-      { label: 'Buildings', icon: 'fa-list' },
-      { label: 'Rooms', icon: 'fa-list' },
-      { label: 'Suppliers', icon: 'fa-list' },
-      { label: 'Languages', icon: 'fa-list' },
-      { label: 'Mail Templates', icon: 'fa-list' }
+    submenu: [
+      { label: 'Fields', icon: Icon.MenuItem, iconName: 'fa-list' },
+      { label: 'Buildings', icon: Icon.MenuItem, iconName: 'fa-list' },
+      { label: 'Rooms', icon: Icon.MenuItem, iconName: 'fa-list' },
+      { label: 'Suppliers', icon: Icon.MenuItem, iconName: 'fa-list' },
+      { label: 'Languages', icon: Icon.MenuItem, iconName: 'fa-list' },
+      { label: 'Mail Templates', icon: Icon.MenuItem, iconName: 'fa-list' }
     ]
   },
   {
     id: 'administration',
     label: 'Administration',
-    children: [
-      { label: 'Users', icon: 'fa-user-friends' },
-      { label: 'Groups', icon: 'fa-users' },
-      { label: 'System-Admins', icon: 'fa-user-astronaut' },
-      { label: 'Authentication-Systems', icon: 'fa-id-card' },
+    submenu: [
+      { label: 'Users', icon: Icon.MenuItem, iconName: 'fa-user-friends' },
+      { label: 'Groups', icon: Icon.MenuItem, iconName: 'fa-users' },
+      { label: 'System-Admins', icon: Icon.MenuItem, iconName: 'fa-user-astronaut' },
+      { label: 'Authentication-Systems', icon: Icon.MenuItem, iconName: 'fa-id-card' },
       {
         label: 'Settings',
-        children: [
-          { label: 'Languages', icon: 'fa-globe' },
-          { label: 'Miscellaneous', icon: 'fa-box-open' },
-          { label: 'SMTP', icon: 'fa-paper-plane' },
-          { label: 'System & Security', icon: 'fa-shield-alt' }
+        submenu: [
+          { label: 'Languages', icon: Icon.MenuItem, iconName: 'fa-globe' },
+          { label: 'Miscellaneous', icon: Icon.MenuItem, iconName: 'fa-box-open' },
+          { label: 'SMTP', icon: Icon.MenuItem, iconName: 'fa-paper-plane' },
+          { label: 'System & Security', icon: Icon.MenuItem, iconName: 'fa-shield-alt' }
         ]
       }
     ]
@@ -319,71 +321,62 @@ const FakePoolGroupsPage = () => (
   </div>
 )
 
-const SidebarMenu = ({ menuTree, dark }) => (
-  <div className={cx('sidebar', dark ? 'sidebar-dark-primary' : 'sidebar-light-primary')}>
-    <ul className="nav nav-flat nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
-      {menuTree.map(({ id, label, children }) => (
-        <>
-          <li key={id} className="nav-header px-4 py-3 text-uppercase font-weight-bold">
-            {label} {/* manage */}
-          </li>
+const SidebarMenu = ({ menuTree, dark }) => {
+  const fallbackIcon = Icon.MenuItem
 
-          {!!children &&
-            children.map(({ id, label, icon, active, link = { href: '#' }, children }) => (
-              <li key={id} className="nav-item menu-open nav-sidebar-level-1">
-                <a {...link} className={cx('nav-link', link.className, { active: active })}>
-                  <i className={cx('nav-icon', icon ? ['fa', icon] : 'fa fa-circle')} />
-                  <p>{label}</p> {/* PoolName */}
-                  {!!children && (
-                    <>
-                      {' '}
-                      <i className="right fas fa-angle-left" />
-                    </>
-                  )}
-                </a>
+  const NavItem = ({ id, label, icon, active, link = { href: '#' }, children }) => {
+    const IconElm = icon || fallbackIcon
+    return (
+      <li key={id} className="nav-item menu-open nav-sidebar-level-2">
+        <a {...link} className={cx('nav-link', link.className, { active: active })}>
+          <IconElm className="nav-icon" /> <p>{label}</p>
+        </a>
+        {children}
+      </li>
+    )
+  }
+  return (
+    <div className={cx('sidebar', dark ? 'sidebar-dark-primary' : 'sidebar-light-primary')}>
+      <ul className="nav nav-flat nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu">
+        {menuTree.map(({ id, label, submenu }) => (
+          <>
+            <li key={id} className="nav-header px-4 py-3 text-uppercase font-weight-bold" style={{ fontSize: '80%' }}>
+              {label}
+            </li>
 
-                {!!children && (
-                  <ul className={cx('nav nav-treeview')}>
-                    {children.map(({ id, label, icon, active, link = { href: '#' }, children }) => {
-                      if (children) throw new Error('menu level too deep!')
-                      return (
-                        <li key={id} className="nav-item menu-open nav-sidebar-level-2">
-                          <a {...link} className={cx('nav-link', link.className, { active: active })}>
-                            <i className={cx('nav-icon', icon ? ['fa', icon] : 'fa fa-circle')} />
-                            <p>{label}</p>
-                          </a>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                )}
-              </li>
-            ))}
-        </>
-      ))}
-    </ul>
-  </div>
-)
+            {!!submenu &&
+              submenu.map(({ submenu, ...item }, ix) => {
+                return (
+                  <NavItem key={ix} {...item}>
+                    {!!submenu && (
+                      <ul className={cx('nav nav-treeview')}>
+                        {submenu.map((item, ix) => {
+                          if (item.submenu) throw new Error('menu level too deep!')
+                          return <NavItem key={ix} {...item} />
+                        })}
+                      </ul>
+                    )}
+                  </NavItem>
+                )
+              })}
+          </>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 const Sidebar = () => (
-  <nav className="main-sidebar bg-dark sidebar-no-expand elevation-4" style={{ marginTop: '3rem' }}>
+  <nav className="main-sidebar bg-dark sidebar-no-expand elevation-4" style={{ marginTop: '3.21875rem' }}>
     <SidebarMenu menuTree={fakeMenuTree.slice(0, 1)} />
     <SidebarMenu dark menuTree={fakeMenuTree.slice(1)} />
   </nav>
 )
 
 export const some_entity_page = () => {
-  const FIXED_LAYOUT = false
   return (
     <>
-      <div
-        id="app-body"
-        className={cx('sidebar-no-expand', {
-          'layout-fixed': FIXED_LAYOUT,
-          'layout-navbar-fixed': FIXED_LAYOUT,
-          'sidebar-collapse': false
-        })}
-      >
+      <div id="app-body" style={{ minWidth: '1200px' }} className={cx('sidebar-no-expand')}>
         <div className="wrapper">
           <Navbar {...fakeAdminNavbarProps} />
 
