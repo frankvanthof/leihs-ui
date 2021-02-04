@@ -1,5 +1,6 @@
 {
   "name": "@leihs/ui",
+  "main": "./dist/leihs-ui-client-side-external-react.js",
   "version": "1.0.0",
   "engines": {
     "node": ">=0.12"
