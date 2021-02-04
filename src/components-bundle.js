@@ -15,6 +15,7 @@ export const Components = {
   Bold,
   DebugProps,
   Navbar,
+  Icon: require('./components/Icons').default,
 
   AppLayout,
   CategoryList: require('./components/MobileApp/CategoryList').default,
@@ -29,5 +30,9 @@ export const Components = {
   PasswordForgotPage,
   PasswordForgotSuccessPage,
   PasswordResetPage,
-  PasswordResetSuccessPage
+  PasswordResetSuccessPage,
+
+  Admin: {
+    Sidebar: require('./components/Admin/Sidebar').default
+  }
 }

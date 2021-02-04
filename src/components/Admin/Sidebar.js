@@ -56,14 +56,15 @@ const SidebarMenu = ({ menuTree, dark }) => {
   )
 }
 
-const Sidebar = () => (
-  <nav
-    className="main-sidebar bg-dark sidebar-no-expand elevation-1"
-    style={{ marginTop: '3.21875rem', fontWeight: '300 !important' }}
-  >
-    <SidebarMenu menuTree={fakeMenuTree.slice(0, 1)} />
-    <SidebarMenu dark menuTree={fakeMenuTree.slice(1)} />
-  </nav>
-)
+const Sidebar = ({ menuTree }) =>
+  !!menuTree && (
+    <nav
+      className="main-sidebar bg-dark sidebar-no-expand elevation-1"
+      style={{ marginTop: '3.21875rem', fontWeight: '300 !important' }}
+    >
+      <SidebarMenu menuTree={menuTree.slice(0, 1)} />
+      <SidebarMenu dark menuTree={menuTree.slice(1)} />
+    </nav>
+  )
 
 export default Sidebar
