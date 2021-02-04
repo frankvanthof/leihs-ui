@@ -68,7 +68,8 @@ import {
   faIdCard,
   faShieldAlt,
   faPaperPlane,
-  faBoxOpen
+  faBoxOpen,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons'
 import { faCircle as faCircleEmpty } from '@fortawesome/free-regular-svg-icons'
 
@@ -88,6 +89,9 @@ const ICONS = {
   CaretRight: {
     src: faCaretRight,
     extraProps: { fixedWidth: true }
+  },
+  ExternalLink: {
+    src: faExternalLinkAlt
   },
   Checkmark: {
     src: faCheck,

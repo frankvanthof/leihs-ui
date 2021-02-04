@@ -28,6 +28,8 @@ const fakeMenuTree = [
         icon: Icon.AdminPool,
         active: true,
         submenu: [
+          { id: 'legacy-lending', label: 'Lending', icon: Icon.ExternalLink },
+          { id: 'legacy-inventory', label: 'Inventory', icon: Icon.ExternalLink },
           { id: 'users', label: 'Users', icon: Icon.AdminUsers },
           { id: 'groups', label: 'Groups', icon: Icon.AdminGroups, active: true },
           { id: 'delegations', label: 'Delegations', icon: Icon.AdminDelegations },
