@@ -207,6 +207,10 @@ const Icons = f.fromPairs(
   f.map(ICONS, ({ src, extraProps = {} }, name) => {
     const iconComponent = ({ spaced, ...givenProps }) => {
       const iconProps = { ...extraProps, ...givenProps }
+
+      if (!src) {
+        throw new Error(`Icon "${name}" could not be found!`)
+      }
       if (iconProps.children) {
         throw new Error('Icons cant have `children`!')
       }
@@ -217,7 +221,7 @@ const Icons = f.fromPairs(
       })
       return (
         <React.Fragment>
-          <FontAwesomeIcon {...iconProps} icon={src} className={iconClassName} />
+          <FontAwesomeIcon {...iconProps} icon={src} className={iconClassName} aria-hidden="true" />
         </React.Fragment>
       )
     }

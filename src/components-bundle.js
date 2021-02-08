@@ -15,6 +15,7 @@ export const Components = {
   Bold,
   DebugProps,
   Navbar,
+  Icon: require('./components/Icons').default,
 
   AppLayout,
   CategoryList: require('./components/MobileApp/CategoryList').default,
