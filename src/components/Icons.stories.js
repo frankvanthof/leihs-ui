@@ -1,4 +1,4 @@
-import React, { Fragment as F } from 'react'
+import React from 'react'
 
 import { examples as IconsExamples } from './Icons.examples'
 
