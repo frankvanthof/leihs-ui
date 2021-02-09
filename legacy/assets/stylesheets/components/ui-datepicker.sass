@@ -1,4 +1,4 @@
-.ui-datepicker
+.custom-datepicker
   background: white
   font-size: $font-size-xs
   display: none
@@ -8,7 +8,7 @@
   @include box-shadow($default-box-shadow)
   @include micro-clearfix
 
-  .ui-datepicker-unselectable, .ui-state-disabled
+  .custom-datepicker-unselectable, .ui-state-disabled
     .ui-state-default
       opacity: 0.5
 
@@ -23,36 +23,36 @@
   opacity: 0 //visibility: hidden
   width: 0px
 
-.ui-datepicker select.ui-datepicker-month-year
+.custom-datepicker select.custom-datepicker-month-year
   width: 100%
 
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year
+.custom-datepicker select.custom-datepicker-month,
+.custom-datepicker select.custom-datepicker-year
   width: 49%
 
-.ui-datepicker table
+.custom-datepicker table
   width: 100%
   font-size: .9em
   border-collapse: collapse
   margin: 0 0 .4em
 
-.ui-datepicker th
+.custom-datepicker th
   padding: .7em .3em
   text-align: center
   font-weight: bold
   border: 0
 
-.ui-datepicker td
+.custom-datepicker td
   border: 0
   padding: 1px
 
-.ui-datepicker td span, .ui-datepicker td a
+.custom-datepicker td span, .custom-datepicker td a
   display: block
   padding: .2em
   text-align: right
   text-decoration: none
 
-.ui-datepicker .ui-datepicker-buttonpane
+.custom-datepicker .custom-datepicker-buttonpane
   background-image: none
   margin: .7em 0 0 0
   padding: 0 .2em
@@ -60,7 +60,7 @@
   border-right: 0
   border-bottom: 0
 
-.ui-datepicker .ui-datepicker-buttonpane button
+.custom-datepicker .custom-datepicker-buttonpane button
   float: right
   margin: .5em .2em .4em
   cursor: pointer
@@ -68,79 +68,79 @@
   width: auto
   overflow: visible
 
-.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current
+.custom-datepicker .custom-datepicker-buttonpane button.custom-datepicker-current
   float: left
 
 
 /* with multiple calendars */
-.ui-datepicker.ui-datepicker-multi
+.custom-datepicker.custom-datepicker-multi
   width: auto
 
-.ui-datepicker-multi .ui-datepicker-group
+.custom-datepicker-multi .custom-datepicker-group
   float: left
 
-.ui-datepicker-multi .ui-datepicker-group table
+.custom-datepicker-multi .custom-datepicker-group table
   width: 95%
   margin: 0 auto .4em
 
-.ui-datepicker-multi-2 .ui-datepicker-group
+.custom-datepicker-multi-2 .custom-datepicker-group
   width: 50%
 
-.ui-datepicker-multi-3 .ui-datepicker-group
+.custom-datepicker-multi-3 .custom-datepicker-group
   width: 33.3%
 
-.ui-datepicker-multi-4 .ui-datepicker-group
+.custom-datepicker-multi-4 .custom-datepicker-group
   width: 25%
 
-.ui-datepicker-multi .ui-datepicker-buttonpane
+.custom-datepicker-multi .custom-datepicker-buttonpane
   clear: left
 
-.ui-datepicker-row-break
+.custom-datepicker-row-break
   clear: both
   width: 100%
   font-size: 0em
 
 
 /* RTL support */
-.ui-datepicker-rtl
+.custom-datepicker-rtl
   direction: rtl
 
-.ui-datepicker-rtl .ui-datepicker-buttonpane
+.custom-datepicker-rtl .custom-datepicker-buttonpane
   clear:right
 
-.ui-datepicker-rtl .ui-datepicker-buttonpane button
+.custom-datepicker-rtl .custom-datepicker-buttonpane button
   float: left
 
-.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current
+.custom-datepicker-rtl .custom-datepicker-buttonpane button.custom-datepicker-current
   float:right
 
-.ui-datepicker-rtl .ui-datepicker-group
+.custom-datepicker-rtl .custom-datepicker-group
   float:right
 
-.ui-datepicker th
+.custom-datepicker th
   font-weight: bold
   color: gray
 
-.ui-datepicker
+.custom-datepicker
 
-  td.ui-datepicker-today a
+  td.custom-datepicker-today a
     background: none
     font-weight: bold
     text-decoration: underline
 
-  td.ui-datepicker-days-cell-over a
+  td.custom-datepicker-days-cell-over a
     background: $lightblue
     color: white
     @include border-radius(4px)
 
-.ui-datepicker td a
+.custom-datepicker td a
   margin-bottom: 0px
   border: 0px
 
-.ui-datepicker td:hover
+.custom-datepicker td:hover
   color: white
 
-.ui-datepicker .ui-state-default
+.custom-datepicker .ui-state-default
   border: 0px
   background: none
   margin-bottom: 0px
@@ -149,7 +149,7 @@
   text-align: center
   filter: none
 
-.ui-datepicker td .ui-state-active
+.custom-datepicker td .ui-state-active
   background: #BFBFBF
   margin-bottom: 0px
   font-size: normal
@@ -157,7 +157,7 @@
   color: white
   @include border-radius(4px)
 
-.ui-datepicker td .ui-state-default:hover
+.custom-datepicker td .ui-state-default:hover
   background: $blue
   color: white
   @include border-radius(4px)
@@ -166,7 +166,7 @@
 // fixes after jquery UI was indirectly removed:
 
 // TODO: use real icons
-.ui-datepicker
+.custom-datepicker
   // .ui-icon-circle-triangle-w
   //   @extend .fa
   //   @extend .fa-chevron-circle-left
@@ -189,35 +189,35 @@
     overflow: hidden
     padding: 7px 11px 7px 3px
 
-.ui-datepicker .ui-datepicker-header
+.custom-datepicker .custom-datepicker-header
   position: relative
   padding: .2em 0
 
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next
+.custom-datepicker .custom-datepicker-prev,
+.custom-datepicker .custom-datepicker-next
   position: absolute
   top: 2px
   width: 1.8em
   height: 1.8em
 
-.ui-datepicker .ui-datepicker-prev-hover,
-.ui-datepicker .ui-datepicker-next-hover
+.custom-datepicker .custom-datepicker-prev-hover,
+.custom-datepicker .custom-datepicker-next-hover
   top: 1px
 
-.ui-datepicker .ui-datepicker-prev
+.custom-datepicker .custom-datepicker-prev
   left: 2px
 
-.ui-datepicker .ui-datepicker-next
+.custom-datepicker .custom-datepicker-next
   right: 2px
 
-.ui-datepicker .ui-datepicker-prev-hover
+.custom-datepicker .custom-datepicker-prev-hover
   left: 1px
 
-.ui-datepicker .ui-datepicker-next-hover
+.custom-datepicker .custom-datepicker-next-hover
   right: 1px
 
-.ui-datepicker .ui-datepicker-prev span,
-.ui-datepicker .ui-datepicker-next span
+.custom-datepicker .custom-datepicker-prev span,
+.custom-datepicker .custom-datepicker-next span
   display: block
   position: absolute
   left: 50%
@@ -225,15 +225,15 @@
   top: 50%
   margin-top: -8px
 
-.ui-datepicker .ui-datepicker-title
+.custom-datepicker .custom-datepicker-title
   margin: 0 2.3em
   line-height: 1.8em
   text-align: center
 
-.ui-datepicker .ui-datepicker-title select
+.custom-datepicker .custom-datepicker-title select
   font-size: 1em
   margin: 1px 0
 
-.ui-datepicker select.ui-datepicker-month,
-.ui-datepicker select.ui-datepicker-year
+.custom-datepicker select.custom-datepicker-month,
+.custom-datepicker select.custom-datepicker-year
   width: 45%

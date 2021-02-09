@@ -5,11 +5,13 @@ import React, { useState } from 'react'
 import f from 'lodash'
 
 import { BookingCalendar } from './BookingCalendar'
-import { DateRange } from '@leihs/calendar'
+import { Calendar } from '@leihs/calendar'
+
 // eslint-disable-next-line no-unused-vars
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 const df = require('date-fns')
 window.f = f
+window.df = df
 
 export default {
   title: 'MobileApp/Components/Calendar',
@@ -27,28 +29,38 @@ export const WIP_just_a_datepicker = () => {
   const now = new Date()
   //
   const onlyFuture = true
-  const onChange = item => setSelectedDate(item)
+  const onChange = item => {
+    setSelectedDate(item)
+  }
   //
   return (
     <div className="mx-1 mt-2 d-flex flex-column">
-      <p className="d-block m-auto">
-        selected date: <samp>{JSON.stringify(selectedDate)}</samp>
-      </p>
-      <DateRange
+      <Calendar
         className="m-auto"
         displayMode="date"
+        minDate={onlyFuture ? now : null}
+        date={selectedDate}
+        onChange={onChange}
+      />
+      {/* <Calendar
+        className="m-auto"
+        displayMode="date"
+        showPreview={false}
         months={1}
         minDate={onlyFuture ? now : null}
         date={selectedDate}
         onChange={onChange}
         // TMP:
-        maxDateLoaded={df.parseISO('2020-07-31')}
-        loadingIndicator={'cargando…'}
-        scroll={{
-          enabled: true
-          // monthHeight: WIP_LARGE_SIZE ? 278 : undefined
-        }}
-      />
+        // maxDateLoaded={df.parseISO('2020-07-31')}
+        // loadingIndicator={'cargando…'}
+        // scroll={{
+        //   enabled: true
+        //   // monthHeight: WIP_LARGE_SIZE ? 278 : undefined
+        // }}
+      /> */}
+      <p className="d-block m-auto">
+        selected date: <samp>{JSON.stringify(selectedDate)}</samp>
+      </p>
     </div>
   )
 }
