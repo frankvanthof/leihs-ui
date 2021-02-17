@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useMemo } from 'react'
 // import f from 'lodash'
 import cx from 'classnames/dedupe'
-import { isValid, parseISO as parseISODate, format as formatDate, isBefore, isAfter } from 'date-fns'
+import { isValid, parseISO as parseISODate, format as formatDate, isBefore, isAfter, isSameDay } from 'date-fns'
 
 import { Calendar } from '@leihs/calendar'
 
@@ -23,34 +23,34 @@ const DatePicker = ({
   const _popupcal = false
   const _restrictWidth = false
 
-  if (value === 'now') value = new Date()
+  const date = value === 'now' ? new Date() : parseDatefromInput(value)
+
   const currentValueIsValidDate =
-    (value ? isValid(value) : false) &&
-    (minDate ? isBefore(minDate, value) : true) &&
-    (maxDate ? isAfter(maxDate, value) : true)
+    (date ? isValid(date) : false) &&
+    (minDate ? isSameDay(minDate, date) || isBefore(minDate, date) : true) &&
+    (maxDate ? isSameDay(maxDate, date) || isAfter(maxDate, date) : true)
   const currentInputIsValid = disabled || !required ? true : currentValueIsValidDate
 
-  const inputVal = useRef(formatDateForInput(value), [value])
+  const inputVal = useRef(value, [value])
   const inputEl = useRef(null, [])
   const [isFocussed, setFocus] = useState(false, [])
   // const dateVal = useRef(value, [value])
 
   const isDateInputSupported = useMemo(checkIsDateInputBrowserSupported, [])
   const useNativeInput = force ? false : isDateInputSupported
+  const isOpen = !disabled && !useNativeInput
 
   useEffect(
     function updateInputVal() {
-      inputVal.current = formatDateForInput(value)
+      inputVal.current = value
     },
     [value]
   )
   function updateInput() {
-    inputEl.current && currentValueIsValidDate && (inputEl.current.value = formatDateForInput(value))
+    inputEl.current && currentValueIsValidDate && (inputEl.current.value = value)
     inputEl.current && inputEl.current.setCustomValidity(currentInputIsValid ? '' : errMsg)
   }
   useEffect(updateInput, [inputVal, currentValueIsValidDate, currentInputIsValid, value, required, minDate, maxDate])
-
-  const isOpen = !disabled && !useNativeInput
 
   return (
     <div
@@ -70,14 +70,16 @@ const DatePicker = ({
             forceValidations && (currentInputIsValid ? 'is-valid' : 'is-invalid'),
             'custom-datepicker-textinput'
           )}
-          style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
+          style={isOpen ? { borderBottomLeftRadius: 0, borderBottomRightRadius: 0 } : null}
           placeholder={placeholder}
           disabled={disabled}
           defaultValue={inputVal.current || ''}
           onChange={e => {
             const val = e.target.value
             const date = parseDatefromInput(val)
-            onChange(isValid(date) ? date : null)
+            const returnValue = isValid(date) ? val : null
+            const stubEvent = { target: { value: returnValue } }
+            onChange(stubEvent)
           }}
           ref={inputEl}
           onBlur={() => setFocus(false)}
@@ -92,14 +94,18 @@ const DatePicker = ({
             onFocus={() => setFocus(true)}
           >
             <Calendar
-              key={value || 1} // force update shown date if changed via text input
+              key={date || 1} // force update shown date if changed via text input
               className={cx('m-auto rounded custom-datepicker-calendar', { 'd-none': _popupcal && !isFocussed })}
               displayMode="date"
               months={months}
               minDate={minDate}
-              date={currentValueIsValidDate ? value : undefined}
-              shownDate={currentValueIsValidDate ? value : undefined}
-              onChange={onChange}
+              date={currentValueIsValidDate ? date : undefined}
+              shownDate={currentValueIsValidDate ? date : undefined}
+              onChange={date => {
+                const returnValue = formatDateForInput(date)
+                const stubEvent = { target: { value: returnValue } }
+                onChange(stubEvent)
+              }}
               scroll={{ enabled: scroll }}
             />
           </div>
@@ -118,7 +124,7 @@ function parseDatefromInput(date) {
   return parseISODate(date)
 }
 
-function formatDateForInput(date) {
+export function formatDateForInput(date) {
   if (!isValid(date)) return ''
   return formatDate(date, 'yyyy-MM-dd')
 }

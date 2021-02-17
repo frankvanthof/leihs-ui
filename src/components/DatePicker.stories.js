@@ -5,26 +5,23 @@ import React, { useState } from 'react'
 import cx from 'classnames'
 import * as df from 'date-fns'
 
-import DatePicker from './DatePicker'
+import DatePicker, { formatDateForInput } from './DatePicker'
 const NOW = new Date()
 
 export default {
   title: 'Components/DatePicker',
-  component: DatePicker,
-  // decorators: [withInfo],
-  parameters: {
-    // FIXME: does crash in snapshot test
-    // storyshots: { disable: true }
-  }
+  component: DatePicker
+  // decorators: [withInfo]
 }
 
-const makeBaseStory = ({ initialValue, onlyFuture, wasValidated }) => () => {
+const makeBaseStory = ({ initialValue, onlyFuture, wasValidated, ...props }) => () => {
   const [selectedDate, setSelectedDate] = useState(initialValue)
   //
   const now = new Date()
   //
-  const onChange = item => {
-    setSelectedDate(item)
+  const onChange = event => {
+    // debugger
+    setSelectedDate(event.target.value)
   }
 
   //
@@ -41,6 +38,7 @@ const makeBaseStory = ({ initialValue, onlyFuture, wasValidated }) => () => {
         showPreview={false}
         months={1}
         minDate={onlyFuture ? now : null}
+        {...props}
       />
 
       <small id="passwordHelpBlock" className="form-text text-muted">
@@ -60,11 +58,20 @@ export const datepicker_future_no_value_validation = makeBaseStory({
 })
 datepicker_future_no_value_validation.storyName = 'Datepicker, no initial value, show validation, only future dates'
 
-export const datepicker_future_with_value = makeBaseStory({ initialValue: df.addYears(NOW, 5), onlyFuture: true })
+export const datepicker_with_value_disabled = makeBaseStory({
+  initialValue: formatDateForInput(df.addYears(NOW, 5)),
+  disabled: true
+})
+datepicker_with_value_disabled.storyName = 'Datepicker, with initial value, disabled'
+
+export const datepicker_future_with_value = makeBaseStory({
+  initialValue: formatDateForInput(df.addYears(NOW, 5)),
+  onlyFuture: true
+})
 datepicker_future_with_value.storyName = 'Datepicker, with initial value, only future dates'
 
 export const datepicker_future_with_value_validation = makeBaseStory({
-  initialValue: df.addYears(NOW, 5),
+  initialValue: formatDateForInput(df.addYears(NOW, 5)),
   onlyFuture: true,
   wasValidated: true
 })
