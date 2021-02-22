@@ -1,13 +1,26 @@
 import React, { useEffect, useState, useRef, useMemo } from 'react'
+import PropTypes from 'prop-types'
 // import f from 'lodash'
 import cx from 'classnames/dedupe'
-import { isValid, parseISO as parseISODate, format as formatDate, isBefore, isAfter, isSameDay } from 'date-fns'
+import {
+  isValid,
+  isDate,
+  parseISO as parseISODate,
+  format as formatDate,
+  isBefore,
+  isAfter,
+  isSameDay,
+  startOfDay,
+  addDays
+} from 'date-fns'
 
 import { Calendar } from '@leihs/calendar'
 
 const DatePicker = ({
-  value,
+  value = '',
   required = false,
+  name,
+  id,
   minDate,
   maxDate,
   onChange,
@@ -22,8 +35,11 @@ const DatePicker = ({
   const scroll = false // NOTE: does not work yet (when changing date from outside Calendar)
   const _popupcal = false
   const _restrictWidth = false
+  const NOW = new Date()
 
-  const date = value === 'now' ? new Date() : parseDatefromInput(value)
+  const date = value === 'now' ? NOW : parseDatefromInput(value)
+  minDate = parseDatefromProp(minDate, NOW)
+  maxDate = parseDatefromProp(maxDate, NOW)
 
   const currentValueIsValidDate =
     (date ? isValid(date) : false) &&
@@ -64,6 +80,8 @@ const DatePicker = ({
       <div className={cx('rounded', { 'shadow-sm': isOpen, 'custom-control-focussed': isFocussed })}>
         {/* NOTE: use uncontrolled input because we already attach a ref for setting the validity, adn dont want the overhead of props-to-state */}
         <input
+          id={id}
+          name={name}
           type={useNativeInput ? 'date' : 'text'}
           className={cx(
             'form-control',
@@ -117,6 +135,46 @@ const DatePicker = ({
 }
 
 export default DatePicker
+
+DatePicker.displayName = 'FormInputs.DatePicker'
+
+DatePicker.propTypes = {
+  /** same as `HTMLInputElement` */
+  value: PropTypes.string,
+  /** same as `HTMLInputElement` */
+  id: PropTypes.string,
+  /** same as `HTMLInputElement` */
+  name: PropTypes.string,
+  /** same as `HTMLInputElement` */
+  required: PropTypes.bool,
+  /** same as `HTMLInputElement` */
+  disabled: PropTypes.bool,
+  /** same as `HTMLInputElement` */
+  placeholder: PropTypes.string,
+  /** same as `HTMLInputElement` */
+  onChange: PropTypes.func.isRequired,
+  /** earliest date that can be selected */
+  minDate: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.oneOf(['now', 'today', 'tomorrow'])]),
+  /** latest date that can be selected */
+  maxDate: PropTypes.oneOfType([PropTypes.instanceOf(Date), PropTypes.oneOf(['now', 'today', 'tomorrow'])]),
+  /** number of months the calendar should display */
+  months: PropTypes.number,
+  /** force custom UI (do not use native date input) */
+  force: PropTypes.bool,
+  // scroll = false,
+  /** force display of validation state (use this instead of wrapping in bootstrap's `.was-validated`) */
+  forceValidations: PropTypes.bool,
+  /** error message used to indicate that no valid date has been selected */
+  errMsg: PropTypes.string
+}
+
+function parseDatefromProp(prop, now) {
+  if (isDate(prop)) return prop
+  if (prop === 'now') return now
+  if (prop === 'today') return startOfDay(now)
+  if (prop === 'tomorrow') return addDays(startOfDay(now), 1)
+  return parseDatefromInput(prop)
+}
 
 function parseDatefromInput(date) {
   const DATE_STRING_REGEX = /[1-2]\d\d\d-(0\d|1[0-2])-[0-3]\d/
