@@ -1,30 +1,24 @@
-// import { withInfo } from '@storybook/addon-info'
 // import { action } from '@storybook/addon-actions'
-
 import React, { useState } from 'react'
 import cx from 'classnames'
 import * as df from 'date-fns'
 
 import DatePicker, { formatDateForInput } from './DatePicker'
+
 const NOW = new Date()
 
 export default {
   title: 'Components/DatePicker',
   component: DatePicker
-  // decorators: [withInfo]
 }
 
 const makeBaseStory = ({ initialValue, onlyFuture, wasValidated, ...props }) => () => {
   const [selectedDate, setSelectedDate] = useState(initialValue)
   //
-  const now = new Date()
-  //
   const onChange = event => {
-    // debugger
     setSelectedDate(event.target.value)
   }
 
-  //
   return (
     <div className={cx('form-group', { 'was-validated': wasValidated })}>
       <label>Example label</label>
@@ -37,7 +31,7 @@ const makeBaseStory = ({ initialValue, onlyFuture, wasValidated, ...props }) => 
         displayMode="date"
         showPreview={false}
         months={1}
-        minDate={onlyFuture ? now : null}
+        minDate={onlyFuture ? 'now' : null}
         {...props}
       />
 
