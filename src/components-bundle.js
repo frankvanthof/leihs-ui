@@ -34,3 +34,5 @@ const Components = {
 }
 
 export default Components
+
+export { jimp } from 'jimp'
