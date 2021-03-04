@@ -23,6 +23,7 @@ import {
   faQuestion,
   faShoppingCart,
   faUserCircle,
+  faUserFriends,
   faTimes,
   faCaretUp,
   faCaretDown,
@@ -50,7 +51,25 @@ import {
   faTable,
   faFileDownload,
   faDraftingCompass,
-  faEdit
+  faEdit,
+  faHandsHelping,
+  faHands,
+  faList,
+  faAngleLeft,
+  faAngleRight,
+  faAngleDown,
+  faAngleUp,
+  faChartLine,
+  faThermometerHalf,
+  faSave,
+  faHistory,
+  faBoxes,
+  faUserAstronaut,
+  faIdCard,
+  faShieldAlt,
+  faPaperPlane,
+  faBoxOpen,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons'
 import { faCircle as faCircleEmpty } from '@fortawesome/free-regular-svg-icons'
 
@@ -70,6 +89,9 @@ const ICONS = {
   CaretRight: {
     src: faCaretRight,
     extraProps: { fixedWidth: true }
+  },
+  ExternalLink: {
+    src: faExternalLinkAlt
   },
   Checkmark: {
     src: faCheck,
@@ -200,6 +222,78 @@ const ICONS = {
   },
   WarningSign: {
     src: faExclamationTriangle
+  },
+  MenuItem: {
+    src: faCircleEmpty
+  },
+  MenuAngleLeft: {
+    src: faAngleLeft
+  },
+  MenuAngleRight: {
+    src: faAngleRight
+  },
+  MenuAngleDown: {
+    src: faAngleDown
+  },
+  MenuAngleUp: {
+    src: faAngleUp
+  },
+  AdminUsers: {
+    src: faUserFriends
+  },
+  AdminGroups: {
+    src: faUsers
+  },
+  AdminDelegations: {
+    src: faHandsHelping
+  },
+  AdminEntitlementGroups: {
+    src: faHands
+  },
+  AdminMenuItemSettings: {
+    src: faList
+  },
+  AdminPool: {
+    src: faCube
+  },
+  AdminStatistics: {
+    src: faChartLine
+  },
+  AdminExportInventory: {
+    src: faBoxes
+  },
+  AdminStatusInfo: {
+    src: faThermometerHalf
+  },
+  AdminAudits: {
+    src: faHistory
+  },
+  AdminAuditsLegacy: {
+    src: faHistory
+  },
+  AdminAuditedChanges: {
+    src: faSave
+  },
+  AdminAuditedRequests: {
+    src: faExchangeAlt
+  },
+  AdminSystemAdmins: {
+    src: faUserAstronaut
+  },
+  AdminAuthSystems: {
+    src: faIdCard
+  },
+  AdminLanguages: {
+    src: faUserFriends
+  },
+  AdminSettingsMisc: {
+    src: faBoxOpen
+  },
+  AdminSettingsSMTP: {
+    src: faPaperPlane
+  },
+  AdminSettingsSystemSecurity: {
+    src: faShieldAlt
   }
 }
 
@@ -207,6 +301,10 @@ const Icons = f.fromPairs(
   f.map(ICONS, ({ src, extraProps = {} }, name) => {
     const iconComponent = ({ spaced, ...givenProps }) => {
       const iconProps = { ...extraProps, ...givenProps }
+
+      if (!src) {
+        throw new Error(`Icon "${name}" could not be found!`)
+      }
       if (iconProps.children) {
         throw new Error('Icons cant have `children`!')
       }
@@ -217,7 +315,7 @@ const Icons = f.fromPairs(
       })
       return (
         <React.Fragment>
-          <FontAwesomeIcon {...iconProps} icon={src} className={iconClassName} />
+          <FontAwesomeIcon {...iconProps} icon={src} className={iconClassName} aria-hidden="true" />
         </React.Fragment>
       )
     }

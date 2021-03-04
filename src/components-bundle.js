@@ -16,6 +16,7 @@ const Components = {
   DebugProps,
   Navbar,
   DatePicker: require('./components/DatePicker').default,
+  Icon: require('./components/Icons').default,
 
   AppLayout,
   CategoryList: require('./components/MobileApp/CategoryList').default,
@@ -30,7 +31,11 @@ const Components = {
   PasswordForgotPage,
   PasswordForgotSuccessPage,
   PasswordResetPage,
-  PasswordResetSuccessPage
+  PasswordResetSuccessPage,
+
+  Admin: {
+    Sidebar: require('./components/Admin/Sidebar').default
+  }
 }
 
 export default Components
