@@ -10,7 +10,7 @@ import { Translator as T } from '../locale/translate'
 const APP_COLOR = 'gray'
 
 const exampleNavbarParams = {
-  appTitle: 'leihs',
+  appTitle: 'NPO',
   appColor: null,
   me: false,
   appMenu: null,
